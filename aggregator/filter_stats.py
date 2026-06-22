@@ -93,8 +93,8 @@ def compute_stats(signals: list[dict]) -> dict:
     for fname, stats in filter_stats.items():
         evaluated = stats["wins"] + stats["losses"]
         win_rate = round((stats["wins"] / evaluated * 100), 1) if evaluated > 0 else None
-        avg_win = round(sum(stats["win_moves"]) / len(stats["win_moves"]), 2) if stats["win_moves"] else None
-        avg_loss = round(sum(stats["loss_moves"]) / len(stats["loss_moves"]), 2) if stats["loss_moves"] else None
+        avg_win = round(sum(abs(m) for m in stats["win_moves"]) / len(stats["win_moves"]), 2) if stats["win_moves"] else None
+        avg_loss = round(sum(abs(m) for m in stats["loss_moves"]) / len(stats["loss_moves"]), 2) if stats["loss_moves"] else None
 
         result["filters"][fname] = {
             "signals": stats["signals"],
