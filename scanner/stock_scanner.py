@@ -154,7 +154,7 @@ def get_fno_symbols(nfo_instruments: list[dict]) -> list[str]:
     symbols = set()
     for i in nfo_instruments:
         if i.get("instrument_type") == "FUT" and i.get("segment") == "NFO-FUT":
-            symbols.add(i.get("name", ""))
+            symbols.add(i.get("name", "").strip('"'))
     return sorted(symbols - {""})
 
 
@@ -276,7 +276,7 @@ def run():
     nearest_fut = {}
     for inst in sorted(nfo_instruments, key=lambda x: x.get("expiry", "")):
         if inst.get("instrument_type") == "FUT" and inst.get("segment") == "NFO-FUT":
-            sym = inst.get("name", "")
+            sym = inst.get("name", "").strip('"')
             if sym and sym not in nearest_fut:
                 nearest_fut[sym] = inst["tradingsymbol"]
 
