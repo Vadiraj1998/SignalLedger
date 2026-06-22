@@ -1,0 +1,19 @@
+[
+  {
+    "date": "2026-06-22",
+    "symbol": "BTCUSDT",
+    "market": "crypto",
+    "filters": ["FUNDING_EXTREME_SHORT", "OI_SURGE"],
+    "bias": "short",
+    "price_at_scan": 104250.0,
+    "price_change_pct_24h": 1.8,
+    "funding_rate": 0.112,
+    "oi_change_pct_24h": 23.4,
+    "volume_usdt_24h": 48200000000,
+    "volume_avg_7d": 21000000000,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
