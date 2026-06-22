@@ -1,0 +1,182 @@
+[
+  {
+    "date": "2026-06-12",
+    "symbol": "APOLLOHOSP",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 8535.0,
+    "price_change_pct": -0.434,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 276444.0,
+    "high_52w": 8624.0,
+    "low_52w": 6696.5,
+    "eod_price": 8498.0,
+    "move_pct": -0.434,
+    "success": false,
+    "updated_at": "2026-06-22T18:24:31.122123+00:00"
+  },
+  {
+    "date": "2026-06-12",
+    "symbol": "FEDERALBNK",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 315.0,
+    "price_change_pct": 0.222,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 9052110.0,
+    "high_52w": 318.35,
+    "low_52w": 185.11,
+    "eod_price": 315.7,
+    "move_pct": 0.222,
+    "success": true,
+    "updated_at": "2026-06-22T18:25:12.468117+00:00"
+  },
+  {
+    "date": "2026-06-12",
+    "symbol": "HCLTECH",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_LOW"
+    ],
+    "bias": "short",
+    "price_at_scan": 1120.0,
+    "price_change_pct": -0.929,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 2203987.0,
+    "high_52w": 1780.1,
+    "low_52w": 1089.5,
+    "eod_price": 1109.6,
+    "move_pct": -0.929,
+    "success": true,
+    "updated_at": "2026-06-22T18:25:23.375630+00:00"
+  },
+  {
+    "date": "2026-06-12",
+    "symbol": "ICICIPRULI",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_LOW"
+    ],
+    "bias": "short",
+    "price_at_scan": 465.1,
+    "price_change_pct": 0.656,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 887258.0,
+    "high_52w": 706.8,
+    "low_52w": 459.5,
+    "eod_price": 468.15,
+    "move_pct": 0.656,
+    "success": false,
+    "updated_at": "2026-06-22T18:25:33.380815+00:00"
+  },
+  {
+    "date": "2026-06-12",
+    "symbol": "KEI",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 5234.0,
+    "price_change_pct": 2.589,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 225909.0,
+    "high_52w": 5476.3,
+    "low_52w": 3525.3,
+    "eod_price": 5369.5,
+    "move_pct": 2.589,
+    "success": true,
+    "updated_at": "2026-06-22T18:25:51.971903+00:00"
+  },
+  {
+    "date": "2026-06-12",
+    "symbol": "LTM",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_LOW"
+    ],
+    "bias": "short",
+    "price_at_scan": 3855.0,
+    "price_change_pct": -0.267,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 361579.0,
+    "high_52w": 6429.5,
+    "low_52w": 3803.7,
+    "eod_price": 3844.7,
+    "move_pct": -0.267,
+    "success": true,
+    "updated_at": "2026-06-22T18:26:00.306230+00:00"
+  },
+  {
+    "date": "2026-06-12",
+    "symbol": "RBLBANK",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 363.0,
+    "price_change_pct": 0.785,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 8410483.0,
+    "high_52w": 368.45,
+    "low_52w": 214.04,
+    "eod_price": 365.85,
+    "move_pct": 0.785,
+    "success": true,
+    "updated_at": "2026-06-22T18:26:40.369101+00:00"
+  },
+  {
+    "date": "2026-06-12",
+    "symbol": "SBILIFE",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_LOW"
+    ],
+    "bias": "short",
+    "price_at_scan": 1742.0,
+    "price_change_pct": -2.067,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 1438254.0,
+    "high_52w": 2132.0,
+    "low_52w": 1700.4,
+    "eod_price": 1706.0,
+    "move_pct": -2.067,
+    "success": true,
+    "updated_at": "2026-06-22T18:26:46.254551+00:00"
+  },
+  {
+    "date": "2026-06-12",
+    "symbol": "ZYDUSLIFE",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 1113.2,
+    "price_change_pct": -0.764,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 872151.0,
+    "high_52w": 1119.8,
+    "low_52w": 835.5,
+    "eod_price": 1104.7,
+    "move_pct": -0.764,
+    "success": false,
+    "updated_at": "2026-06-22T18:27:16.251518+00:00"
+  }
+]

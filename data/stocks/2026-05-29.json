@@ -1,0 +1,102 @@
+[
+  {
+    "date": "2026-05-29",
+    "symbol": "BHEL",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 424.05,
+    "price_change_pct": -1.721,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 18794737.0,
+    "high_52w": 424.9,
+    "low_52w": 205.12,
+    "eod_price": 416.75,
+    "move_pct": -1.721,
+    "success": false,
+    "updated_at": "2026-06-22T17:55:01.649976+00:00"
+  },
+  {
+    "date": "2026-05-29",
+    "symbol": "BRITANNIA",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_LOW"
+    ],
+    "bias": "short",
+    "price_at_scan": 5335.5,
+    "price_change_pct": -2.455,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 1697949.0,
+    "high_52w": 6336.0,
+    "low_52w": 5164.5,
+    "eod_price": 5204.5,
+    "move_pct": -2.455,
+    "success": true,
+    "updated_at": "2026-06-22T17:55:05.869525+00:00"
+  },
+  {
+    "date": "2026-05-29",
+    "symbol": "GVT&D",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 5140.0,
+    "price_change_pct": 0.167,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 2379024.0,
+    "high_52w": 5222.1,
+    "low_52w": 2195.4,
+    "eod_price": 5148.6,
+    "move_pct": 0.167,
+    "success": true,
+    "updated_at": "2026-06-22T17:55:35.728429+00:00"
+  },
+  {
+    "date": "2026-05-29",
+    "symbol": "POWERINDIA",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 37750.0,
+    "price_change_pct": 1.841,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 376115.0,
+    "high_52w": 38645.0,
+    "low_52w": 16111.0,
+    "eod_price": 38445.0,
+    "move_pct": 1.841,
+    "success": true,
+    "updated_at": "2026-06-22T17:56:51.956009+00:00"
+  },
+  {
+    "date": "2026-05-29",
+    "symbol": "RVNL",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_LOW"
+    ],
+    "bias": "short",
+    "price_at_scan": 251.8,
+    "price_change_pct": -2.522,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 62620879.0,
+    "high_52w": 442.8,
+    "low_52w": 243.0,
+    "eod_price": 245.45,
+    "move_pct": -2.522,
+    "success": true,
+    "updated_at": "2026-06-22T17:56:57.863248+00:00"
+  }
+]

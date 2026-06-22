@@ -1,0 +1,202 @@
+[
+  {
+    "date": "2026-06-01",
+    "symbol": "BRITANNIA",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_LOW"
+    ],
+    "bias": "short",
+    "price_at_scan": 5208.0,
+    "price_change_pct": -0.97,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 341856.0,
+    "high_52w": 6336.0,
+    "low_52w": 5122.0,
+    "eod_price": 5157.5,
+    "move_pct": -0.97,
+    "success": true,
+    "updated_at": "2026-06-22T17:58:03.813550+00:00"
+  },
+  {
+    "date": "2026-06-01",
+    "symbol": "HAVELLS",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_LOW"
+    ],
+    "bias": "short",
+    "price_at_scan": 1185.3,
+    "price_change_pct": -3.552,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 936054.0,
+    "high_52w": 1621.1,
+    "low_52w": 1138.1,
+    "eod_price": 1143.2,
+    "move_pct": -3.552,
+    "success": true,
+    "updated_at": "2026-06-22T17:58:35.309598+00:00"
+  },
+  {
+    "date": "2026-06-01",
+    "symbol": "ICICIPRULI",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_LOW"
+    ],
+    "bias": "short",
+    "price_at_scan": 506.95,
+    "price_change_pct": -3.62,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 2321218.0,
+    "high_52w": 706.8,
+    "low_52w": 487.25,
+    "eod_price": 488.6,
+    "move_pct": -3.62,
+    "success": true,
+    "updated_at": "2026-06-22T17:58:46.150920+00:00"
+  },
+  {
+    "date": "2026-06-01",
+    "symbol": "ITC",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_LOW"
+    ],
+    "bias": "short",
+    "price_at_scan": 287.8,
+    "price_change_pct": -2.832,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 23477875.0,
+    "high_52w": 408.6,
+    "low_52w": 278.3,
+    "eod_price": 279.65,
+    "move_pct": -2.832,
+    "success": true,
+    "updated_at": "2026-06-22T17:58:59.661816+00:00"
+  },
+  {
+    "date": "2026-06-01",
+    "symbol": "LAURUSLABS",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 1372.4,
+    "price_change_pct": 1.166,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 2996514.0,
+    "high_52w": 1398.8,
+    "low_52w": 606.2,
+    "eod_price": 1388.4,
+    "move_pct": 1.166,
+    "success": true,
+    "updated_at": "2026-06-22T17:59:09.652629+00:00"
+  },
+  {
+    "date": "2026-06-01",
+    "symbol": "NMDC",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 89.1,
+    "price_change_pct": 3.67,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 73822842.0,
+    "high_52w": 94.25,
+    "low_52w": 64.83,
+    "eod_price": 92.37,
+    "move_pct": 3.67,
+    "success": true,
+    "updated_at": "2026-06-22T17:59:32.156051+00:00"
+  },
+  {
+    "date": "2026-06-01",
+    "symbol": "PIIND",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_LOW"
+    ],
+    "bias": "short",
+    "price_at_scan": 2789.8,
+    "price_change_pct": -3.126,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 248652.0,
+    "high_52w": 4330.0,
+    "low_52w": 2691.1,
+    "eod_price": 2702.6,
+    "move_pct": -3.126,
+    "success": true,
+    "updated_at": "2026-06-22T17:59:46.295429+00:00"
+  },
+  {
+    "date": "2026-06-01",
+    "symbol": "RVNL",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_LOW"
+    ],
+    "bias": "short",
+    "price_at_scan": 248.1,
+    "price_change_pct": -2.636,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 9432010.0,
+    "high_52w": 442.8,
+    "low_52w": 240.8,
+    "eod_price": 241.56,
+    "move_pct": -2.636,
+    "success": true,
+    "updated_at": "2026-06-22T17:59:57.177357+00:00"
+  },
+  {
+    "date": "2026-06-01",
+    "symbol": "SBICARD",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_LOW"
+    ],
+    "bias": "short",
+    "price_at_scan": 624.8,
+    "price_change_pct": -1.416,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 1725343.0,
+    "high_52w": 1027.25,
+    "low_52w": 607.8,
+    "eod_price": 615.95,
+    "move_pct": -1.416,
+    "success": true,
+    "updated_at": "2026-06-22T17:59:59.692549+00:00"
+  },
+  {
+    "date": "2026-06-01",
+    "symbol": "SWIGGY",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_LOW"
+    ],
+    "bias": "short",
+    "price_at_scan": 259.1,
+    "price_change_pct": -3.609,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 6241815.0,
+    "high_52w": 474.0,
+    "low_52w": 247.3,
+    "eod_price": 249.75,
+    "move_pct": -3.609,
+    "success": true,
+    "updated_at": "2026-06-22T18:00:10.118684+00:00"
+  }
+]

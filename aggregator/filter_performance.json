@@ -1,0 +1,97 @@
+{
+  "generated_at": "2026-06-22T18:42:43.780278",
+  "total_signals": 344,
+  "filters": {
+    "NEAR_52W_HIGH": {
+      "signals": 237,
+      "evaluated": 237,
+      "wins": 166,
+      "losses": 71,
+      "pending": 0,
+      "win_rate_pct": 70.0,
+      "avg_win_move_pct": 1.84,
+      "avg_loss_move_pct": -0.77
+    },
+    "NEAR_52W_LOW": {
+      "signals": 107,
+      "evaluated": 107,
+      "wins": 88,
+      "losses": 19,
+      "pending": 0,
+      "win_rate_pct": 82.2,
+      "avg_win_move_pct": -1.57,
+      "avg_loss_move_pct": 0.37
+    }
+  },
+  "markets": {
+    "stock": {
+      "signals": 344,
+      "wins": 254,
+      "losses": 90,
+      "pending": 0,
+      "win_rate_pct": 73.8
+    }
+  },
+  "top_symbols": [
+    {
+      "symbol": "GVT&D",
+      "signals": 5,
+      "wins": 5,
+      "win_rate_pct": 100.0
+    },
+    {
+      "symbol": "RVNL",
+      "signals": 8,
+      "wins": 8,
+      "win_rate_pct": 100.0
+    },
+    {
+      "symbol": "SBICARD",
+      "signals": 8,
+      "wins": 8,
+      "win_rate_pct": 100.0
+    },
+    {
+      "symbol": "POLYCAB",
+      "signals": 10,
+      "wins": 9,
+      "win_rate_pct": 90.0
+    },
+    {
+      "symbol": "LTM",
+      "signals": 6,
+      "wins": 5,
+      "win_rate_pct": 83.3
+    },
+    {
+      "symbol": "PIDILITIND",
+      "signals": 6,
+      "wins": 5,
+      "win_rate_pct": 83.3
+    },
+    {
+      "symbol": "SWIGGY",
+      "signals": 5,
+      "wins": 4,
+      "win_rate_pct": 80.0
+    },
+    {
+      "symbol": "ADANIGREEN",
+      "signals": 5,
+      "wins": 4,
+      "win_rate_pct": 80.0
+    },
+    {
+      "symbol": "SONACOMS",
+      "signals": 5,
+      "wins": 4,
+      "win_rate_pct": 80.0
+    },
+    {
+      "symbol": "DALBHARAT",
+      "signals": 5,
+      "wins": 4,
+      "win_rate_pct": 80.0
+    }
+  ]
+}

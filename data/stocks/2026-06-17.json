@@ -1,0 +1,322 @@
+[
+  {
+    "date": "2026-06-17",
+    "symbol": "ABCAPITAL",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 374.8,
+    "price_change_pct": -0.627,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 2381456.0,
+    "high_52w": 375.95,
+    "low_52w": 243.0,
+    "eod_price": 372.45,
+    "move_pct": -0.627,
+    "success": false,
+    "updated_at": "2026-06-22T18:33:15.743585+00:00"
+  },
+  {
+    "date": "2026-06-17",
+    "symbol": "ADANIPORTS",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 1824.0,
+    "price_change_pct": 0.252,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 2697924.0,
+    "high_52w": 1857.8,
+    "low_52w": 1290.5,
+    "eod_price": 1828.6,
+    "move_pct": 0.252,
+    "success": true,
+    "updated_at": "2026-06-22T18:33:19.168572+00:00"
+  },
+  {
+    "date": "2026-06-17",
+    "symbol": "BHARATFORG",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 2022.0,
+    "price_change_pct": 0.618,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 670471.0,
+    "high_52w": 2044.0,
+    "low_52w": 1100.5,
+    "eod_price": 2034.5,
+    "move_pct": 0.618,
+    "success": true,
+    "updated_at": "2026-06-22T18:33:38.291005+00:00"
+  },
+  {
+    "date": "2026-06-17",
+    "symbol": "CGPOWER",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 941.0,
+    "price_change_pct": 2.418,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 3996950.0,
+    "high_52w": 965.6,
+    "low_52w": 525.5,
+    "eod_price": 963.75,
+    "move_pct": 2.418,
+    "success": true,
+    "updated_at": "2026-06-22T18:33:48.366146+00:00"
+  },
+  {
+    "date": "2026-06-17",
+    "symbol": "FEDERALBNK",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 320.65,
+    "price_change_pct": 0.639,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 9029691.0,
+    "high_52w": 323.6,
+    "low_52w": 185.11,
+    "eod_price": 322.7,
+    "move_pct": 0.639,
+    "success": true,
+    "updated_at": "2026-06-22T18:34:05.903084+00:00"
+  },
+  {
+    "date": "2026-06-17",
+    "symbol": "GMRAIRPORT",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 107.96,
+    "price_change_pct": 1.26,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 13734304.0,
+    "high_52w": 110.5,
+    "low_52w": 80.25,
+    "eod_price": 109.32,
+    "move_pct": 1.26,
+    "success": true,
+    "updated_at": "2026-06-22T18:34:10.028840+00:00"
+  },
+  {
+    "date": "2026-06-17",
+    "symbol": "GRASIM",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 3150.0,
+    "price_change_pct": 0.013,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 395269.0,
+    "high_52w": 3200.0,
+    "low_52w": 2502.5,
+    "eod_price": 3150.4,
+    "move_pct": 0.013,
+    "success": true,
+    "updated_at": "2026-06-22T18:34:13.343406+00:00"
+  },
+  {
+    "date": "2026-06-17",
+    "symbol": "GVT&D",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 4900.0,
+    "price_change_pct": 5.153,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 887332.0,
+    "high_52w": 5222.1,
+    "low_52w": 2265.0,
+    "eod_price": 5152.5,
+    "move_pct": 5.153,
+    "success": true,
+    "updated_at": "2026-06-22T18:34:14.204633+00:00"
+  },
+  {
+    "date": "2026-06-17",
+    "symbol": "KEI",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 5430.0,
+    "price_change_pct": 3.932,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 440733.0,
+    "high_52w": 5673.0,
+    "low_52w": 3525.3,
+    "eod_price": 5643.5,
+    "move_pct": 3.932,
+    "success": true,
+    "updated_at": "2026-06-22T18:34:45.149724+00:00"
+  },
+  {
+    "date": "2026-06-17",
+    "symbol": "NAM-INDIA",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 1146.8,
+    "price_change_pct": 0.602,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 419629.0,
+    "high_52w": 1158.5,
+    "low_52w": 730.0,
+    "eod_price": 1153.7,
+    "move_pct": 0.602,
+    "success": true,
+    "updated_at": "2026-06-22T18:35:06.124218+00:00"
+  },
+  {
+    "date": "2026-06-17",
+    "symbol": "NUVAMA",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 1665.5,
+    "price_change_pct": 3.675,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 886482.0,
+    "high_52w": 1735.2,
+    "low_52w": 1096.9,
+    "eod_price": 1726.7,
+    "move_pct": 3.675,
+    "success": true,
+    "updated_at": "2026-06-22T18:35:12.765585+00:00"
+  },
+  {
+    "date": "2026-06-17",
+    "symbol": "NYKAA",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 273.65,
+    "price_change_pct": 2.668,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 9414746.0,
+    "high_52w": 285.6,
+    "low_52w": 192.95,
+    "eod_price": 280.95,
+    "move_pct": 2.668,
+    "success": true,
+    "updated_at": "2026-06-22T18:35:13.611718+00:00"
+  },
+  {
+    "date": "2026-06-17",
+    "symbol": "PIDILITIND",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 1575.1,
+    "price_change_pct": 0.197,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 651610.0,
+    "high_52w": 1587.0,
+    "low_52w": 1259.0,
+    "eod_price": 1578.2,
+    "move_pct": 0.197,
+    "success": true,
+    "updated_at": "2026-06-22T18:35:24.468935+00:00"
+  },
+  {
+    "date": "2026-06-17",
+    "symbol": "POLYCAB",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 9600.0,
+    "price_change_pct": 3.401,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 591839.0,
+    "high_52w": 9987.5,
+    "low_52w": 5787.0,
+    "eod_price": 9926.5,
+    "move_pct": 3.401,
+    "success": true,
+    "updated_at": "2026-06-22T18:35:28.626275+00:00"
+  },
+  {
+    "date": "2026-06-17",
+    "symbol": "RBLBANK",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 370.2,
+    "price_change_pct": -0.27,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 2703651.0,
+    "high_52w": 375.15,
+    "low_52w": 215.35,
+    "eod_price": 369.2,
+    "move_pct": -0.27,
+    "success": false,
+    "updated_at": "2026-06-22T18:35:33.596020+00:00"
+  },
+  {
+    "date": "2026-06-17",
+    "symbol": "YESBANK",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 23.9,
+    "price_change_pct": 5.063,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 394351584.0,
+    "high_52w": 25.46,
+    "low_52w": 17.2,
+    "eod_price": 25.11,
+    "move_pct": 5.063,
+    "success": true,
+    "updated_at": "2026-06-22T18:36:08.661099+00:00"
+  }
+]
