@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SignalLedger — Methodology</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#f4f5f7;--surface:#ffffff;--surface2:#f8f9fa;
+      --border:rgba(0,0,0,.08);--border2:rgba(0,0,0,.14);
+      --text:#111827;--muted:#6b7280;--muted2:#9ca3af;
+      --green:#059669;--green-bg:#ecfdf5;--green-b:#6ee7b7;
+      --red:#dc2626;--red-bg:#fef2f2;--red-b:#fca5a5;
+      --amber:#d97706;--amber-bg:#fffbeb;
+      --blue:#2563eb;--blue-bg:#eff6ff;
+      --purple:#7c3aed;--purple-bg:#f5f3ff;
+      --sans:'Inter',sans-serif;--mono:'JetBrains Mono',monospace;
+    }
+    [data-theme="dark"] {
+      --bg:#0f1117;--surface:#1a1d23;--surface2:#21252d;
+      --border:rgba(255,255,255,.07);--border2:rgba(255,255,255,.13);
+      --text:#f1f3f5;--muted:#8b92a0;--muted2:#5a6070;
+      --green:#10b981;--green-bg:#052e1c;--green-b:#065f46;
+      --red:#ef4444;--red-bg:#2d1212;--red-b:#7f1d1d;
+      --amber:#f59e0b;--amber-bg:#2d1f05;
+      --blue:#3b82f6;--blue-bg:#0d1f3c;
+      --purple:#a78bfa;--purple-bg:#1e1040;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:14px;min-height:100vh;transition:background .2s,color .2s}
+
+    /* ── HEADER ── */
+    .hdr{display:flex;align-items:center;justify-content:space-between;padding:13px 28px;background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:30}
+    .hdr-l{display:flex;align-items:center;gap:20px}
+    .logo{display:flex;align-items:center;gap:9px;font:600 15px var(--sans);color:var(--text);letter-spacing:.02em;text-decoration:none}
+    .logo-dot{width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 0 3px var(--green-bg)}
+    .nav{display:flex;gap:4px}
+    .nav-btn{font:500 13px var(--sans);background:none;border:1px solid transparent;color:var(--muted);cursor:pointer;padding:6px 14px;border-radius:8px;transition:all .15s;text-decoration:none;display:inline-block}
+    .nav-btn.active,.nav-btn:hover{background:var(--surface2);border-color:var(--border2);color:var(--text)}
+    .hdr-r{display:flex;align-items:center;gap:14px}
+    .theme-btn{font:500 13px var(--sans);background:none;border:1px solid var(--border2);color:var(--muted);cursor:pointer;padding:5px 11px;border-radius:7px;transition:all .15s}
+    .theme-btn:hover{color:var(--text);border-color:var(--text)}
+
+    /* ── LAYOUT ── */
+    .main{padding:32px 28px;max-width:900px;margin:0 auto}
+    .sec-label{font:600 11px var(--sans);color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+    .sec-label::after{content:"";flex:1;height:1px;background:var(--border2)}
+    .section{margin-bottom:36px}
+
+    /* ── INTRO ── */
+    .intro-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px 28px;margin-bottom:32px}
+    .intro-title{font:600 20px var(--sans);color:var(--text);margin-bottom:8px}
+    .intro-sub{font:400 14px var(--sans);color:var(--muted);line-height:1.7}
+    .intro-sub b{color:var(--text);font-weight:500}
+
+    /* ── PIPELINE ── */
+    .pipeline{display:flex;align-items:center;gap:0;margin:20px 0;flex-wrap:wrap;gap:8px}
+    .pipe-step{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px 16px;font:500 13px var(--sans);color:var(--text);display:flex;align-items:center;gap:8px}
+    .pipe-step .pipe-icon{font-size:16px}
+    .pipe-arrow{color:var(--muted2);font-size:18px;flex-shrink:0}
+
+    /* ── FILTER CARDS ── */
+    .filter-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:8px}
+    @media(max-width:700px){.filter-grid{grid-template-columns:1fr}}
+    .filter-card{background:var(--surface);border:1px solid var(--border);border-left-width:3px;border-radius:10px;padding:16px 18px}
+    .filter-card.long  {border-left-color:var(--green)}
+    .filter-card.short {border-left-color:var(--red)}
+    .filter-card.neutral{border-left-color:var(--amber)}
+    .filter-card.info  {border-left-color:var(--blue)}
+    .fc-name{font:600 13px var(--sans);color:var(--text);margin-bottom:4px;display:flex;align-items:center;gap:8px}
+    .fc-badge{font:600 10px var(--sans);padding:2px 7px;border-radius:4px;letter-spacing:.05em}
+    .badge-long   {background:var(--green-bg);color:var(--green)}
+    .badge-short  {background:var(--red-bg);color:var(--red)}
+    .badge-neutral{background:var(--amber-bg);color:var(--amber)}
+    .fc-desc{font:400 13px var(--sans);color:var(--muted);line-height:1.6;margin-bottom:10px}
+    .fc-rule{font:500 12px var(--mono);color:var(--text);background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:8px 12px;line-height:1.6}
+    .fc-rule span{color:var(--blue)}
+
+    /* ── DATA SOURCES ── */
+    .source-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+    @media(max-width:800px){.source-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:500px){.source-grid{grid-template-columns:1fr}}
+    .source-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px 18px}
+    .sc-name{font:600 13px var(--sans);color:var(--text);margin-bottom:4px}
+    .sc-desc{font:400 12px var(--sans);color:var(--muted);line-height:1.6;margin-bottom:10px}
+    .sc-tag{font:500 11px var(--sans);padding:2px 8px;border-radius:4px;background:var(--blue-bg);color:var(--blue);display:inline-block}
+
+    /* ── ACCOUNTABILITY ── */
+    .steps{display:flex;flex-direction:column;gap:0}
+    .step{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--border)}
+    .step:last-child{border-bottom:none}
+    .step-num{width:28px;height:28px;border-radius:50%;background:var(--surface2);border:1px solid var(--border2);font:600 13px var(--sans);color:var(--muted);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+    .step-body{}
+    .step-title{font:600 14px var(--sans);color:var(--text);margin-bottom:4px}
+    .step-desc{font:400 13px var(--sans);color:var(--muted);line-height:1.6}
+    .step-code{font:500 12px var(--mono);color:var(--text);background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:6px 10px;margin-top:8px;display:inline-block}
+
+    /* ── LIMITATIONS ── */
+    .limit-list{display:flex;flex-direction:column;gap:8px}
+    .limit-item{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 16px;display:flex;gap:12px;align-items:flex-start}
+    .limit-icon{font-size:16px;flex-shrink:0;margin-top:1px}
+    .limit-text{font:400 13px var(--sans);color:var(--muted);line-height:1.6}
+    .limit-text b{color:var(--text);font-weight:500}
+
+    /* ── SCHEDULE ── */
+    .schedule-table{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden}
+    .schedule-table th{font:600 11px var(--sans);color:var(--muted);letter-spacing:.08em;text-transform:uppercase;padding:10px 16px;text-align:left;border-bottom:1px solid var(--border2);background:var(--surface2)}
+    .schedule-table td{padding:11px 16px;border-bottom:1px solid var(--border);font:400 13px var(--sans);color:var(--text)}
+    .schedule-table tr:last-child td{border-bottom:none}
+    .schedule-table tr:hover td{background:var(--surface2)}
+    .time-mono{font-family:var(--mono);font-size:12px;color:var(--muted)}
+
+    .footer{text-align:center;padding:2rem;font:400 12px var(--sans);color:var(--muted2);border-top:1px solid var(--border2);margin-top:16px}
+    .footer a{color:var(--muted);text-decoration:none}.footer a:hover{color:var(--text)}
+  </style>
+</head>
+<body>
+
+<div class="hdr">
+  <div class="hdr-l">
+    <a class="logo" href="index.html"><div class="logo-dot"></div>SignalLedger</a>
+    <nav class="nav">
+      <a class="nav-btn" href="index.html">Watchlist</a>
+      <a class="nav-btn" href="index.html#performance">Performance</a>
+      <a class="nav-btn active" href="methodology.html">Methodology</a>
+    </nav>
+  </div>
+  <div class="hdr-r">
+    <button class="theme-btn" id="theme-btn" onclick="toggleTheme()">Dark</button>
+  </div>
+</div>
+
+<div class="main">
+
+  <div class="intro-card">
+    <div class="intro-title">How SignalLedger works</div>
+    <div class="intro-sub">
+      SignalLedger is a <b>rule-based daily scanner</b> — not predictions, not AI, not gut feel.
+      Every morning it scans NSE F&O stocks and Binance crypto futures using a fixed set of quantitative filters.
+      Every signal is recorded at scan time with the exact entry price. Every result is logged at EOD.
+      <br><br>
+      The git history is the audit trail. <b>No cherry-picking is possible.</b>
+    </div>
+  </div>
+
+  <!-- PIPELINE -->
+  <div class="section">
+    <div class="sec-label">Daily pipeline</div>
+    <div class="pipeline">
+      <div class="pipe-step"><span class="pipe-icon">⏰</span> Morning scan</div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-step"><span class="pipe-icon">🔍</span> Apply filters</div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-step"><span class="pipe-icon">💾</span> Record signals + entry price</div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-step"><span class="pipe-icon">📤</span> Push to GitHub</div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-step"><span class="pipe-icon">📈</span> EOD — fetch closing price</div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-step"><span class="pipe-icon">✅</span> Log result + push</div>
+    </div>
+  </div>
+
+  <!-- CRYPTO FILTERS -->
+  <div class="section">
+    <div class="sec-label">Crypto filters — Binance USDT perpetual futures</div>
+    <div class="filter-grid">
+
+      <div class="filter-card long">
+        <div class="fc-name">Funding Extreme Long <span class="fc-badge badge-long">LONG</span></div>
+        <div class="fc-desc">Funding rate is very negative — market is crowded short. When too many people are short and paying funding, a squeeze becomes likely.</div>
+        <div class="fc-rule">funding_rate ≤ <span>-0.05%</span></div>
+      </div>
+
+      <div class="filter-card short">
+        <div class="fc-name">Funding Extreme Short <span class="fc-badge badge-short">SHORT</span></div>
+        <div class="fc-desc">Funding rate is very positive — market is crowded long. Overleveraged longs paying high funding are vulnerable to liquidation cascades.</div>
+        <div class="fc-rule">funding_rate ≥ <span>+0.10%</span></div>
+      </div>
+
+      <div class="filter-card neutral">
+        <div class="fc-name">OI Surge <span class="fc-badge badge-neutral">NEUTRAL</span></div>
+        <div class="fc-desc">Open interest up significantly in 24h — new money is entering the market. Combined with price direction, signals conviction.</div>
+        <div class="fc-rule">OI change (24h) ≥ <span>15%</span></div>
+      </div>
+
+      <div class="filter-card neutral">
+        <div class="fc-name">Volume Spike <span class="fc-badge badge-neutral">NEUTRAL</span></div>
+        <div class="fc-desc">24h trading volume is abnormally high vs the 7-day average. Unusual volume often precedes or accompanies significant moves.</div>
+        <div class="fc-rule">volume_24h ≥ <span>1.5×</span> avg_7d</div>
+      </div>
+
+      <div class="filter-card long">
+        <div class="fc-name">Momentum + OI Confirm <span class="fc-badge badge-long">LONG</span></div>
+        <div class="fc-desc">Price is up AND open interest is rising — trend move with new money behind it. Not just short covering.</div>
+        <div class="fc-rule">price_change ≥ <span>+2%</span> AND OI_change ≥ <span>8%</span></div>
+      </div>
+
+      <div class="filter-card short">
+        <div class="fc-name">Dump + OI Confirm <span class="fc-badge badge-short">SHORT</span></div>
+        <div class="fc-desc">Price is down AND open interest is rising — bearish trend with new short positions being added. Not just long liquidation.</div>
+        <div class="fc-rule">price_change ≤ <span>-2%</span> AND OI_change ≥ <span>8%</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- STOCK FILTERS -->
+  <div class="section">
+    <div class="sec-label">Stock filters — NSE F&O universe (~216 stocks) + indices</div>
+    <div class="filter-grid">
+
+      <div class="filter-card long">
+        <div class="fc-name">OI Buildup Bullish <span class="fc-badge badge-long">LONG</span></div>
+        <div class="fc-desc">Futures OI is increasing AND price is rising — long positions being added with conviction. Classic bullish buildup.</div>
+        <div class="fc-rule">OI_change ≥ <span>15%</span> AND price_change ≥ <span>+1%</span></div>
+      </div>
+
+      <div class="filter-card short">
+        <div class="fc-name">OI Buildup Bearish <span class="fc-badge badge-short">SHORT</span></div>
+        <div class="fc-desc">Futures OI is increasing AND price is falling — short positions being added. Sellers are entering with conviction.</div>
+        <div class="fc-rule">OI_change ≥ <span>15%</span> AND price_change ≤ <span>-1%</span></div>
+      </div>
+
+      <div class="filter-card long">
+        <div class="fc-name">Near 52-Week High <span class="fc-badge badge-long">LONG</span></div>
+        <div class="fc-desc">Price is within 2% of its 52-week high — breakout watch. Stocks near yearly highs are often in strong uptrends and may break out to new highs.</div>
+        <div class="fc-rule">((high_52w - price) / high_52w) × 100 ≤ <span>2%</span></div>
+      </div>
+
+      <div class="filter-card short">
+        <div class="fc-name">Near 52-Week Low <span class="fc-badge badge-short">SHORT</span></div>
+        <div class="fc-desc">Price is within 2% of its 52-week low — breakdown watch. Stocks near yearly lows may be in downtrends and vulnerable to further selling.</div>
+        <div class="fc-rule">((price - low_52w) / low_52w) × 100 ≤ <span>2%</span></div>
+      </div>
+
+      <div class="filter-card neutral">
+        <div class="fc-name">Volume Surge <span class="fc-badge badge-neutral">NEUTRAL</span></div>
+        <div class="fc-desc">Today's volume is significantly above the 20-day average. Unusual volume flags institutional activity or event-driven moves.</div>
+        <div class="fc-rule">volume_today ≥ <span>2×</span> avg_20d</div>
+      </div>
+
+      <div class="filter-card long">
+        <div class="fc-name">PCR Extreme Bullish <span class="fc-badge badge-long">LONG</span></div>
+        <div class="fc-desc">Put-Call Ratio above 1.5 on index option chain — excessive put buying signals fear/oversold conditions. Contrarian long signal.</div>
+        <div class="fc-rule">PCR ≥ <span>1.5</span> (indices only)</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- HOW BIAS IS DETERMINED -->
+  <div class="section">
+    <div class="sec-label">How bias is determined</div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:20px 22px">
+      <div style="font:400 13px var(--sans);color:var(--muted);line-height:1.8;margin-bottom:16px">
+        Each signal can trigger multiple filters. Bias is determined by counting long vs short signals:
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px">
+        <div style="background:var(--green-bg);border:1px solid var(--green-b);border-radius:8px;padding:12px 16px">
+          <div style="font:600 12px var(--sans);color:var(--green);margin-bottom:6px">LONG</div>
+          <div style="font:400 12px var(--sans);color:var(--muted);line-height:1.6">More long-biased filters triggered than short</div>
+        </div>
+        <div style="background:var(--red-bg);border:1px solid var(--red-b);border-radius:8px;padding:12px 16px">
+          <div style="font:600 12px var(--sans);color:var(--red);margin-bottom:6px">SHORT</div>
+          <div style="font:400 12px var(--sans);color:var(--muted);line-height:1.6">More short-biased filters triggered than long</div>
+        </div>
+        <div style="background:var(--amber-bg);border:1px solid var(--border2);border-radius:8px;padding:12px 16px">
+          <div style="font:600 12px var(--sans);color:var(--amber);margin-bottom:6px">NEUTRAL</div>
+          <div style="font:400 12px var(--sans);color:var(--muted);line-height:1.6">Equal long/short signals, or purely volume/OI with no direction</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUCCESS DEFINITION -->
+  <div class="section">
+    <div class="sec-label">How success is measured</div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:20px 22px">
+      <div style="font:400 13px var(--sans);color:var(--muted);line-height:1.8;margin-bottom:16px">
+        EOD result is fetched at market close. Success is purely directional — did the price move in the biased direction?
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <div style="display:flex;justify-content:space-between;padding:8px 12px;background:var(--surface2);border-radius:6px">
+          <span style="font:400 13px var(--sans);color:var(--muted)">Long signal</span>
+          <span style="font:500 12px var(--mono);color:var(--green)">success = EOD price > entry price</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;padding:8px 12px;background:var(--surface2);border-radius:6px">
+          <span style="font:400 13px var(--sans);color:var(--muted)">Short signal</span>
+          <span style="font:500 12px var(--mono);color:var(--red)">success = EOD price &lt; entry price</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;padding:8px 12px;background:var(--surface2);border-radius:6px">
+          <span style="font:400 13px var(--sans);color:var(--muted)">Neutral signal</span>
+          <span style="font:500 12px var(--mono);color:var(--amber)">success = abs(move) > 1%</span>
+        </div>
+      </div>
+      <div style="font:400 12px var(--sans);color:var(--muted2);margin-top:12px;line-height:1.6">
+        Entry price = price at morning scan time. EOD price = closing price fetched after market close. No slippage, fees, or position sizing assumed.
+      </div>
+    </div>
+  </div>
+
+  <!-- DATA SOURCES -->
+  <div class="section">
+    <div class="sec-label">Data sources</div>
+    <div class="source-grid">
+      <div class="source-card">
+        <div class="sc-name">Binance Futures API</div>
+        <div class="sc-desc">Funding rates, open interest history, 24h ticker, kline data. Public endpoints — no auth required.</div>
+        <span class="sc-tag">Crypto</span>
+      </div>
+      <div class="source-card">
+        <div class="sc-name">Kite Connect (Zerodha)</div>
+        <div class="sc-desc">NSE equity quotes, NFO instruments list, historical OHLCV data for 52-week levels and volume averages.</div>
+        <span class="sc-tag">Stocks</span>
+      </div>
+      <div class="source-card">
+        <div class="sc-name">GitHub (raw)</div>
+        <div class="sc-desc">All signal JSON files are stored in this repo. Immutable after push — git history is the audit trail.</div>
+        <span class="sc-tag">Storage</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCAN SCHEDULE -->
+  <div class="section">
+    <div class="sec-label">Scan schedule (IST)</div>
+    <table class="schedule-table">
+      <thead><tr><th>Time (IST)</th><th>Time (UTC)</th><th>Job</th><th>Days</th></tr></thead>
+      <tbody>
+        <tr><td class="time-mono">5:30 AM</td><td class="time-mono">00:00</td><td>Crypto morning scan</td><td>Daily</td></tr>
+        <tr><td class="time-mono">6:00 AM</td><td class="time-mono">00:30</td><td>Stock morning scan (F&O + indices)</td><td>Mon–Fri</td></tr>
+        <tr><td class="time-mono">3:45 PM</td><td class="time-mono">10:15</td><td>Stock EOD update</td><td>Mon–Fri</td></tr>
+        <tr><td class="time-mono">11:30 PM</td><td class="time-mono">18:00</td><td>Crypto EOD update</td><td>Daily</td></tr>
+        <tr><td class="time-mono">8:00 AM Sun</td><td class="time-mono">02:30 Sun</td><td>Weekly filter performance aggregation</td><td>Weekly</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ACCOUNTABILITY -->
+  <div class="section">
+    <div class="sec-label">Accountability system</div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:4px 22px">
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Signal recorded at scan time</div>
+            <div class="step-desc">Every signal is saved to a dated JSON file with the exact price at time of scan. This cannot be changed retroactively — git history proves it.</div>
+            <div class="step-code">data/stocks/2026-06-22.json → price_at_scan: 391.95</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Pushed to GitHub immediately</div>
+            <div class="step-desc">The cron job pushes to GitHub right after every scan. The commit timestamp proves when the signal was recorded — before the market moves.</div>
+            <div class="step-code">git commit -m "Morning stock scan 2026-06-22" → timestamped</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">EOD result patched automatically</div>
+            <div class="step-desc">After market close, the same file is updated with EOD price, move %, and success flag. No manual input — fully automated.</div>
+            <div class="step-code">eod_price: 375.30 → move_pct: -4.24% → success: false</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Raw data is public</div>
+            <div class="step-desc">Every JSON file is readable by anyone. No aggregation, no summaries — just the raw signal data. Anyone can verify the numbers independently.</div>
+            <div class="step-code">github.com/Vadiraj1998/SignalLedger/tree/main/data</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LIMITATIONS -->
+  <div class="section">
+    <div class="sec-label">Known limitations</div>
+    <div class="limit-list">
+      <div class="limit-item">
+        <div class="limit-icon">⚠️</div>
+        <div class="limit-text"><b>No stop-loss or target.</b> Success is purely directional — any positive move on a long is a "win" even if it's 0.01%. Real trading requires position sizing and risk management.</div>
+      </div>
+      <div class="limit-item">
+        <div class="limit-icon">⚠️</div>
+        <div class="limit-text"><b>Entry price is approximate.</b> The scanner runs at 5:30–6:00 AM IST. The actual tradeable price at market open may differ, especially for stocks after overnight news.</div>
+      </div>
+      <div class="limit-item">
+        <div class="limit-icon">⚠️</div>
+        <div class="limit-text"><b>OI data for stocks is limited.</b> Kite's quote API doesn't give reliable historical OI, so OI buildup filters only apply to live scans — not backfill data.</div>
+      </div>
+      <div class="limit-item">
+        <div class="limit-icon">⚠️</div>
+        <div class="limit-text"><b>No slippage or fees.</b> Win rate does not account for brokerage, STT, impact cost, or execution slippage. Actual trading returns will be lower.</div>
+      </div>
+      <div class="limit-item">
+        <div class="limit-icon">⚠️</div>
+        <div class="limit-text"><b>Filters are static.</b> Thresholds are fixed values in config/filters.json — they are not adaptive to market regimes. A 2% threshold in a volatile week is different from a calm week.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    SignalLedger is a personal research tool, not financial advice.<br>
+    <a href="https://github.com/Vadiraj1998/SignalLedger" target="_blank">github.com/Vadiraj1998/SignalLedger</a>
+    · Built by <a href="https://vadiraj.dev" target="_blank">Vadiraj</a>
+  </div>
+
+</div>
+
+<script>
+function toggleTheme(){
+  const dark=document.documentElement.getAttribute("data-theme")==="dark";
+  document.documentElement.setAttribute("data-theme",dark?"light":"dark");
+  document.getElementById("theme-btn").textContent=dark?"Dark":"Light";
+  localStorage.setItem("sl-theme",dark?"light":"dark");
+}
+(function(){
+  const saved=localStorage.getItem("sl-theme");
+  const theme=saved||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");
+  document.documentElement.setAttribute("data-theme",theme);
+  document.getElementById("theme-btn").textContent=theme==="dark"?"Light":"Dark";
+})();
+</script>
+</body>
+</html>
