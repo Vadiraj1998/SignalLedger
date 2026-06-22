@@ -1,0 +1,59 @@
+[
+  {
+    "date": "2026-05-31",
+    "symbol": "BNBUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 719.01,
+    "price_change_pct_24h": -1.127,
+    "funding_rate": 0.0,
+    "oi_change_pct_24h": -5.94,
+    "volume_usdt_24h": 1667832190.3321,
+    "volume_avg_7d": 298959012.6305714,
+    "eod_price": 710.91,
+    "move_pct": -1.127,
+    "success": true,
+    "updated_at": "2026-06-22T18:47:09.091560+00:00"
+  },
+  {
+    "date": "2026-05-31",
+    "symbol": "ATOMUSDT",
+    "market": "crypto",
+    "filters": [
+      "DUMP_OI_CONFIRM"
+    ],
+    "bias": "short",
+    "price_at_scan": 2.017,
+    "price_change_pct_24h": -3.074,
+    "funding_rate": -0.019514,
+    "oi_change_pct_24h": 9.67,
+    "volume_usdt_24h": 20040284.65289,
+    "volume_avg_7d": 28003241.962322857,
+    "eod_price": 1.955,
+    "move_pct": -3.074,
+    "success": true,
+    "updated_at": "2026-06-22T18:47:18.191563+00:00"
+  },
+  {
+    "date": "2026-05-31",
+    "symbol": "INJUSDT",
+    "market": "crypto",
+    "filters": [
+      "FUNDING_EXTREME_LONG"
+    ],
+    "bias": "long",
+    "price_at_scan": 6.593,
+    "price_change_pct_24h": -0.865,
+    "funding_rate": -0.022406,
+    "oi_change_pct_24h": -2.75,
+    "volume_usdt_24h": 83903155.7661,
+    "volume_avg_7d": 119278209.23572858,
+    "eod_price": 6.536,
+    "move_pct": -0.865,
+    "success": false,
+    "updated_at": "2026-06-22T18:47:23.221288+00:00"
+  }
+]

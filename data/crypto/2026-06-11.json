@@ -1,0 +1,40 @@
+[
+  {
+    "date": "2026-06-11",
+    "symbol": "ATOMUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 1.762,
+    "price_change_pct_24h": 15.437,
+    "funding_rate": -0.014642,
+    "oi_change_pct_24h": 3.15,
+    "volume_usdt_24h": 42138888.10735,
+    "volume_avg_7d": 20406997.84221143,
+    "eod_price": 2.034,
+    "move_pct": 15.437,
+    "success": true,
+    "updated_at": "2026-06-22T18:51:13.033447+00:00"
+  },
+  {
+    "date": "2026-06-11",
+    "symbol": "ARBUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.07747,
+    "price_change_pct_24h": 7.809,
+    "funding_rate": -0.012955000000000001,
+    "oi_change_pct_24h": 0.74,
+    "volume_usdt_24h": 70690774.04782,
+    "volume_avg_7d": 44899862.35341,
+    "eod_price": 0.08352,
+    "move_pct": 7.809,
+    "success": true,
+    "updated_at": "2026-06-22T18:51:19.674336+00:00"
+  }
+]

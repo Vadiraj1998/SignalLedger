@@ -1,0 +1,78 @@
+[
+  {
+    "date": "2026-06-01",
+    "symbol": "BTCUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 73653.2,
+    "price_change_pct_24h": -3.071,
+    "funding_rate": 0.005703,
+    "oi_change_pct_24h": 0.35,
+    "volume_usdt_24h": 15378872728.3725,
+    "volume_avg_7d": 9177827470.914,
+    "eod_price": 71391.5,
+    "move_pct": -3.071,
+    "success": true,
+    "updated_at": "2026-06-22T18:47:28.739943+00:00"
+  },
+  {
+    "date": "2026-06-01",
+    "symbol": "BNBUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 710.91,
+    "price_change_pct_24h": -2.456,
+    "funding_rate": 0.0,
+    "oi_change_pct_24h": -3.85,
+    "volume_usdt_24h": 1909357683.4671,
+    "volume_avg_7d": 479231744.7027143,
+    "eod_price": 693.45,
+    "move_pct": -2.456,
+    "success": true,
+    "updated_at": "2026-06-22T18:47:30.401225+00:00"
+  },
+  {
+    "date": "2026-06-01",
+    "symbol": "DOTUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 1.188,
+    "price_change_pct_24h": -2.525,
+    "funding_rate": -0.004084,
+    "oi_change_pct_24h": 3.07,
+    "volume_usdt_24h": 94709512.7507,
+    "volume_avg_7d": 60061205.91294285,
+    "eod_price": 1.158,
+    "move_pct": -2.525,
+    "success": true,
+    "updated_at": "2026-06-22T18:47:36.137863+00:00"
+  },
+  {
+    "date": "2026-06-01",
+    "symbol": "JUPUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.1911,
+    "price_change_pct_24h": 5.756,
+    "funding_rate": -0.008763,
+    "oi_change_pct_24h": -2.35,
+    "volume_usdt_24h": 19636044.5072,
+    "volume_avg_7d": 10922377.185242858,
+    "eod_price": 0.2021,
+    "move_pct": 5.756,
+    "success": true,
+    "updated_at": "2026-06-22T18:47:41.924157+00:00"
+  }
+]

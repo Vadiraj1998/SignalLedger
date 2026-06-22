@@ -1,0 +1,59 @@
+[
+  {
+    "date": "2026-05-25",
+    "symbol": "NEARUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 2.393,
+    "price_change_pct_24h": 15.754,
+    "funding_rate": 0.007598,
+    "oi_change_pct_24h": 3.27,
+    "volume_usdt_24h": 797980348.026,
+    "volume_avg_7d": 416032446.74214286,
+    "eod_price": 2.77,
+    "move_pct": 15.754,
+    "success": true,
+    "updated_at": "2026-06-22T18:45:08.778186+00:00"
+  },
+  {
+    "date": "2026-05-25",
+    "symbol": "INJUSDT",
+    "market": "crypto",
+    "filters": [
+      "MOMENTUM_OI_CONFIRM"
+    ],
+    "bias": "long",
+    "price_at_scan": 5.13,
+    "price_change_pct_24h": 10.487,
+    "funding_rate": -0.00789,
+    "oi_change_pct_24h": 8.1,
+    "volume_usdt_24h": 124373917.2889,
+    "volume_avg_7d": 96708971.07284285,
+    "eod_price": 5.668,
+    "move_pct": 10.487,
+    "success": true,
+    "updated_at": "2026-06-22T18:45:14.670628+00:00"
+  },
+  {
+    "date": "2026-05-25",
+    "symbol": "SEIUSDT",
+    "market": "crypto",
+    "filters": [
+      "FUNDING_EXTREME_LONG"
+    ],
+    "bias": "long",
+    "price_at_scan": 0.0608,
+    "price_change_pct_24h": 1.678,
+    "funding_rate": -0.020776,
+    "oi_change_pct_24h": 3.14,
+    "volume_usdt_24h": 13415790.77251,
+    "volume_avg_7d": 16282188.60815,
+    "eod_price": 0.06182,
+    "move_pct": 1.678,
+    "success": true,
+    "updated_at": "2026-06-22T18:45:18.865221+00:00"
+  }
+]

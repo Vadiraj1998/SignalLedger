@@ -1,0 +1,59 @@
+[
+  {
+    "date": "2026-06-08",
+    "symbol": "SOLUSDT",
+    "market": "crypto",
+    "filters": [
+      "FUNDING_EXTREME_LONG"
+    ],
+    "bias": "long",
+    "price_at_scan": 66.46,
+    "price_change_pct_24h": 0.497,
+    "funding_rate": -0.025513,
+    "oi_change_pct_24h": 1.49,
+    "volume_usdt_24h": 1548384274.8833,
+    "volume_avg_7d": 2275909383.9420857,
+    "eod_price": 66.79,
+    "move_pct": 0.497,
+    "success": true,
+    "updated_at": "2026-06-22T18:50:00.452762+00:00"
+  },
+  {
+    "date": "2026-06-08",
+    "symbol": "OPUSDT",
+    "market": "crypto",
+    "filters": [
+      "FUNDING_EXTREME_LONG"
+    ],
+    "bias": "long",
+    "price_at_scan": 0.0974,
+    "price_change_pct_24h": -1.54,
+    "funding_rate": -0.031075,
+    "oi_change_pct_24h": 0.19,
+    "volume_usdt_24h": 28804395.71088,
+    "volume_avg_7d": 48831173.66397,
+    "eod_price": 0.0959,
+    "move_pct": -1.54,
+    "success": false,
+    "updated_at": "2026-06-22T18:50:16.497461+00:00"
+  },
+  {
+    "date": "2026-06-08",
+    "symbol": "SEIUSDT",
+    "market": "crypto",
+    "filters": [
+      "FUNDING_EXTREME_LONG"
+    ],
+    "bias": "long",
+    "price_at_scan": 0.04956,
+    "price_change_pct_24h": -0.666,
+    "funding_rate": -0.033481,
+    "oi_change_pct_24h": 0.62,
+    "volume_usdt_24h": 14947998.11383,
+    "volume_avg_7d": 37513235.25581,
+    "eod_price": 0.04923,
+    "move_pct": -0.666,
+    "success": false,
+    "updated_at": "2026-06-22T18:50:18.153082+00:00"
+  }
+]

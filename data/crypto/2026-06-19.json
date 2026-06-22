@@ -1,0 +1,42 @@
+[
+  {
+    "date": "2026-06-19",
+    "symbol": "AVAXUSDT",
+    "market": "crypto",
+    "filters": [
+      "OI_SURGE",
+      "VOLUME_SPIKE",
+      "DUMP_OI_CONFIRM"
+    ],
+    "bias": "short",
+    "price_at_scan": 6.313,
+    "price_change_pct_24h": -6.7,
+    "funding_rate": -0.013208999999999999,
+    "oi_change_pct_24h": 28.59,
+    "volume_usdt_24h": 201886072.404,
+    "volume_avg_7d": 83929194.12571429,
+    "eod_price": 5.89,
+    "move_pct": -6.7,
+    "success": true,
+    "updated_at": "2026-06-22T18:53:58.169507+00:00"
+  },
+  {
+    "date": "2026-06-19",
+    "symbol": "ATOMUSDT",
+    "market": "crypto",
+    "filters": [
+      "FUNDING_EXTREME_LONG"
+    ],
+    "bias": "long",
+    "price_at_scan": 1.81,
+    "price_change_pct_24h": -0.055,
+    "funding_rate": -0.021351000000000002,
+    "oi_change_pct_24h": -1.45,
+    "volume_usdt_24h": 9402038.55606,
+    "volume_avg_7d": 19838431.394532856,
+    "eod_price": 1.809,
+    "move_pct": -0.055,
+    "success": false,
+    "updated_at": "2026-06-22T18:54:03.124570+00:00"
+  }
+]

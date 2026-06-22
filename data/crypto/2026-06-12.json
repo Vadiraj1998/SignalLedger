@@ -1,0 +1,40 @@
+[
+  {
+    "date": "2026-06-12",
+    "symbol": "DOGEUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.08603,
+    "price_change_pct_24h": -0.105,
+    "funding_rate": 0.0045639999999999995,
+    "oi_change_pct_24h": 14.06,
+    "volume_usdt_24h": 786798304.6305,
+    "volume_avg_7d": 516073520.3859929,
+    "eod_price": 0.08594,
+    "move_pct": -0.105,
+    "success": false,
+    "updated_at": "2026-06-22T18:51:27.680396+00:00"
+  },
+  {
+    "date": "2026-06-12",
+    "symbol": "APTUSDT",
+    "market": "crypto",
+    "filters": [
+      "FUNDING_EXTREME_LONG"
+    ],
+    "bias": "long",
+    "price_at_scan": 0.6459,
+    "price_change_pct_24h": -0.588,
+    "funding_rate": -0.025344000000000002,
+    "oi_change_pct_24h": 0.54,
+    "volume_usdt_24h": 32492605.93934,
+    "volume_avg_7d": 40759206.37422571,
+    "eod_price": 0.6421,
+    "move_pct": -0.588,
+    "success": false,
+    "updated_at": "2026-06-22T18:51:42.812156+00:00"
+  }
+]

@@ -1,0 +1,59 @@
+[
+  {
+    "date": "2026-06-17",
+    "symbol": "ADAUSDT",
+    "market": "crypto",
+    "filters": [
+      "FUNDING_EXTREME_LONG"
+    ],
+    "bias": "long",
+    "price_at_scan": 0.1722,
+    "price_change_pct_24h": -3.194,
+    "funding_rate": -0.022646,
+    "oi_change_pct_24h": -7.75,
+    "volume_usdt_24h": 216635412.5567,
+    "volume_avg_7d": 187616067.57167143,
+    "eod_price": 0.1667,
+    "move_pct": -3.194,
+    "success": false,
+    "updated_at": "2026-06-22T18:53:15.007999+00:00"
+  },
+  {
+    "date": "2026-06-17",
+    "symbol": "WIFUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.17,
+    "price_change_pct_24h": -1.647,
+    "funding_rate": 0.004407,
+    "oi_change_pct_24h": -0.52,
+    "volume_usdt_24h": 36290823.89938,
+    "volume_avg_7d": 18375816.264631428,
+    "eod_price": 0.1672,
+    "move_pct": -1.647,
+    "success": true,
+    "updated_at": "2026-06-22T18:53:18.315571+00:00"
+  },
+  {
+    "date": "2026-06-17",
+    "symbol": "UNIUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 3.29,
+    "price_change_pct_24h": -2.006,
+    "funding_rate": 0.01,
+    "oi_change_pct_24h": -3.95,
+    "volume_usdt_24h": 499977744.51,
+    "volume_avg_7d": 43806727.955142856,
+    "eod_price": 3.224,
+    "move_pct": -2.006,
+    "success": true,
+    "updated_at": "2026-06-22T18:53:21.603390+00:00"
+  }
+]

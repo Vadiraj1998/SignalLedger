@@ -1,0 +1,40 @@
+[
+  {
+    "date": "2026-06-06",
+    "symbol": "OPUSDT",
+    "market": "crypto",
+    "filters": [
+      "FUNDING_EXTREME_LONG"
+    ],
+    "bias": "long",
+    "price_at_scan": 0.0978,
+    "price_change_pct_24h": -4.294,
+    "funding_rate": -0.024603,
+    "oi_change_pct_24h": 5.16,
+    "volume_usdt_24h": 33568329.93928,
+    "volume_avg_7d": 39324712.165858574,
+    "eod_price": 0.0936,
+    "move_pct": -4.294,
+    "success": false,
+    "updated_at": "2026-06-22T18:49:33.836567+00:00"
+  },
+  {
+    "date": "2026-06-06",
+    "symbol": "SEIUSDT",
+    "market": "crypto",
+    "filters": [
+      "FUNDING_EXTREME_LONG"
+    ],
+    "bias": "long",
+    "price_at_scan": 0.047,
+    "price_change_pct_24h": -0.34,
+    "funding_rate": -0.06906,
+    "oi_change_pct_24h": -0.27,
+    "volume_usdt_24h": 19228523.62674,
+    "volume_avg_7d": 42298488.19012571,
+    "eod_price": 0.04684,
+    "move_pct": -0.34,
+    "success": false,
+    "updated_at": "2026-06-22T18:49:35.487395+00:00"
+  }
+]

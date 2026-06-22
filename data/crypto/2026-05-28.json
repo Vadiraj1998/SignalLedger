@@ -1,0 +1,79 @@
+[
+  {
+    "date": "2026-05-28",
+    "symbol": "XRPUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 1.3068,
+    "price_change_pct_24h": 0.597,
+    "funding_rate": 0.000137,
+    "oi_change_pct_24h": -1.79,
+    "volume_usdt_24h": 817226158.51098,
+    "volume_avg_7d": 525695946.0132986,
+    "eod_price": 1.3146,
+    "move_pct": 0.597,
+    "success": false,
+    "updated_at": "2026-06-22T18:46:06.123561+00:00"
+  },
+  {
+    "date": "2026-05-28",
+    "symbol": "WIFUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.1864,
+    "price_change_pct_24h": -1.18,
+    "funding_rate": 0.004883,
+    "oi_change_pct_24h": 1.66,
+    "volume_usdt_24h": 31283230.64945,
+    "volume_avg_7d": 20387967.45683857,
+    "eod_price": 0.1842,
+    "move_pct": -1.18,
+    "success": true,
+    "updated_at": "2026-06-22T18:46:11.088556+00:00"
+  },
+  {
+    "date": "2026-05-28",
+    "symbol": "MANAUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.0837,
+    "price_change_pct_24h": 0.119,
+    "funding_rate": 0.00065,
+    "oi_change_pct_24h": 2.58,
+    "volume_usdt_24h": 5146996.5454,
+    "volume_avg_7d": 3307031.0545857144,
+    "eod_price": 0.0838,
+    "move_pct": 0.119,
+    "success": false,
+    "updated_at": "2026-06-22T18:46:17.705384+00:00"
+  },
+  {
+    "date": "2026-05-28",
+    "symbol": "SEIUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE",
+      "MOMENTUM_OI_CONFIRM"
+    ],
+    "bias": "long",
+    "price_at_scan": 0.06608,
+    "price_change_pct_24h": 2.663,
+    "funding_rate": -0.0070599999999999994,
+    "oi_change_pct_24h": 11.01,
+    "volume_usdt_24h": 69354260.36855,
+    "volume_avg_7d": 19871957.980002854,
+    "eod_price": 0.06784,
+    "move_pct": 2.663,
+    "success": true,
+    "updated_at": "2026-06-22T18:46:22.627879+00:00"
+  }
+]

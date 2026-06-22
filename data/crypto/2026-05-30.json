@@ -1,0 +1,43 @@
+[
+  {
+    "date": "2026-05-30",
+    "symbol": "BNBUSDT",
+    "market": "crypto",
+    "filters": [
+      "OI_SURGE",
+      "VOLUME_SPIKE",
+      "MOMENTUM_OI_CONFIRM"
+    ],
+    "bias": "long",
+    "price_at_scan": 643.51,
+    "price_change_pct_24h": 11.733,
+    "funding_rate": 0.0037920000000000002,
+    "oi_change_pct_24h": 27.86,
+    "volume_usdt_24h": 1593240732.5135,
+    "volume_avg_7d": 307615941.2197857,
+    "eod_price": 719.01,
+    "move_pct": 11.733,
+    "success": true,
+    "updated_at": "2026-06-22T18:46:47.530994+00:00"
+  },
+  {
+    "date": "2026-05-30",
+    "symbol": "INJUSDT",
+    "market": "crypto",
+    "filters": [
+      "FUNDING_EXTREME_LONG",
+      "VOLUME_SPIKE"
+    ],
+    "bias": "long",
+    "price_at_scan": 6.427,
+    "price_change_pct_24h": 2.567,
+    "funding_rate": -0.033483,
+    "oi_change_pct_24h": 2.43,
+    "volume_usdt_24h": 165434170.8648,
+    "volume_avg_7d": 105759503.01697144,
+    "eod_price": 6.592,
+    "move_pct": 2.567,
+    "success": true,
+    "updated_at": "2026-06-22T18:47:01.666358+00:00"
+  }
+]

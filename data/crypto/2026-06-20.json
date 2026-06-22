@@ -1,0 +1,83 @@
+[
+  {
+    "date": "2026-06-20",
+    "symbol": "AVAXUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 5.89,
+    "price_change_pct_24h": 5.84,
+    "funding_rate": -0.018652,
+    "oi_change_pct_24h": -9.0,
+    "volume_usdt_24h": 141631882.385,
+    "volume_avg_7d": 87718358.43571427,
+    "eod_price": 6.234,
+    "move_pct": 5.84,
+    "success": true,
+    "updated_at": "2026-06-22T18:54:19.382722+00:00"
+  },
+  {
+    "date": "2026-06-20",
+    "symbol": "JUPUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE",
+      "MOMENTUM_OI_CONFIRM"
+    ],
+    "bias": "long",
+    "price_at_scan": 0.1908,
+    "price_change_pct_24h": 10.273,
+    "funding_rate": -0.000633,
+    "oi_change_pct_24h": 12.58,
+    "volume_usdt_24h": 24374886.5198,
+    "volume_avg_7d": 13728888.938457144,
+    "eod_price": 0.2104,
+    "move_pct": 10.273,
+    "success": true,
+    "updated_at": "2026-06-22T18:54:26.855915+00:00"
+  },
+  {
+    "date": "2026-06-20",
+    "symbol": "SANDUSDT",
+    "market": "crypto",
+    "filters": [
+      "OI_SURGE",
+      "VOLUME_SPIKE",
+      "MOMENTUM_OI_CONFIRM"
+    ],
+    "bias": "long",
+    "price_at_scan": 0.05096,
+    "price_change_pct_24h": 17.896,
+    "funding_rate": 0.0025859999999999998,
+    "oi_change_pct_24h": 36.28,
+    "volume_usdt_24h": 73373458.22103,
+    "volume_avg_7d": 5784786.139097142,
+    "eod_price": 0.06008,
+    "move_pct": 17.896,
+    "success": true,
+    "updated_at": "2026-06-22T18:54:27.690045+00:00"
+  },
+  {
+    "date": "2026-06-20",
+    "symbol": "MANAUSDT",
+    "market": "crypto",
+    "filters": [
+      "OI_SURGE",
+      "VOLUME_SPIKE",
+      "MOMENTUM_OI_CONFIRM"
+    ],
+    "bias": "long",
+    "price_at_scan": 0.0667,
+    "price_change_pct_24h": 16.342,
+    "funding_rate": 0.01,
+    "oi_change_pct_24h": 24.99,
+    "volume_usdt_24h": 24251098.0942,
+    "volume_avg_7d": 3039733.941485714,
+    "eod_price": 0.0776,
+    "move_pct": 16.342,
+    "success": true,
+    "updated_at": "2026-06-22T18:54:28.507023+00:00"
+  }
+]

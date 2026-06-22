@@ -1,0 +1,21 @@
+[
+  {
+    "date": "2026-05-24",
+    "symbol": "NEARUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 2.45,
+    "price_change_pct_24h": -2.286,
+    "funding_rate": 0.008222,
+    "oi_change_pct_24h": 5.97,
+    "volume_usdt_24h": 666317008.149,
+    "volume_avg_7d": 303765025.41714287,
+    "eod_price": 2.394,
+    "move_pct": -2.286,
+    "success": true,
+    "updated_at": "2026-06-22T18:44:46.781512+00:00"
+  }
+]
