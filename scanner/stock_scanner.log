@@ -1,0 +1,96 @@
+2026-06-22 14:50:04,590 [INFO] Scanning indices...
+2026-06-22 14:50:04,591 [INFO]   Fetching option chain: NIFTY
+2026-06-22 14:50:04,677 [ERROR] Option chain fetch failed for NIFTY: 404 Client Error: Not Found for url: https://www.nseindia.com/api/option-chain-indices?symbol=NIFTY
+2026-06-22 14:50:05,677 [INFO]   Fetching option chain: BANKNIFTY
+2026-06-22 14:50:05,705 [ERROR] Option chain fetch failed for BANKNIFTY: 404 Client Error: Not Found for url: https://www.nseindia.com/api/option-chain-indices?symbol=BANKNIFTY
+2026-06-22 14:50:06,706 [INFO]   Fetching option chain: FINNIFTY
+2026-06-22 14:50:06,761 [ERROR] Option chain fetch failed for FINNIFTY: 404 Client Error: Not Found for url: https://www.nseindia.com/api/option-chain-indices?symbol=FINNIFTY
+2026-06-22 14:50:07,761 [INFO] Fetching F&O universe...
+2026-06-22 14:50:07,832 [ERROR] F&O universe fetch failed: 404 Client Error: Not Found for url: https://www.nseindia.com/api/equity-stockIndices?index=Securities%20in%20F%26O
+2026-06-22 14:50:08,832 [INFO]   Got 0 stocks
+2026-06-22 14:50:08,833 [INFO] Saved 0 stock signals to /home/ubuntu/SignalLedger/data/stocks/2026-06-22.json
+2026-06-22 15:02:02,685 [INFO] Scanning indices...
+2026-06-22 15:02:02,686 [INFO]   Fetching option chain: NIFTY
+2026-06-22 15:02:02,763 [ERROR] Option chain fetch failed for NIFTY: 404 Client Error: Not Found for url: https://www.nseindia.com/api/option-chain-indices?symbol=NIFTY
+2026-06-22 15:02:03,763 [INFO]   Fetching option chain: BANKNIFTY
+2026-06-22 15:02:03,788 [ERROR] Option chain fetch failed for BANKNIFTY: 404 Client Error: Not Found for url: https://www.nseindia.com/api/option-chain-indices?symbol=BANKNIFTY
+2026-06-22 15:02:04,789 [INFO]   Fetching option chain: FINNIFTY
+2026-06-22 15:02:04,815 [ERROR] Option chain fetch failed for FINNIFTY: 404 Client Error: Not Found for url: https://www.nseindia.com/api/option-chain-indices?symbol=FINNIFTY
+2026-06-22 15:02:05,815 [INFO] Fetching F&O universe...
+2026-06-22 15:02:05,897 [ERROR] F&O universe fetch failed: 404 Client Error: Not Found for url: https://www.nseindia.com/api/equity-stockIndices?index=Securities%20in%20F%26O
+2026-06-22 15:02:06,897 [INFO]   Got 0 stocks
+2026-06-22 15:02:06,898 [INFO] Saved 0 stock signals to /home/ubuntu/SignalLedger/data/stocks/2026-06-22.json
+2026-06-22 15:04:13,585 [INFO] Today's file already exists: /home/ubuntu/SignalLedger/data/stocks/2026-06-22.json. Skipping.
+2026-06-22 15:04:23,573 [INFO] Kite token fetched via SSH from OCI-2
+2026-06-22 15:04:23,573 [INFO] Kite token acquired.
+2026-06-22 15:04:23,574 [INFO] Fetching index quotes...
+2026-06-22 15:04:24,022 [INFO]   NIFTY 50 — no filters triggered
+2026-06-22 15:04:24,022 [INFO]   NIFTY BANK — no filters triggered
+2026-06-22 15:04:24,023 [INFO]   NIFTY FIN SERVICE — no filters triggered
+2026-06-22 15:04:24,023 [INFO] Fetching NFO instruments...
+2026-06-22 15:04:24,506 [INFO]   216 F&O stocks found
+2026-06-22 15:04:24,506 [INFO] Fetching stock quotes...
+2026-06-22 15:04:24,972 [INFO] Saved 0 stock signals to /home/ubuntu/SignalLedger/data/stocks/2026-06-22.json
+2026-06-22 15:04:48,240 [INFO] Kite token fetched via SSH from OCI-2
+2026-06-22 15:05:08,438 [INFO] Kite token fetched via SSH from OCI-2
+2026-06-22 15:06:55,466 [INFO] Kite token fetched via SSH from OCI-2
+2026-06-22 15:07:17,055 [INFO] Kite token fetched via SSH from OCI-2
+2026-06-22 15:08:28,791 [INFO] Kite token fetched via SSH from OCI-2
+2026-06-22 15:10:48,022 [INFO] Kite token fetched via SSH from OCI-2
+2026-06-22 15:10:48,022 [INFO] Kite token acquired.
+2026-06-22 15:10:48,022 [INFO] Loading instruments...
+2026-06-22 15:10:48,213 [INFO] Loaded 9877 NSE EQ instruments
+2026-06-22 15:10:48,762 [INFO] F&O universe: 216 stocks
+2026-06-22 15:10:48,782 [INFO] Fetching index quotes...
+2026-06-22 15:10:49,232 [INFO]   NIFTY 50 — no filters triggered (chg: 0.37%)
+2026-06-22 15:10:49,232 [INFO]   NIFTY BANK — no filters triggered (chg: 0.43%)
+2026-06-22 15:10:49,232 [INFO]   NIFTY FIN SERVICE — no filters triggered (chg: 0.58%)
+2026-06-22 15:10:49,232 [INFO] Fetching stock quotes...
+2026-06-22 15:10:49,701 [INFO] Fetching 52w high/low for 216 stocks (this takes ~3-4 mins)...
+2026-06-22 15:10:49,702 [INFO] Done. Saved 0 signals to /home/ubuntu/SignalLedger/data/stocks/2026-06-22.json
+2026-06-22 15:11:11,560 [INFO] Kite token fetched via SSH from OCI-2
+2026-06-22 15:11:11,748 [INFO] Loaded 9877 NSE EQ instruments
+2026-06-22 15:11:39,942 [INFO] Kite token fetched via SSH from OCI-2
+2026-06-22 15:12:50,403 [INFO] Kite token fetched via SSH from OCI-2
+2026-06-22 15:12:50,403 [INFO] Kite token acquired.
+2026-06-22 15:12:50,403 [INFO] Loading instruments...
+2026-06-22 15:12:50,592 [INFO] Loaded 9877 NSE EQ instruments
+2026-06-22 15:12:51,168 [INFO] F&O universe: 216 stocks
+2026-06-22 15:12:51,192 [INFO] Fetching index quotes...
+2026-06-22 15:12:51,638 [INFO]   NIFTY 50 — no filters triggered (chg: 0.37%)
+2026-06-22 15:12:51,638 [INFO]   NIFTY BANK — no filters triggered (chg: 0.43%)
+2026-06-22 15:12:51,638 [INFO]   NIFTY FIN SERVICE — no filters triggered (chg: 0.58%)
+2026-06-22 15:12:51,638 [INFO] Fetching stock quotes...
+2026-06-22 15:12:52,520 [INFO] Fetching 52w high/low for 216 stocks (this takes ~3-4 mins)...
+2026-06-22 15:12:54,035 [INFO]   ✓ ABCAPITAL → ['NEAR_52W_HIGH'] | price_chg=4.27% oi_chg=3.51% 52wH=392.9 52wL=243.0
+2026-06-22 15:12:55,064 [INFO]   ✓ ADANIENT → ['NEAR_52W_HIGH'] | price_chg=0.7% oi_chg=0.26% 52wH=3065.0 52wL=1753.0
+2026-06-22 15:12:55,520 [INFO]   ✓ ADANIGREEN → ['NEAR_52W_HIGH'] | price_chg=3.16% oi_chg=0.92% 52wH=1555.0 52wL=765.0
+2026-06-22 15:12:56,050 [INFO]   ✓ ADANIPORTS → ['NEAR_52W_HIGH'] | price_chg=-0.44% oi_chg=0.68% 52wH=1857.8 52wL=1290.5
+2026-06-22 15:12:58,470 [INFO]   ✓ ANGELONE → ['NEAR_52W_HIGH'] | price_chg=0.31% oi_chg=0.02% 52wH=360.45 52wL=208.63
+2026-06-22 15:12:59,413 [INFO]   ✓ APOLLOHOSP → ['NEAR_52W_HIGH'] | price_chg=-0.24% oi_chg=0.91% 52wH=8624.0 52wL=6696.5
+2026-06-22 15:13:02,296 [INFO]   Progress: 20/216 stocks processed...
+2026-06-22 15:13:07,185 [INFO]   ✓ BHARATFORG → ['NEAR_52W_HIGH'] | price_chg=3.06% oi_chg=3.61% 52wH=2113.6 52wL=1100.5
+2026-06-22 15:13:11,972 [INFO]   Progress: 40/216 stocks processed...
+2026-06-22 15:13:12,920 [INFO]   ✓ CGPOWER → ['NEAR_52W_HIGH'] | price_chg=-0.12% oi_chg=1.0% 52wH=969.9 52wL=525.5
+2026-06-22 15:13:18,730 [INFO]   ✓ DELHIVERY → ['NEAR_52W_HIGH'] | price_chg=4.92% oi_chg=3.51% 52wH=491.7 52wL=355.1
+2026-06-22 15:13:21,516 [INFO]   Progress: 60/216 stocks processed...
+2026-06-22 15:13:22,890 [INFO]   ✓ FEDERALBNK → ['NEAR_52W_HIGH'] | price_chg=-0.17% oi_chg=0.54% 52wH=324.9 52wL=185.11
+2026-06-22 15:13:27,152 [INFO]   ✓ GRASIM → ['NEAR_52W_HIGH'] | price_chg=0.82% oi_chg=0.13% 52wH=3200.0 52wL=2502.5
+2026-06-22 15:13:31,012 [INFO]   Progress: 80/216 stocks processed...
+2026-06-22 15:13:40,354 [INFO]   Progress: 100/216 stocks processed...
+2026-06-22 15:13:45,163 [INFO]   ✓ KEI → ['NEAR_52W_HIGH'] | price_chg=0.52% oi_chg=1.86% 52wH=5686.0 52wL=3525.3
+2026-06-22 15:13:47,050 [INFO]   ✓ LAURUSLABS → ['NEAR_52W_HIGH'] | price_chg=1.63% oi_chg=1.05% 52wH=1457.0 52wL=647.0
+2026-06-22 15:13:49,878 [INFO]   Progress: 120/216 stocks processed...
+2026-06-22 15:13:49,878 [INFO]   ✓ LTM → ['NEAR_52W_LOW'] | price_chg=-0.06% oi_chg=2.28% 52wH=6429.5 52wL=3756.0
+2026-06-22 15:13:56,947 [INFO]   ✓ NAM-INDIA → ['NEAR_52W_HIGH'] | price_chg=0.13% oi_chg=2.14% 52wH=1194.0 52wL=753.35
+2026-06-22 15:13:59,373 [INFO]   Progress: 140/216 stocks processed...
+2026-06-22 15:14:03,030 [INFO]   ✓ NYKAA → ['NEAR_52W_HIGH'] | price_chg=0.68% oi_chg=4.1% 52wH=307.0 52wL=194.6
+2026-06-22 15:14:09,223 [INFO]   ✓ PIDILITIND → ['NEAR_52W_HIGH'] | price_chg=-0.49% oi_chg=0.77% 52wH=1595.0 52wL=1259.0
+2026-06-22 15:14:10,670 [INFO]   Progress: 160/216 stocks processed...
+2026-06-22 15:14:11,593 [INFO]   ✓ POLYCAB → ['NEAR_52W_HIGH'] | price_chg=-0.6% oi_chg=0.04% 52wH=10126.0 52wL=5975.0
+2026-06-22 15:14:14,044 [INFO]   ✓ RADICO → ['NEAR_52W_HIGH'] | price_chg=0.25% oi_chg=2.82% 52wH=3806.2 52wL=2500.0
+2026-06-22 15:14:14,509 [INFO]   ✓ RBLBANK → ['NEAR_52W_HIGH'] | price_chg=-0.09% oi_chg=0.99% 52wH=381.7 52wL=224.03
+2026-06-22 15:14:20,283 [INFO]   Progress: 180/216 stocks processed...
+2026-06-22 15:14:20,778 [INFO]   ✓ SONACOMS → ['NEAR_52W_HIGH'] | price_chg=1.17% oi_chg=3.6% 52wH=626.35 52wL=402.3
+2026-06-22 15:14:29,708 [INFO]   Progress: 200/216 stocks processed...
+2026-06-22 15:14:35,107 [INFO] Done. Saved 21 signals to /home/ubuntu/SignalLedger/data/stocks/2026-06-22.json
