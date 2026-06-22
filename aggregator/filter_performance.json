@@ -1,7 +1,57 @@
 {
-  "generated_at": "2026-06-22T18:42:43.780278",
-  "total_signals": 344,
+  "generated_at": "2026-06-22T18:52:04.163055",
+  "total_signals": 455,
   "filters": {
+    "VOLUME_SPIKE": {
+      "signals": 90,
+      "evaluated": 90,
+      "wins": 80,
+      "losses": 10,
+      "pending": 0,
+      "win_rate_pct": 88.9,
+      "avg_win_move_pct": 7.49,
+      "avg_loss_move_pct": 0.59
+    },
+    "MOMENTUM_OI_CONFIRM": {
+      "signals": 4,
+      "evaluated": 4,
+      "wins": 4,
+      "losses": 0,
+      "pending": 0,
+      "win_rate_pct": 100.0,
+      "avg_win_move_pct": 7.84,
+      "avg_loss_move_pct": null
+    },
+    "FUNDING_EXTREME_LONG": {
+      "signals": 22,
+      "evaluated": 22,
+      "wins": 10,
+      "losses": 12,
+      "pending": 0,
+      "win_rate_pct": 45.5,
+      "avg_win_move_pct": 5.75,
+      "avg_loss_move_pct": 2.72
+    },
+    "DUMP_OI_CONFIRM": {
+      "signals": 7,
+      "evaluated": 7,
+      "wins": 7,
+      "losses": 0,
+      "pending": 0,
+      "win_rate_pct": 100.0,
+      "avg_win_move_pct": 9.69,
+      "avg_loss_move_pct": null
+    },
+    "OI_SURGE": {
+      "signals": 2,
+      "evaluated": 2,
+      "wins": 2,
+      "losses": 0,
+      "pending": 0,
+      "win_rate_pct": 100.0,
+      "avg_win_move_pct": 12.22,
+      "avg_loss_move_pct": null
+    },
     "NEAR_52W_HIGH": {
       "signals": 237,
       "evaluated": 237,
@@ -10,7 +60,7 @@
       "pending": 0,
       "win_rate_pct": 70.0,
       "avg_win_move_pct": 1.84,
-      "avg_loss_move_pct": -0.77
+      "avg_loss_move_pct": 0.77
     },
     "NEAR_52W_LOW": {
       "signals": 107,
@@ -19,11 +69,18 @@
       "losses": 19,
       "pending": 0,
       "win_rate_pct": 82.2,
-      "avg_win_move_pct": -1.57,
+      "avg_win_move_pct": 1.57,
       "avg_loss_move_pct": 0.37
     }
   },
   "markets": {
+    "crypto": {
+      "signals": 111,
+      "wins": 103,
+      "losses": 22,
+      "pending": 0,
+      "win_rate_pct": 82.4
+    },
     "stock": {
       "signals": 344,
       "wins": 254,
@@ -33,6 +90,48 @@
     }
   },
   "top_symbols": [
+    {
+      "symbol": "NEARUSDT",
+      "signals": 5,
+      "wins": 5,
+      "win_rate_pct": 100.0
+    },
+    {
+      "symbol": "INJUSDT",
+      "signals": 5,
+      "wins": 5,
+      "win_rate_pct": 100.0
+    },
+    {
+      "symbol": "ATOMUSDT",
+      "signals": 6,
+      "wins": 6,
+      "win_rate_pct": 100.0
+    },
+    {
+      "symbol": "WIFUSDT",
+      "signals": 5,
+      "wins": 5,
+      "win_rate_pct": 100.0
+    },
+    {
+      "symbol": "JUPUSDT",
+      "signals": 5,
+      "wins": 5,
+      "win_rate_pct": 100.0
+    },
+    {
+      "symbol": "SOLUSDT",
+      "signals": 5,
+      "wins": 5,
+      "win_rate_pct": 100.0
+    },
+    {
+      "symbol": "OPUSDT",
+      "signals": 7,
+      "wins": 7,
+      "win_rate_pct": 100.0
+    },
     {
       "symbol": "GVT&D",
       "signals": 5,
@@ -50,48 +149,6 @@
       "signals": 8,
       "wins": 8,
       "win_rate_pct": 100.0
-    },
-    {
-      "symbol": "POLYCAB",
-      "signals": 10,
-      "wins": 9,
-      "win_rate_pct": 90.0
-    },
-    {
-      "symbol": "LTM",
-      "signals": 6,
-      "wins": 5,
-      "win_rate_pct": 83.3
-    },
-    {
-      "symbol": "PIDILITIND",
-      "signals": 6,
-      "wins": 5,
-      "win_rate_pct": 83.3
-    },
-    {
-      "symbol": "SWIGGY",
-      "signals": 5,
-      "wins": 4,
-      "win_rate_pct": 80.0
-    },
-    {
-      "symbol": "ADANIGREEN",
-      "signals": 5,
-      "wins": 4,
-      "win_rate_pct": 80.0
-    },
-    {
-      "symbol": "SONACOMS",
-      "signals": 5,
-      "wins": 4,
-      "win_rate_pct": 80.0
-    },
-    {
-      "symbol": "DALBHARAT",
-      "signals": 5,
-      "wins": 4,
-      "win_rate_pct": 80.0
     }
   ]
 }
