@@ -231,7 +231,7 @@ function renderPerf(perf){
         <td style="font-family:var(--mono);color:var(--muted)">${s.evaluated}</td>
         <td style="font-family:var(--mono)" class="${wc}">${wr.toFixed(1)}%</td>
         <td style="font-family:var(--mono);color:var(--green)">${s.avg_win_move_pct!=null?"+"+s.avg_win_move_pct+"%":"—"}</td>
-        <td style="font-family:var(--mono);color:var(--red)">${s.avg_loss_move_pct!=null?s.avg_loss_move_pct+"%":"—"}</td>
+        <td style="font-family:var(--mono);color:var(--red)">${s.avg_loss_move_pct!=null?"-"+s.avg_loss_move_pct+"%":"—"}</td>
         <td><div class="wr-bar"><div class="wr-fill" style="width:${Math.min(wr,100)}%;background:${wfill}"></div></div></td>
       </tr>`;
     }).join("")}</tbody></table></div>
