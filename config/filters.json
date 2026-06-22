@@ -2,34 +2,34 @@
   "crypto": {
     "FUNDING_EXTREME_LONG": {
       "description": "Funding rate very negative — crowded shorts, potential long squeeze",
-      "threshold": -0.05,
+      "threshold": -0.02,
       "bias": "long"
     },
     "FUNDING_EXTREME_SHORT": {
       "description": "Funding rate very positive — crowded longs, potential short squeeze",
-      "threshold": 0.1,
+      "threshold": 0.05,
       "bias": "short"
     },
     "OI_SURGE": {
       "description": "Open interest up >20% in 24h — new money entering",
-      "threshold": 20.0,
+      "threshold": 15.0,
       "bias": "neutral"
     },
     "VOLUME_SPIKE": {
       "description": "24h volume >2x the 7-day average",
-      "threshold": 2.0,
+      "threshold": 1.5,
       "bias": "neutral"
     },
     "MOMENTUM_OI_CONFIRM": {
       "description": "Price up >3% AND OI up >10% — trend with conviction",
-      "price_threshold": 3.0,
-      "oi_threshold": 10.0,
+      "price_threshold": 2.0,
+      "oi_threshold": 8.0,
       "bias": "long"
     },
     "DUMP_OI_CONFIRM": {
       "description": "Price down >3% AND OI up >10% — bearish with conviction",
-      "price_threshold": -3.0,
-      "oi_threshold": 10.0,
+      "price_threshold": -2.0,
+      "oi_threshold": 8.0,
       "bias": "short"
     }
   },
