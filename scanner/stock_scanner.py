@@ -1,11 +1,13 @@
 """
 stock_scanner.py
 Morning scan — NSE F&O universe + NIFTY / BankNifty / FinNifty
-Runs weekdays at 6:00 AM IST via cron
-Uses NSE public endpoints (no auth required)
+Runs weekdays at 6:00 AM IST (UTC 00:30) via cron
+Uses Kite Connect API — token fetched same way as analytics.py
 """
 
 import json
+import os
+import subprocess
 import time
 import logging
 from datetime import datetime, timezone
@@ -29,106 +31,155 @@ logging.basicConfig(
 )
 log = logging.getLogger(__name__)
 
-# ── NSE headers — required to avoid 403 ──────────────────────────────────────
-NSE_HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    "Accept": "*/*",
-    "Accept-Language": "en-US,en;q=0.9",
-    "Accept-Encoding": "gzip, deflate, br",
-    "Referer": "https://www.nseindia.com/",
-    "Connection": "keep-alive",
-}
+# ── Load dashboard .env for OCI2 SSH config ───────────────────────────────────
+def _load_dashboard_env():
+    env_path = Path("/home/ubuntu/central_trading_dashboard/.env")
+    if env_path.exists():
+        for line in env_path.read_text().splitlines():
+            line = line.strip()
+            if line and not line.startswith("#") and "=" in line:
+                k, _, v = line.partition("=")
+                os.environ.setdefault(k.strip(), v.strip())
 
-NSE_BASE = "https://www.nseindia.com"
+_load_dashboard_env()
 
-# Indices to scan
-INDICES = ["NIFTY", "BANKNIFTY", "FINNIFTY"]
+# ── Kite token — same logic as analytics.py ───────────────────────────────────
+def _parse_env_text(text: str) -> dict:
+    result = {}
+    for line in text.splitlines():
+        line = line.strip()
+        if line and not line.startswith("#") and "=" in line:
+            k, _, v = line.partition("=")
+            result[k.strip()] = v.strip()
+    return result
 
 
-def nse_session() -> requests.Session:
-    """Create a session with cookies from NSE homepage (required)."""
-    session = requests.Session()
-    session.headers.update(NSE_HEADERS)
-    # Hit homepage first to get cookies
+def _get_kite_token() -> tuple[str, str]:
+    """Grab api_key + access_token — tries local paths first, then OCI-2 via SSH."""
+    local_candidates = [
+        Path(os.getenv("SWING_ENV", "/home/ubuntu/zerodha-swing-bot/.env")),
+        Path(os.getenv("ALGO_ENV",  "/home/ubuntu/algo/.env")),
+    ]
+    for env_path in local_candidates:
+        if not env_path.exists():
+            continue
+        cfg    = _parse_env_text(env_path.read_text())
+        token  = cfg.get("KITE_ACCESS_TOKEN", "")
+        apikey = cfg.get("KITE_API_KEY", "kitefront")
+        if token:
+            log.info(f"Kite token found at {env_path}")
+            return apikey, token
+
+    # Fall back to OCI-2 over SSH
+    host   = os.getenv("OCI2_HOST")
+    user   = os.getenv("OCI2_USER", "ubuntu")
+    key    = os.getenv("OCI2_SSH_KEY", "/home/ubuntu/.ssh/id_rsa")
+    remote = os.getenv("OCI2_SWING_ENV", "/home/ubuntu/zerodha-swing-bot/.env")
+    if host:
+        try:
+            result = subprocess.run(
+                ["ssh", "-i", key, "-o", "StrictHostKeyChecking=no",
+                 "-o", "ConnectTimeout=5", f"{user}@{host}", f"cat {remote}"],
+                capture_output=True, text=True, timeout=8
+            )
+            if result.returncode == 0:
+                cfg    = _parse_env_text(result.stdout)
+                token  = cfg.get("KITE_ACCESS_TOKEN", "")
+                apikey = cfg.get("KITE_API_KEY", "kitefront")
+                if token:
+                    log.info("Kite token fetched via SSH from OCI-2")
+                    return apikey, token
+        except Exception as e:
+            log.warning(f"SSH token fetch failed: {e}")
+
+    return "", ""
+
+
+# ── Kite API helpers ──────────────────────────────────────────────────────────
+KITE_BASE = "https://api.kite.trade"
+
+def kite_get(endpoint: str, api_key: str, token: str, params: dict = None) -> dict | list:
+    headers = {
+        "X-Kite-Version": "3",
+        "Authorization": f"token {api_key}:{token}",
+    }
+    r = requests.get(f"{KITE_BASE}{endpoint}", headers=headers, params=params, timeout=10)
+    r.raise_for_status()
+    return r.json()["data"]
+
+
+def fetch_fno_instruments(api_key: str, token: str) -> list[dict]:
+    """Fetch full NFO instruments list — contains all F&O contracts."""
     try:
-        session.get(NSE_BASE, timeout=10)
-        time.sleep(1)
-    except Exception as e:
-        log.warning(f"NSE homepage fetch failed: {e}")
-    return session
-
-
-def fetch_fno_universe(session: requests.Session) -> list[dict]:
-    """Fetch all F&O stocks with quote data from NSE."""
-    try:
-        url = f"{NSE_BASE}/api/equity-stockIndices?index=Securities%20in%20F%26O"
-        r = session.get(url, timeout=15)
+        headers = {
+            "X-Kite-Version": "3",
+            "Authorization": f"token {api_key}:{token}",
+        }
+        r = requests.get(f"{KITE_BASE}/instruments/NFO", headers=headers, timeout=30)
         r.raise_for_status()
-        data = r.json()
-        return data.get("data", [])
+        # Returns CSV
+        lines = r.text.strip().splitlines()
+        keys = lines[0].split(",")
+        instruments = []
+        for line in lines[1:]:
+            values = line.split(",")
+            if len(values) == len(keys):
+                instruments.append(dict(zip(keys, values)))
+        return instruments
     except Exception as e:
-        log.error(f"F&O universe fetch failed: {e}")
+        log.error(f"Instruments fetch failed: {e}")
         return []
 
 
-def fetch_index_option_chain(session: requests.Session, symbol: str) -> dict | None:
-    """Fetch option chain for NIFTY / BANKNIFTY / FINNIFTY."""
+def fetch_quotes(api_key: str, token: str, instrument_tokens: list[str]) -> dict:
+    """Fetch quotes for a list of instruments (max 500 per call)."""
     try:
-        url = f"{NSE_BASE}/api/option-chain-indices?symbol={symbol}"
-        r = session.get(url, timeout=15)
-        r.raise_for_status()
-        return r.json()
+        result = {}
+        # Kite allows up to 500 symbols per quote call
+        for i in range(0, len(instrument_tokens), 500):
+            batch = instrument_tokens[i:i+500]
+            data = kite_get("/quote", api_key, token, params={"i": batch})
+            result.update(data)
+            time.sleep(0.3)
+        return result
     except Exception as e:
-        log.error(f"Option chain fetch failed for {symbol}: {e}")
-        return None
+        log.error(f"Quote fetch failed: {e}")
+        return {}
 
 
-def compute_pcr(option_chain: dict) -> float | None:
-    """Compute Put-Call Ratio from option chain data."""
-    try:
-        records = option_chain["records"]["data"]
-        total_put_oi = sum(
-            r["PE"]["openInterest"] for r in records if "PE" in r and r["PE"]
-        )
-        total_call_oi = sum(
-            r["CE"]["openInterest"] for r in records if "CE" in r and r["CE"]
-        )
-        if total_call_oi > 0:
-            return round(total_put_oi / total_call_oi, 3)
-    except Exception as e:
-        log.warning(f"PCR computation failed: {e}")
-    return None
+def get_fno_stock_universe(instruments: list[dict]) -> list[str]:
+    """Extract unique underlying stock symbols from NFO instruments."""
+    symbols = set()
+    for inst in instruments:
+        if inst.get("instrument_type") == "FUT" and inst.get("segment") == "NFO-FUT":
+            symbols.add(inst.get("name", ""))
+    return sorted(symbols - {""})
 
 
-def fetch_stock_oi_data(session: requests.Session, symbol: str) -> dict | None:
-    """Fetch OI data for individual F&O stock."""
-    try:
-        url = f"{NSE_BASE}/api/quote-derivative?symbol={symbol}"
-        r = session.get(url, timeout=10)
-        r.raise_for_status()
-        return r.json()
-    except Exception as e:
-        log.warning(f"OI fetch failed for {symbol}: {e}")
-    return None
+# ── Filter logic ──────────────────────────────────────────────────────────────
+INDICES = {
+    "NIFTY 50":    "NSE:NIFTY 50",
+    "NIFTY BANK":  "NSE:NIFTY BANK",
+    "NIFTY FIN SERVICE": "NSE:NIFTY FIN SERVICE",
+}
 
-
-def apply_stock_filters(symbol: str, price: float, price_chg_pct: float, oi_chg_pct: float | None, volume: float, avg_volume: float | None, high_52w: float, low_52w: float, filters_cfg: dict) -> list[str]:
+def apply_stock_filters(symbol: str, price: float, price_chg_pct: float,
+                         oi_chg_pct: float | None, volume: float,
+                         avg_volume: float | None, high_52w: float,
+                         low_52w: float, filters_cfg: dict) -> list[str]:
     triggered = []
     cfg = filters_cfg["stocks"]
 
-    # OI buildup filters
     if oi_chg_pct is not None:
         if oi_chg_pct >= cfg["OI_BUILDUP_BULLISH"]["oi_threshold"] and price_chg_pct >= cfg["OI_BUILDUP_BULLISH"]["price_threshold"]:
             triggered.append("OI_BUILDUP_BULLISH")
         if oi_chg_pct >= cfg["OI_BUILDUP_BEARISH"]["oi_threshold"] and price_chg_pct <= cfg["OI_BUILDUP_BEARISH"]["price_threshold"]:
             triggered.append("OI_BUILDUP_BEARISH")
 
-    # Volume surge
     if avg_volume and avg_volume > 0:
         if (volume / avg_volume) >= cfg["VOLUME_SURGE"]["threshold"]:
             triggered.append("VOLUME_SURGE")
 
-    # 52-week proximity
     if high_52w > 0 and price > 0:
         pct_from_high = ((high_52w - price) / high_52w) * 100
         if pct_from_high <= cfg["NEAR_52W_HIGH"]["threshold"]:
@@ -142,23 +193,10 @@ def apply_stock_filters(symbol: str, price: float, price_chg_pct: float, oi_chg_
     return triggered
 
 
-def apply_index_filters(symbol: str, pcr: float | None, filters_cfg: dict) -> list[str]:
-    triggered = []
-    cfg = filters_cfg["stocks"]
-
-    if pcr is not None:
-        if pcr >= cfg["PCR_EXTREME_BULLISH"]["threshold"]:
-            triggered.append("PCR_EXTREME_BULLISH")
-        if pcr <= cfg["PCR_EXTREME_BEARISH"]["threshold"]:
-            triggered.append("PCR_EXTREME_BEARISH")
-
-    return triggered
-
-
 def derive_bias(filters: list[str]) -> str:
-    long_filters = {"OI_BUILDUP_BULLISH", "NEAR_52W_HIGH", "PCR_EXTREME_BULLISH"}
-    short_filters = {"OI_BUILDUP_BEARISH", "NEAR_52W_LOW", "PCR_EXTREME_BEARISH"}
-    long_count = sum(1 for f in filters if f in long_filters)
+    long_filters  = {"OI_BUILDUP_BULLISH", "NEAR_52W_HIGH", "PCR_EXTREME_BULLISH"}
+    short_filters = {"OI_BUILDUP_BEARISH", "NEAR_52W_LOW",  "PCR_EXTREME_BEARISH"}
+    long_count  = sum(1 for f in filters if f in long_filters)
     short_count = sum(1 for f in filters if f in short_filters)
     if long_count > short_count:
         return "long"
@@ -167,6 +205,7 @@ def derive_bias(filters: list[str]) -> str:
     return "neutral"
 
 
+# ── Main ──────────────────────────────────────────────────────────────────────
 def run():
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     out_path = DATA_DIR / f"{today}.json"
@@ -175,121 +214,114 @@ def run():
         log.info(f"Today's file already exists: {out_path}. Skipping.")
         return
 
+    # Get Kite token
+    api_key, token = _get_kite_token()
+    if not token:
+        log.error("Could not get Kite token. Aborting.")
+        return
+    log.info("Kite token acquired.")
+
     filters_cfg = json.loads(CONFIG_PATH.read_text())
-    session = nse_session()
     signals = []
 
-    # ── Index scans (NIFTY, BankNifty, FinNifty) ──────────────────────────────
-    log.info("Scanning indices...")
-    for index in INDICES:
-        log.info(f"  Fetching option chain: {index}")
-        chain = fetch_index_option_chain(session, index)
-        time.sleep(1)
-
-        if not chain:
+    # ── Index quotes ───────────────────────────────────────────────────────────
+    log.info("Fetching index quotes...")
+    index_quotes = fetch_quotes(api_key, token, list(INDICES.values()))
+    for index_name, instrument in INDICES.items():
+        q = index_quotes.get(instrument, {})
+        if not q:
+            log.warning(f"No quote for {index_name}")
             continue
+        price     = float(q.get("last_price", 0))
+        price_chg = float(q.get("net_change", 0))
+        price_chg_pct = (price_chg / (price - price_chg) * 100) if (price - price_chg) > 0 else 0
+        ohlc      = q.get("ohlc", {})
+        high_52w  = float(q.get("upper_circuit_limit", 0) or 0)
+        low_52w   = float(q.get("lower_circuit_limit", 0) or 0)
 
-        pcr = compute_pcr(chain)
-        triggered = apply_index_filters(index, pcr, filters_cfg)
-
+        triggered = apply_stock_filters(
+            index_name, price, price_chg_pct, None,
+            0, None, high_52w, low_52w, filters_cfg
+        )
         if not triggered:
-            log.info(f"  {index} — no filters triggered (PCR: {pcr})")
+            log.info(f"  {index_name} — no filters triggered")
             continue
-
-        # Get underlying price
-        try:
-            underlying = chain["records"]["underlyingValue"]
-        except Exception:
-            underlying = None
 
         signal = {
-            "date": today,
-            "symbol": index,
-            "market": "index",
-            "filters": triggered,
-            "bias": derive_bias(triggered),
-            "price_at_scan": underlying,
-            "price_change_pct": None,
-            "oi_change_pct": None,
-            "pcr": pcr,
-            "volume": None,
-            "high_52w": None,
-            "low_52w": None,
-            # EOD fields
-            "eod_price": None,
-            "move_pct": None,
-            "success": None,
-            "updated_at": None,
+            "date": today, "symbol": index_name, "market": "index",
+            "filters": triggered, "bias": derive_bias(triggered),
+            "price_at_scan": price, "price_change_pct": round(price_chg_pct, 2),
+            "oi_change_pct": None, "pcr": None,
+            "volume": None, "high_52w": high_52w, "low_52w": low_52w,
+            "eod_price": None, "move_pct": None, "success": None, "updated_at": None,
         }
         signals.append(signal)
-        log.info(f"  {index} → triggered: {triggered} | PCR: {pcr}")
+        log.info(f"  {index_name} → {triggered}")
 
-    # ── F&O stock scans ────────────────────────────────────────────────────────
-    log.info("Fetching F&O universe...")
-    fno_stocks = fetch_fno_universe(session)
-    time.sleep(1)
-    log.info(f"  Got {len(fno_stocks)} stocks")
+    # ── F&O stock universe ─────────────────────────────────────────────────────
+    log.info("Fetching NFO instruments...")
+    instruments = fetch_fno_instruments(api_key, token)
+    fno_symbols = get_fno_stock_universe(instruments)
+    log.info(f"  {len(fno_symbols)} F&O stocks found")
 
-    for stock in fno_stocks:
+    # Build NSE instrument keys for quotes
+    nse_keys = [f"NSE:{sym}" for sym in fno_symbols]
+
+    log.info("Fetching stock quotes...")
+    quotes = fetch_quotes(api_key, token, nse_keys)
+
+    for sym in fno_symbols:
+        key = f"NSE:{sym}"
+        q = quotes.get(key)
+        if not q:
+            continue
         try:
-            symbol = stock.get("symbol", "")
-            price = float(stock.get("lastPrice", 0) or 0)
-            price_chg_pct = float(stock.get("pChange", 0) or 0)
-            volume = float(stock.get("totalTradedVolume", 0) or 0)
-            high_52w = float(stock.get("yearHigh", 0) or 0)
-            low_52w = float(stock.get("yearLow", 0) or 0)
+            price         = float(q.get("last_price", 0))
+            net_change    = float(q.get("net_change", 0))
+            price_chg_pct = (net_change / (price - net_change) * 100) if (price - net_change) > 0 else 0
+            volume        = float(q.get("volume", 0))
+            ohlc          = q.get("ohlc", {})
+            high_52w      = float(q.get("upper_circuit_limit", 0) or 0)
+            low_52w       = float(q.get("lower_circuit_limit", 0) or 0)
 
-            # OI data needs separate call — do for all but throttle
+            # OI from futures — find nearest expiry future instrument token
+            fut = next(
+                (i for i in instruments
+                 if i.get("name") == sym and i.get("instrument_type") == "FUT"),
+                None
+            )
             oi_chg_pct = None
-            oi_data = fetch_stock_oi_data(session, symbol)
-            if oi_data:
-                try:
-                    # Look for futures OI change
-                    fut = next(
-                        (x for x in oi_data.get("stocks", []) if x.get("metadata", {}).get("instrumentType") == "Stock Futures"),
-                        None,
-                    )
-                    if fut:
-                        oi_chg_pct = float(fut.get("marketDeptOrderBook", {}).get("tradeInfo", {}).get("changeinOpenInterest", 0) or 0)
-                except Exception:
-                    pass
-            time.sleep(0.3)
-
-            # No avg volume from this endpoint — use volume > 500k as proxy for now
-            avg_volume = None
+            if fut:
+                fut_key = f"NFO:{fut['tradingsymbol']}"
+                fut_quotes = fetch_quotes(api_key, token, [fut_key])
+                fq = fut_quotes.get(fut_key, {})
+                if fq:
+                    oi_now  = float(fq.get("oi", 0))
+                    oi_day  = float(fq.get("oi_day_high", 0))  # proxy for prev OI
+                    if oi_day > 0:
+                        oi_chg_pct = round(((oi_now - oi_day) / oi_day) * 100, 2)
+                time.sleep(0.1)
 
             triggered = apply_stock_filters(
-                symbol, price, price_chg_pct, oi_chg_pct,
-                volume, avg_volume, high_52w, low_52w, filters_cfg
+                sym, price, price_chg_pct, oi_chg_pct,
+                volume, None, high_52w, low_52w, filters_cfg
             )
-
             if not triggered:
                 continue
 
             signal = {
-                "date": today,
-                "symbol": symbol,
-                "market": "stock",
-                "filters": triggered,
-                "bias": derive_bias(triggered),
-                "price_at_scan": price,
-                "price_change_pct": price_chg_pct,
-                "oi_change_pct": oi_chg_pct,
-                "pcr": None,
-                "volume": volume,
-                "high_52w": high_52w,
-                "low_52w": low_52w,
-                # EOD fields
-                "eod_price": None,
-                "move_pct": None,
-                "success": None,
-                "updated_at": None,
+                "date": today, "symbol": sym, "market": "stock",
+                "filters": triggered, "bias": derive_bias(triggered),
+                "price_at_scan": price, "price_change_pct": round(price_chg_pct, 2),
+                "oi_change_pct": oi_chg_pct, "pcr": None,
+                "volume": volume, "high_52w": high_52w, "low_52w": low_52w,
+                "eod_price": None, "move_pct": None, "success": None, "updated_at": None,
             }
             signals.append(signal)
-            log.info(f"  {symbol} → {triggered} | bias: {derive_bias(triggered)}")
+            log.info(f"  {sym} → {triggered} | bias: {derive_bias(triggered)}")
 
         except Exception as e:
-            log.warning(f"Error processing {stock.get('symbol', '?')}: {e}")
+            log.warning(f"Error processing {sym}: {e}")
             continue
 
     out_path.write_text(json.dumps(signals, indent=2))
