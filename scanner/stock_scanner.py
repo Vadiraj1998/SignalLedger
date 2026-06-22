@@ -10,7 +10,7 @@ import os
 import subprocess
 import time
 import logging
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 import requests
 
@@ -55,7 +55,6 @@ def _parse_env_text(text: str) -> dict:
 
 
 def _get_kite_token() -> tuple[str, str]:
-    """Grab api_key + access_token — tries local paths first, then OCI-2 via SSH."""
     local_candidates = [
         Path(os.getenv("SWING_ENV", "/home/ubuntu/zerodha-swing-bot/.env")),
         Path(os.getenv("ALGO_ENV",  "/home/ubuntu/algo/.env")),
@@ -70,7 +69,6 @@ def _get_kite_token() -> tuple[str, str]:
             log.info(f"Kite token found at {env_path}")
             return apikey, token
 
-    # Fall back to OCI-2 over SSH
     host   = os.getenv("OCI2_HOST")
     user   = os.getenv("OCI2_USER", "ubuntu")
     key    = os.getenv("OCI2_SSH_KEY", "/home/ubuntu/.ssh/id_rsa")
@@ -91,82 +89,129 @@ def _get_kite_token() -> tuple[str, str]:
                     return apikey, token
         except Exception as e:
             log.warning(f"SSH token fetch failed: {e}")
-
     return "", ""
 
 
 # ── Kite API helpers ──────────────────────────────────────────────────────────
 KITE_BASE = "https://api.kite.trade"
 
-def kite_get(endpoint: str, api_key: str, token: str, params: dict = None) -> dict | list:
-    headers = {
+def kite_headers(api_key: str, token: str) -> dict:
+    return {
         "X-Kite-Version": "3",
         "Authorization": f"token {api_key}:{token}",
     }
-    r = requests.get(f"{KITE_BASE}{endpoint}", headers=headers, params=params, timeout=10)
-    r.raise_for_status()
-    return r.json()["data"]
 
 
-def fetch_fno_instruments(api_key: str, token: str) -> list[dict]:
-    """Fetch full NFO instruments list — contains all F&O contracts."""
+def fetch_nse_instruments(api_key: str, token: str) -> dict[str, str]:
+    """Fetch NSE EQ instruments — returns {tradingsymbol: instrument_token}."""
     try:
-        headers = {
-            "X-Kite-Version": "3",
-            "Authorization": f"token {api_key}:{token}",
-        }
-        r = requests.get(f"{KITE_BASE}/instruments/NFO", headers=headers, timeout=30)
+        r = requests.get(
+            f"{KITE_BASE}/instruments/NSE",
+            headers=kite_headers(api_key, token),
+            timeout=30
+        )
         r.raise_for_status()
-        # Returns CSV
+        lines = r.text.strip().splitlines()
+        keys = lines[0].split(",")
+        result = {}
+        for line in lines[1:]:
+            vals = line.split(",")
+            if len(vals) == len(keys):
+                row = dict(zip(keys, vals))
+                if row.get("instrument_type") == "EQ":
+                    result[row["tradingsymbol"]] = row["instrument_token"]
+        log.info(f"Loaded {len(result)} NSE EQ instruments")
+        return result
+    except Exception as e:
+        log.error(f"NSE instruments fetch failed: {e}")
+        return {}
+
+
+def fetch_nfo_instruments(api_key: str, token: str) -> list[dict]:
+    """Fetch NFO instruments list for F&O universe + futures OI."""
+    try:
+        r = requests.get(
+            f"{KITE_BASE}/instruments/NFO",
+            headers=kite_headers(api_key, token),
+            timeout=30
+        )
+        r.raise_for_status()
         lines = r.text.strip().splitlines()
         keys = lines[0].split(",")
         instruments = []
         for line in lines[1:]:
-            values = line.split(",")
-            if len(values) == len(keys):
-                instruments.append(dict(zip(keys, values)))
+            vals = line.split(",")
+            if len(vals) == len(keys):
+                instruments.append(dict(zip(keys, vals)))
         return instruments
     except Exception as e:
-        log.error(f"Instruments fetch failed: {e}")
+        log.error(f"NFO instruments fetch failed: {e}")
         return []
 
 
-def fetch_quotes(api_key: str, token: str, instrument_tokens: list[str]) -> dict:
-    """Fetch quotes for a list of instruments (max 500 per call)."""
-    try:
-        result = {}
-        # Kite allows up to 500 symbols per quote call
-        for i in range(0, len(instrument_tokens), 500):
-            batch = instrument_tokens[i:i+500]
-            data = kite_get("/quote", api_key, token, params={"i": batch})
-            result.update(data)
-            time.sleep(0.3)
-        return result
-    except Exception as e:
-        log.error(f"Quote fetch failed: {e}")
-        return {}
-
-
-def get_fno_stock_universe(instruments: list[dict]) -> list[str]:
-    """Extract unique underlying stock symbols from NFO instruments."""
+def get_fno_symbols(nfo_instruments: list[dict]) -> list[str]:
+    """Unique underlying stock symbols in F&O."""
     symbols = set()
-    for inst in instruments:
-        if inst.get("instrument_type") == "FUT" and inst.get("segment") == "NFO-FUT":
-            symbols.add(inst.get("name", ""))
+    for i in nfo_instruments:
+        if i.get("instrument_type") == "FUT" and i.get("segment") == "NFO-FUT":
+            symbols.add(i.get("name", ""))
     return sorted(symbols - {""})
+
+
+def fetch_quotes(api_key: str, token: str, instrument_keys: list[str]) -> dict:
+    """Fetch quotes in batches of 500."""
+    result = {}
+    for i in range(0, len(instrument_keys), 500):
+        batch = instrument_keys[i:i+500]
+        try:
+            r = requests.get(
+                f"{KITE_BASE}/quote",
+                headers=kite_headers(api_key, token),
+                params={"i": batch},
+                timeout=15
+            )
+            r.raise_for_status()
+            result.update(r.json().get("data", {}))
+            time.sleep(0.3)
+        except Exception as e:
+            log.warning(f"Quote batch failed: {e}")
+    return result
+
+
+def fetch_52w(api_key: str, token: str, instrument_token: str) -> tuple[float, float]:
+    """Fetch real 52-week high and low via daily historical data."""
+    try:
+        to_date   = datetime.now().strftime("%Y-%m-%d")
+        from_date = (datetime.now() - timedelta(days=365)).strftime("%Y-%m-%d")
+        r = requests.get(
+            f"{KITE_BASE}/instruments/historical/{instrument_token}/day",
+            headers=kite_headers(api_key, token),
+            params={"from": from_date, "to": to_date},
+            timeout=15
+        )
+        r.raise_for_status()
+        candles = r.json()["data"]["candles"]
+        if not candles:
+            return 0.0, 0.0
+        high_52w = max(c[2] for c in candles)
+        low_52w  = min(c[3] for c in candles)
+        return float(high_52w), float(low_52w)
+    except Exception as e:
+        log.warning(f"52w fetch failed for token {instrument_token}: {e}")
+        return 0.0, 0.0
 
 
 # ── Filter logic ──────────────────────────────────────────────────────────────
 INDICES = {
-    "NIFTY 50":    "NSE:NIFTY 50",
-    "NIFTY BANK":  "NSE:NIFTY BANK",
+    "NIFTY 50":          "NSE:NIFTY 50",
+    "NIFTY BANK":        "NSE:NIFTY BANK",
     "NIFTY FIN SERVICE": "NSE:NIFTY FIN SERVICE",
 }
 
-def apply_stock_filters(symbol: str, price: float, price_chg_pct: float,
-                         oi_chg_pct: float | None, volume: float,
-                         avg_volume: float | None, high_52w: float,
-                         low_52w: float, filters_cfg: dict) -> list[str]:
+def apply_stock_filters(price: float, price_chg_pct: float, oi_chg_pct: float | None,
+                         volume: float, avg_volume: float | None,
+                         high_52w: float, low_52w: float,
+                         filters_cfg: dict) -> list[str]:
     triggered = []
     cfg = filters_cfg["stocks"]
 
@@ -176,9 +221,8 @@ def apply_stock_filters(symbol: str, price: float, price_chg_pct: float,
         if oi_chg_pct >= cfg["OI_BUILDUP_BEARISH"]["oi_threshold"] and price_chg_pct <= cfg["OI_BUILDUP_BEARISH"]["price_threshold"]:
             triggered.append("OI_BUILDUP_BEARISH")
 
-    if avg_volume and avg_volume > 0:
-        if (volume / avg_volume) >= cfg["VOLUME_SURGE"]["threshold"]:
-            triggered.append("VOLUME_SURGE")
+    if avg_volume and avg_volume > 0 and (volume / avg_volume) >= cfg["VOLUME_SURGE"]["threshold"]:
+        triggered.append("VOLUME_SURGE")
 
     if high_52w > 0 and price > 0:
         pct_from_high = ((high_52w - price) / high_52w) * 100
@@ -198,10 +242,8 @@ def derive_bias(filters: list[str]) -> str:
     short_filters = {"OI_BUILDUP_BEARISH", "NEAR_52W_LOW",  "PCR_EXTREME_BEARISH"}
     long_count  = sum(1 for f in filters if f in long_filters)
     short_count = sum(1 for f in filters if f in short_filters)
-    if long_count > short_count:
-        return "long"
-    if short_count > long_count:
-        return "short"
+    if long_count > short_count:   return "long"
+    if short_count > long_count:   return "short"
     return "neutral"
 
 
@@ -214,7 +256,6 @@ def run():
         log.info(f"Today's file already exists: {out_path}. Skipping.")
         return
 
-    # Get Kite token
     api_key, token = _get_kite_token()
     if not token:
         log.error("Could not get Kite token. Aborting.")
@@ -224,108 +265,126 @@ def run():
     filters_cfg = json.loads(CONFIG_PATH.read_text())
     signals = []
 
+    # ── Load instruments ───────────────────────────────────────────────────────
+    log.info("Loading instruments...")
+    nse_instruments = fetch_nse_instruments(api_key, token)   # {symbol: token}
+    nfo_instruments = fetch_nfo_instruments(api_key, token)   # list of dicts
+    fno_symbols     = get_fno_symbols(nfo_instruments)
+    log.info(f"F&O universe: {len(fno_symbols)} stocks")
+
+    # Nearest expiry futures map: {symbol: tradingsymbol}
+    nearest_fut = {}
+    for inst in sorted(nfo_instruments, key=lambda x: x.get("expiry", "")):
+        if inst.get("instrument_type") == "FUT" and inst.get("segment") == "NFO-FUT":
+            sym = inst.get("name", "")
+            if sym and sym not in nearest_fut:
+                nearest_fut[sym] = inst["tradingsymbol"]
+
     # ── Index quotes ───────────────────────────────────────────────────────────
     log.info("Fetching index quotes...")
     index_quotes = fetch_quotes(api_key, token, list(INDICES.values()))
-    for index_name, instrument in INDICES.items():
-        q = index_quotes.get(instrument, {})
+
+    for index_name, instrument_key in INDICES.items():
+        q = index_quotes.get(instrument_key, {})
         if not q:
             log.warning(f"No quote for {index_name}")
             continue
-        price     = float(q.get("last_price", 0))
-        price_chg = float(q.get("net_change", 0))
-        price_chg_pct = (price_chg / (price - price_chg) * 100) if (price - price_chg) > 0 else 0
-        ohlc      = q.get("ohlc", {})
-        high_52w  = float(q.get("upper_circuit_limit", 0) or 0)
-        low_52w   = float(q.get("lower_circuit_limit", 0) or 0)
+
+        price      = float(q.get("last_price", 0))
+        close_prev = float(q.get("ohlc", {}).get("close", 0))
+        price_chg_pct = round(((price - close_prev) / close_prev * 100), 2) if close_prev > 0 else 0.0
+
+        # 52w for indices via instrument token
+        inst_token = nse_instruments.get(index_name.replace(" ", "_"), "")
+        high_52w, low_52w = 0.0, 0.0
+        # Skip 52w for indices — circuit limits not meaningful, skip for now
 
         triggered = apply_stock_filters(
-            index_name, price, price_chg_pct, None,
-            0, None, high_52w, low_52w, filters_cfg
+            price, price_chg_pct, None, 0, None, high_52w, low_52w, filters_cfg
         )
         if not triggered:
-            log.info(f"  {index_name} — no filters triggered")
+            log.info(f"  {index_name} — no filters triggered (chg: {price_chg_pct}%)")
             continue
 
-        signal = {
+        signals.append({
             "date": today, "symbol": index_name, "market": "index",
             "filters": triggered, "bias": derive_bias(triggered),
-            "price_at_scan": price, "price_change_pct": round(price_chg_pct, 2),
+            "price_at_scan": price, "price_change_pct": price_chg_pct,
             "oi_change_pct": None, "pcr": None,
-            "volume": None, "high_52w": high_52w, "low_52w": low_52w,
+            "volume": None, "high_52w": None, "low_52w": None,
             "eod_price": None, "move_pct": None, "success": None, "updated_at": None,
-        }
-        signals.append(signal)
+        })
         log.info(f"  {index_name} → {triggered}")
 
-    # ── F&O stock universe ─────────────────────────────────────────────────────
-    log.info("Fetching NFO instruments...")
-    instruments = fetch_fno_instruments(api_key, token)
-    fno_symbols = get_fno_stock_universe(instruments)
-    log.info(f"  {len(fno_symbols)} F&O stocks found")
-
-    # Build NSE instrument keys for quotes
-    nse_keys = [f"NSE:{sym}" for sym in fno_symbols]
-
+    # ── F&O stocks ─────────────────────────────────────────────────────────────
     log.info("Fetching stock quotes...")
-    quotes = fetch_quotes(api_key, token, nse_keys)
+    nse_keys  = [f"NSE:{sym}" for sym in fno_symbols if sym in nse_instruments]
+    all_quotes = fetch_quotes(api_key, token, nse_keys)
 
+    # Futures quotes for OI
+    fut_keys = [f"NFO:{nearest_fut[sym]}" for sym in fno_symbols if sym in nearest_fut]
+    fut_quotes = fetch_quotes(api_key, token, fut_keys)
+
+    log.info(f"Fetching 52w high/low for {len(fno_symbols)} stocks (this takes ~3-4 mins)...")
+    processed = 0
     for sym in fno_symbols:
-        key = f"NSE:{sym}"
-        q = quotes.get(key)
+        nse_key = f"NSE:{sym}"
+        q = all_quotes.get(nse_key)
         if not q:
             continue
-        try:
-            price         = float(q.get("last_price", 0))
-            net_change    = float(q.get("net_change", 0))
-            price_chg_pct = (net_change / (price - net_change) * 100) if (price - net_change) > 0 else 0
-            volume        = float(q.get("volume", 0))
-            ohlc          = q.get("ohlc", {})
-            high_52w      = float(q.get("upper_circuit_limit", 0) or 0)
-            low_52w       = float(q.get("lower_circuit_limit", 0) or 0)
 
-            # OI from futures — find nearest expiry future instrument token
-            fut = next(
-                (i for i in instruments
-                 if i.get("name") == sym and i.get("instrument_type") == "FUT"),
-                None
-            )
+        try:
+            price      = float(q.get("last_price", 0))
+            close_prev = float(q.get("ohlc", {}).get("close", 0))
+            price_chg_pct = round(((price - close_prev) / close_prev * 100), 2) if close_prev > 0 else 0.0
+            volume     = float(q.get("volume", 0))
+
+            # OI from nearest future
             oi_chg_pct = None
-            if fut:
-                fut_key = f"NFO:{fut['tradingsymbol']}"
-                fut_quotes = fetch_quotes(api_key, token, [fut_key])
-                fq = fut_quotes.get(fut_key, {})
+            fut_sym = nearest_fut.get(sym)
+            if fut_sym:
+                fq = fut_quotes.get(f"NFO:{fut_sym}", {})
                 if fq:
-                    oi_now  = float(fq.get("oi", 0))
-                    oi_day  = float(fq.get("oi_day_high", 0))  # proxy for prev OI
-                    if oi_day > 0:
-                        oi_chg_pct = round(((oi_now - oi_day) / oi_day) * 100, 2)
-                time.sleep(0.1)
+                    oi_now     = float(fq.get("oi", 0))
+                    oi_day_low = float(fq.get("oi_day_low", 0))
+                    if oi_day_low > 0:
+                        oi_chg_pct = round(((oi_now - oi_day_low) / oi_day_low) * 100, 2)
+
+            # Real 52w high/low from historical data
+            inst_token = nse_instruments.get(sym, "")
+            high_52w, low_52w = 0.0, 0.0
+            if inst_token:
+                high_52w, low_52w = fetch_52w(api_key, token, inst_token)
+                time.sleep(0.35)  # ~3 req/sec to stay within Kite limits
 
             triggered = apply_stock_filters(
-                sym, price, price_chg_pct, oi_chg_pct,
+                price, price_chg_pct, oi_chg_pct,
                 volume, None, high_52w, low_52w, filters_cfg
             )
+
+            processed += 1
+            if processed % 20 == 0:
+                log.info(f"  Progress: {processed}/{len(fno_symbols)} stocks processed...")
+
             if not triggered:
                 continue
 
-            signal = {
+            signals.append({
                 "date": today, "symbol": sym, "market": "stock",
                 "filters": triggered, "bias": derive_bias(triggered),
-                "price_at_scan": price, "price_change_pct": round(price_chg_pct, 2),
+                "price_at_scan": price, "price_change_pct": price_chg_pct,
                 "oi_change_pct": oi_chg_pct, "pcr": None,
                 "volume": volume, "high_52w": high_52w, "low_52w": low_52w,
                 "eod_price": None, "move_pct": None, "success": None, "updated_at": None,
-            }
-            signals.append(signal)
-            log.info(f"  {sym} → {triggered} | bias: {derive_bias(triggered)}")
+            })
+            log.info(f"  ✓ {sym} → {triggered} | price_chg={price_chg_pct}% oi_chg={oi_chg_pct}% 52wH={high_52w} 52wL={low_52w}")
 
         except Exception as e:
             log.warning(f"Error processing {sym}: {e}")
             continue
 
     out_path.write_text(json.dumps(signals, indent=2))
-    log.info(f"Saved {len(signals)} stock signals to {out_path}")
+    log.info(f"Done. Saved {len(signals)} signals to {out_path}")
 
 
 if __name__ == "__main__":
