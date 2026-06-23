@@ -81,10 +81,25 @@ def compute_stats(signals: list[dict]) -> dict:
                 if move_pct is not None:
                     filter_stats[f]["loss_moves"].append(move_pct)
 
+    # Overall stats
+    all_wins       = sum(1 for s in signals if s.get("success") is True)
+    all_losses     = sum(1 for s in signals if s.get("success") is False)
+    all_evaluated  = all_wins + all_losses
+    overall_wr     = all_wins / all_evaluated if all_evaluated > 0 else 0
+    all_win_moves  = [abs(s["move_pct"]) for s in signals if s.get("success") is True  and s.get("move_pct") is not None]
+    all_loss_moves = [abs(s["move_pct"]) for s in signals if s.get("success") is False and s.get("move_pct") is not None]
+    avg_win_all    = round(sum(all_win_moves)  / len(all_win_moves),  2) if all_win_moves  else 0
+    avg_loss_all   = round(sum(all_loss_moves) / len(all_loss_moves), 2) if all_loss_moves else 0
+    expectancy     = round((overall_wr * avg_win_all) - ((1 - overall_wr) * avg_loss_all), 3)
+
     # Build output
     result = {
         "generated_at": datetime.utcnow().isoformat(),
         "total_signals": len(signals),
+        "overall_win_rate_pct": round(overall_wr * 100, 1),
+        "overall_avg_win_pct": avg_win_all,
+        "overall_avg_loss_pct": avg_loss_all,
+        "overall_expectancy_pct": expectancy,
         "filters": {},
         "markets": {},
         "top_symbols": [],

@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SignalLedger</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
   <style>
-    :root {
+    :root{
       --bg:#f4f5f7;--surface:#ffffff;--surface2:#f8f9fa;
       --border:rgba(0,0,0,.08);--border2:rgba(0,0,0,.14);
       --text:#111827;--muted:#6b7280;--muted2:#9ca3af;
@@ -16,7 +17,7 @@
       --blue:#2563eb;--blue-bg:#eff6ff;
       --sans:'Inter',sans-serif;--mono:'JetBrains Mono',monospace;
     }
-    [data-theme="dark"] {
+    [data-theme="dark"]{
       --bg:#0f1117;--surface:#1a1d23;--surface2:#21252d;
       --border:rgba(255,255,255,.07);--border2:rgba(255,255,255,.13);
       --text:#f1f3f5;--muted:#8b92a0;--muted2:#5a6070;
@@ -32,13 +33,16 @@
     .logo{display:flex;align-items:center;gap:9px;font:600 15px var(--sans);color:var(--text);letter-spacing:.02em}
     .logo-dot{width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 0 3px var(--green-bg)}
     .nav{display:flex;gap:4px}
-    .nav-btn{font:500 13px var(--sans);background:none;border:1px solid transparent;color:var(--muted);cursor:pointer;padding:6px 14px;border-radius:8px;transition:all .15s}
+    .nav-btn{font:500 13px var(--sans);background:none;border:1px solid transparent;color:var(--muted);cursor:pointer;padding:6px 14px;border-radius:8px;transition:all .15s;text-decoration:none;display:inline-block}
     .nav-btn.active,.nav-btn:hover{background:var(--surface2);border-color:var(--border2);color:var(--text)}
     .hdr-r{display:flex;align-items:center;gap:14px}
     .date-pill{font:400 13px var(--mono);color:var(--muted)}
     .theme-btn{font:500 13px var(--sans);background:none;border:1px solid var(--border2);color:var(--muted);cursor:pointer;padding:5px 11px;border-radius:7px;transition:all .15s}
     .theme-btn:hover{color:var(--text);border-color:var(--text)}
     .view{display:none}.view.active{display:block}
+    .hero{background:var(--surface);border-bottom:1px solid var(--border);padding:16px 28px}
+    .hero-text{font:400 13px var(--sans);color:var(--muted);line-height:1.6;max-width:760px}
+    .hero-text b{color:var(--text);font-weight:500}
     .topbar{display:grid;grid-template-columns:repeat(4,1fr);background:var(--surface);border-bottom:1px solid var(--border)}
     .ob{padding:18px 28px;border-right:1px solid var(--border)}.ob:last-child{border-right:none}
     .ob-label{font:500 11px var(--sans);color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
@@ -77,11 +81,11 @@
     .srow-label{font:400 13px var(--sans);color:var(--muted)}
     .srow-val{font:500 13px var(--mono);color:var(--text)}
     .srow-val.pos{color:var(--green)}.srow-val.neg{color:var(--red)}.srow-val.dim{color:var(--muted);font-size:12px}
-    .sc-foot{padding:9px 18px;background:var(--surface2);border-top:1px solid var(--border);font:400 12px var(--sans);color:var(--muted);display:flex;gap:6px;flex-wrap:wrap}
+    .sc-foot{padding:9px 18px;background:var(--surface2);border-top:1px solid var(--border);display:flex;gap:6px;flex-wrap:wrap}
     .filter-tag{font:500 11px var(--sans);padding:2px 8px;border-radius:5px;background:var(--surface);border:1px solid var(--border2);color:var(--muted)}
     .filter-tag.long{background:var(--green-bg);color:var(--green);border-color:var(--green-b)}
     .filter-tag.short{background:var(--red-bg);color:var(--red);border-color:var(--red-b)}
-    .tbl-wrap{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:28px}
+    .tbl-wrap{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:20px}
     .pos-table{width:100%;border-collapse:collapse;font-size:13px}
     .pos-table th{font:600 11px var(--sans);color:var(--muted);letter-spacing:.08em;text-transform:uppercase;padding:10px 16px;text-align:left;border-bottom:1px solid var(--border2);background:var(--surface2)}
     .pos-table td{padding:11px 16px;border-bottom:1px solid var(--border);color:var(--text)}
@@ -90,7 +94,11 @@
     .wr-bar{height:4px;background:var(--bg);border-radius:3px;overflow:hidden;min-width:80px}
     .wr-fill{height:100%;border-radius:3px}
     .empty{padding:40px;text-align:center;font:400 14px var(--sans);color:var(--muted);border:1px dashed var(--border2);border-radius:10px}
-    .footer{text-align:center;padding:2rem;font:400 12px var(--sans);color:var(--muted2)}
+    .chart-wrap{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px 24px;margin-bottom:20px}
+    .chart-title{font:600 11px var(--sans);color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:16px}
+    .charts-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px}
+    @media(max-width:800px){.charts-row{grid-template-columns:1fr}}
+    .footer{text-align:center;padding:2rem 1rem;font:400 12px var(--sans);color:var(--muted2);border-top:1px solid var(--border2);margin-top:8px}
     .footer a{color:var(--muted);text-decoration:none}.footer a:hover{color:var(--text)}
   </style>
 </head>
@@ -102,7 +110,7 @@
     <nav class="nav">
       <button class="nav-btn active" onclick="switchView('watchlist',this)">Watchlist</button>
       <button class="nav-btn" onclick="switchView('performance',this)">Performance</button>
-      <a class="nav-btn" href="methodology.html" style="text-decoration:none">Methodology</a>
+      <a class="nav-btn" href="methodology.html">Methodology</a>
     </nav>
   </div>
   <div class="hdr-r">
@@ -111,7 +119,13 @@
   </div>
 </div>
 
+<!-- WATCHLIST VIEW -->
 <div class="view active" id="view-watchlist">
+  <div class="hero">
+    <div class="hero-text">
+      Publicly audited stock and crypto signals. <b>Every signal is timestamped before the outcome. Every result is logged at EOD. Git history is the proof.</b> No cherry-picking possible.
+    </div>
+  </div>
   <div class="topbar">
     <div class="ob"><div class="ob-label">Signals today</div><div class="ob-val green" id="ob-total">—</div><div class="ob-sub">stocks + crypto</div></div>
     <div class="ob"><div class="ob-label">Long setups</div><div class="ob-val blue" id="ob-long">—</div><div class="ob-sub">bullish bias</div></div>
@@ -130,21 +144,44 @@
     <div class="sec-label">Today's watchlist</div>
     <div class="sig-grid" id="sig-grid"><div class="empty" style="grid-column:1/-1">Loading signals...</div></div>
   </div>
+  <div class="footer">
+    Every signal recorded at scan time · Results logged at EOD · Git history is the proof<br>
+    <a href="https://github.com/Vadiraj1998/SignalLedger" target="_blank">github.com/Vadiraj1998/SignalLedger</a> · Built by <a href="https://vadiraj.dev" target="_blank">Vadiraj</a>
+  </div>
 </div>
 
+<!-- PERFORMANCE VIEW -->
 <div class="view" id="view-performance">
-  <div class="main" style="margin-top:24px">
+  <div class="topbar">
+    <div class="ob"><div class="ob-label">All-time win rate</div><div class="ob-val green" id="pb-winrate">—</div><div class="ob-sub">across all filters</div></div>
+    <div class="ob"><div class="ob-label">Avg winner</div><div class="ob-val green" id="pb-avgwin">—</div><div class="ob-sub">per signal</div></div>
+    <div class="ob"><div class="ob-label">Avg loser</div><div class="ob-val red" id="pb-avgloss">—</div><div class="ob-sub">per signal</div></div>
+    <div class="ob"><div class="ob-label">Expectancy</div><div class="ob-val" id="pb-expectancy">—</div><div class="ob-sub">per signal</div></div>
+  </div>
+  <div class="main">
     <div class="sec-label">Filter performance — all time</div>
     <div id="perf-container"><div class="empty">Loading...</div></div>
-    <div class="footer">Every signal recorded at scan time · Results logged at EOD · Git history is the proof<br>
-      <a href="https://github.com/Vadiraj1998/SignalLedger" target="_blank">github.com/Vadiraj1998/SignalLedger</a> · Built by <a href="https://vadiraj.dev" target="_blank">Vadiraj</a>
+    <div class="charts-row">
+      <div class="chart-wrap">
+        <div class="chart-title">Win rate by filter</div>
+        <canvas id="chart-winrate" height="200"></canvas>
+      </div>
+      <div class="chart-wrap">
+        <div class="chart-title">Signals by filter</div>
+        <canvas id="chart-signals" height="200"></canvas>
+      </div>
     </div>
+  </div>
+  <div class="footer">
+    Every signal recorded at scan time · Results logged at EOD · Git history is the proof<br>
+    <a href="https://github.com/Vadiraj1998/SignalLedger" target="_blank">github.com/Vadiraj1998/SignalLedger</a> · Built by <a href="https://vadiraj.dev" target="_blank">Vadiraj</a>
   </div>
 </div>
 
 <script>
 const REPO="https://raw.githubusercontent.com/Vadiraj1998/SignalLedger/main";
 let allSignals=[],activeTab="all",perfData=null;
+let chartWR=null,chartSig=null;
 
 function today(){return new Date().toISOString().slice(0,10)}
 
@@ -153,6 +190,7 @@ function toggleTheme(){
   document.documentElement.setAttribute("data-theme",dark?"light":"dark");
   document.getElementById("theme-btn").textContent=dark?"Dark":"Light";
   localStorage.setItem("sl-theme",dark?"light":"dark");
+  if(perfData)renderCharts(perfData);
 }
 
 function switchView(v,el){
@@ -160,7 +198,7 @@ function switchView(v,el){
   document.querySelectorAll(".nav-btn").forEach(e=>e.classList.remove("active"));
   document.getElementById("view-"+v).classList.add("active");
   el.classList.add("active");
-  if(v==="performance"&&perfData)renderPerf(perfData);
+  if(v==="performance"&&perfData){renderPerf(perfData);renderCharts(perfData);}
 }
 
 function setTab(tab,el){
@@ -178,6 +216,20 @@ function fmtP(s){
   return s.market==="crypto"?"$"+Number(s.price_at_scan).toLocaleString("en-US"):"₹"+Number(s.price_at_scan).toLocaleString("en-IN");
 }
 function fmtN(v,mkt){return(mkt==="crypto"?"$":"₹")+Number(v).toLocaleString()}
+
+function getCSSVar(name){return getComputedStyle(document.documentElement).getPropertyValue(name).trim()}
+
+function computeExpectancy(filters){
+  let tw=0,tl=0,twm=0,tlm=0;
+  Object.values(filters).forEach(s=>{
+    tw+=s.wins;tl+=s.losses;
+    if(s.avg_win_move_pct)twm+=s.avg_win_move_pct*s.wins;
+    if(s.avg_loss_move_pct)tlm+=s.avg_loss_move_pct*s.losses;
+  });
+  const ev=tw+tl;if(!ev)return null;
+  const wr=tw/ev,aw=tw>0?twm/tw:0,al=tl>0?tlm/tl:0;
+  return{wr:wr*100,avgWin:aw,avgLoss:al,expectancy:(wr*aw)-((1-wr)*al),evaluated:ev};
+}
 
 function renderSignals(){
   const grid=document.getElementById("sig-grid");
@@ -217,14 +269,27 @@ function renderSignals(){
 function renderPerf(perf){
   const c=document.getElementById("perf-container");
   if(!perf?.filters||!Object.keys(perf.filters).length){c.innerHTML=`<div class="empty">Accuracy data builds up after a few weeks of signals</div>`;return}
+  const exp=computeExpectancy(perf.filters);
+  if(exp){
+    document.getElementById("pb-winrate").textContent=exp.wr.toFixed(1)+"%";
+    document.getElementById("pb-avgwin").textContent="+"+exp.avgWin.toFixed(2)+"%";
+    document.getElementById("pb-avgloss").textContent="-"+exp.avgLoss.toFixed(2)+"%";
+    const e=exp.expectancy,el=document.getElementById("pb-expectancy");
+    el.textContent=(e>=0?"+":"")+e.toFixed(2)+"%";
+    el.className="ob-val "+(e>=0?"green":"red");
+  }
   const entries=Object.entries(perf.filters).filter(([,v])=>v.evaluated>0).sort((a,b)=>(b[1].win_rate_pct||0)-(a[1].win_rate_pct||0));
   if(!entries.length){c.innerHTML=`<div class="empty">No evaluated signals yet</div>`;return}
   c.innerHTML=`<div class="tbl-wrap"><table class="pos-table">
-    <thead><tr><th>Filter</th><th>Signals</th><th>Evaluated</th><th>Win rate</th><th>Avg win</th><th>Avg loss</th><th></th></tr></thead>
+    <thead><tr><th>Filter</th><th>Signals</th><th>Evaluated</th><th>Win rate</th><th>Avg win</th><th>Avg loss</th><th>Expectancy</th><th></th></tr></thead>
     <tbody>${entries.map(([name,s])=>{
       const wr=s.win_rate_pct??0;
       const wc=wr>=60?"pos":wr<45?"neg":"";
       const wfill=wr>=60?"var(--green)":wr<45?"var(--red)":"var(--amber)";
+      const lr=(100-wr)/100;
+      const exp=s.avg_win_move_pct&&s.avg_loss_move_pct?((wr/100)*s.avg_win_move_pct-(lr*s.avg_loss_move_pct)):null;
+      const expStr=exp!=null?(exp>=0?"+":"")+exp.toFixed(2)+"%":null;
+      const expCls=exp!=null?(exp>=0?"pos":"neg"):"";
       return`<tr>
         <td style="font-weight:500">${fr(name)}</td>
         <td style="font-family:var(--mono);color:var(--muted)">${s.signals}</td>
@@ -232,12 +297,49 @@ function renderPerf(perf){
         <td style="font-family:var(--mono)" class="${wc}">${wr.toFixed(1)}%</td>
         <td style="font-family:var(--mono);color:var(--green)">${s.avg_win_move_pct!=null?"+"+s.avg_win_move_pct+"%":"—"}</td>
         <td style="font-family:var(--mono);color:var(--red)">${s.avg_loss_move_pct!=null?"-"+s.avg_loss_move_pct+"%":"—"}</td>
+        <td style="font-family:var(--mono)" class="${expCls}">${expStr??'—'}</td>
         <td><div class="wr-bar"><div class="wr-fill" style="width:${Math.min(wr,100)}%;background:${wfill}"></div></div></td>
       </tr>`;
-    }).join("")}</tbody></table></div>
-    <div class="footer">Every signal recorded at scan time · Results logged at EOD · Git history is the proof<br>
-      <a href="https://github.com/Vadiraj1998/SignalLedger" target="_blank">github.com/Vadiraj1998/SignalLedger</a> · Built by <a href="https://vadiraj.dev" target="_blank">Vadiraj</a>
-    </div>`;
+    }).join("")}</tbody></table></div>`;
+}
+
+function renderCharts(perf){
+  if(!perf?.filters)return;
+  const entries=Object.entries(perf.filters).filter(([,v])=>v.evaluated>0).sort((a,b)=>(b[1].win_rate_pct||0)-(a[1].win_rate_pct||0));
+  if(!entries.length)return;
+
+  const labels=entries.map(([n])=>fr(n));
+  const winRates=entries.map(([,s])=>s.win_rate_pct??0);
+  const signals=entries.map(([,s])=>s.signals);
+
+  const isDark=document.documentElement.getAttribute("data-theme")==="dark";
+  const gridColor=isDark?"rgba(255,255,255,0.06)":"rgba(0,0,0,0.06)";
+  const tickColor=isDark?"#8b92a0":"#6b7280";
+
+  const barColors=winRates.map(w=>w>=60?"#10b981":w<45?"#ef4444":"#f59e0b");
+
+  const commonOpts={
+    responsive:true,
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>ctx.raw+(ctx.chart.id==="wr"?"%":" signals")}}},
+    scales:{
+      x:{grid:{color:gridColor},ticks:{color:tickColor,font:{size:11,family:"Inter"}}},
+      y:{grid:{color:gridColor},ticks:{color:tickColor,font:{size:11,family:"Inter"}}}
+    }
+  };
+
+  if(chartWR){chartWR.destroy();}
+  chartWR=new Chart(document.getElementById("chart-winrate"),{
+    type:"bar",
+    data:{labels,datasets:[{data:winRates,backgroundColor:barColors,borderRadius:4,borderSkipped:false}]},
+    options:{...commonOpts,scales:{...commonOpts.scales,y:{...commonOpts.scales.y,min:0,max:100,ticks:{...commonOpts.scales.y.ticks,callback:v=>v+"%"}}}}
+  });
+
+  if(chartSig){chartSig.destroy();}
+  chartSig=new Chart(document.getElementById("chart-signals"),{
+    type:"bar",
+    data:{labels,datasets:[{data:signals,backgroundColor:isDark?"rgba(59,130,246,0.7)":"rgba(37,99,235,0.7)",borderRadius:4,borderSkipped:false}]},
+    options:commonOpts
+  });
 }
 
 async function loadData(){
@@ -253,8 +355,14 @@ async function loadData(){
   renderSignals();
   try{
     const r=await fetch(`${REPO}/aggregator/filter_performance.json`);
-    if(r.ok){perfData=await r.json();document.getElementById("ob-alltime").textContent=perfData.total_signals??allSignals.length;renderPerf(perfData);}
-    else document.getElementById("ob-alltime").textContent=allSignals.length;
+    if(r.ok){
+      perfData=await r.json();
+      document.getElementById("ob-alltime").textContent=perfData.total_signals??allSignals.length;
+      renderPerf(perfData);
+      renderCharts(perfData);
+    }else{
+      document.getElementById("ob-alltime").textContent=allSignals.length;
+    }
   }catch(e){document.getElementById("ob-alltime").textContent=allSignals.length;}
 }
 
@@ -266,6 +374,13 @@ async function loadData(){
 })();
 
 loadData();
+
+// Handle ?tab=performance from methodology page
+const urlTab=new URLSearchParams(window.location.search).get("tab");
+if(urlTab==="performance"){
+  const btn=[...document.querySelectorAll(".nav-btn")].find(b=>b.textContent.trim()==="Performance");
+  if(btn)switchView("performance",btn);
+}
 </script>
 </body>
 </html>
