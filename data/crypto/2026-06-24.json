@@ -1,0 +1,40 @@
+[
+  {
+    "date": "2026-06-24",
+    "symbol": "ADAUSDT",
+    "market": "crypto",
+    "filters": [
+      "DUMP_OI_CONFIRM"
+    ],
+    "bias": "short",
+    "price_at_scan": 0.1514,
+    "price_change_pct_24h": -4.419,
+    "funding_rate": -8.589e-05,
+    "oi_change_pct_24h": 8.548674012186948,
+    "volume_usdt_24h": 161186677.397,
+    "volume_avg_7d": 138042102.5408,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-06-24",
+    "symbol": "SUIUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.7038,
+    "price_change_pct_24h": -2.128,
+    "funding_rate": 6.085e-05,
+    "oi_change_pct_24h": 3.8216914689184716,
+    "volume_usdt_24h": 234575819.621,
+    "volume_avg_7d": 152093907.60743287,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
