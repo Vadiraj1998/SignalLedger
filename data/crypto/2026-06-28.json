@@ -14,9 +14,9 @@
     "oi_change_pct_24h": 9.418536368749455,
     "volume_usdt_24h": 91208864.08573,
     "volume_avg_7d": 32413874.479007144,
-    "eod_price": null,
-    "move_pct": null,
-    "success": null,
-    "updated_at": null
+    "eod_price": 0.172,
+    "move_pct": 3.49,
+    "success": true,
+    "updated_at": "2026-06-28T18:00:02.604666+00:00"
   }
 ]
