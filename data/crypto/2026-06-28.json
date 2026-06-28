@@ -1,0 +1,22 @@
+[
+  {
+    "date": "2026-06-28",
+    "symbol": "WIFUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE",
+      "MOMENTUM_OI_CONFIRM"
+    ],
+    "bias": "long",
+    "price_at_scan": 0.1662,
+    "price_change_pct_24h": 7.226,
+    "funding_rate": 5e-05,
+    "oi_change_pct_24h": 9.418536368749455,
+    "volume_usdt_24h": 91208864.08573,
+    "volume_avg_7d": 32413874.479007144,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
