@@ -1,0 +1,40 @@
+[
+  {
+    "date": "2026-07-01",
+    "symbol": "BNBUSDT",
+    "market": "crypto",
+    "filters": [
+      "DUMP_OI_CONFIRM"
+    ],
+    "bias": "short",
+    "price_at_scan": 546.85,
+    "price_change_pct_24h": -2.301,
+    "funding_rate": 8.374e-05,
+    "oi_change_pct_24h": 8.292940329900855,
+    "volume_usdt_24h": 234219773.382,
+    "volume_avg_7d": 290395185.32794285,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-07-01",
+    "symbol": "OPUSDT",
+    "market": "crypto",
+    "filters": [
+      "DUMP_OI_CONFIRM"
+    ],
+    "bias": "short",
+    "price_at_scan": 0.0964,
+    "price_change_pct_24h": -3.792,
+    "funding_rate": -4.239e-05,
+    "oi_change_pct_24h": 8.683161563745909,
+    "volume_usdt_24h": 19212197.39658,
+    "volume_avg_7d": 25889664.323302858,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
