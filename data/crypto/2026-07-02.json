@@ -1,0 +1,40 @@
+[
+  {
+    "date": "2026-07-02",
+    "symbol": "ADAUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.1539,
+    "price_change_pct_24h": 6.653,
+    "funding_rate": 0.0001,
+    "oi_change_pct_24h": -2.2500222044087916,
+    "volume_usdt_24h": 228680998.2239,
+    "volume_avg_7d": 129302074.50544286,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-07-02",
+    "symbol": "JUPUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.2344,
+    "price_change_pct_24h": 10.775,
+    "funding_rate": 1.19e-06,
+    "oi_change_pct_24h": 5.490076010359946,
+    "volume_usdt_24h": 40961656.8443,
+    "volume_avg_7d": 23828125.086142857,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
