@@ -1,0 +1,40 @@
+[
+  {
+    "date": "2026-07-03",
+    "symbol": "UNIUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 3.179,
+    "price_change_pct_24h": 14.065,
+    "funding_rate": 0.0001,
+    "oi_change_pct_24h": 1.1149024865818944,
+    "volume_usdt_24h": 128598053.994,
+    "volume_avg_7d": 59735849.71871429,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-07-03",
+    "symbol": "INJUSDT",
+    "market": "crypto",
+    "filters": [
+      "MOMENTUM_OI_CONFIRM"
+    ],
+    "bias": "long",
+    "price_at_scan": 4.623,
+    "price_change_pct_24h": 3.215,
+    "funding_rate": -0.00023333,
+    "oi_change_pct_24h": 10.950846267599012,
+    "volume_usdt_24h": 36009336.9095,
+    "volume_avg_7d": 38023275.911542855,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
