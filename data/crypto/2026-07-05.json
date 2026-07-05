@@ -1,0 +1,40 @@
+[
+  {
+    "date": "2026-07-05",
+    "symbol": "ADAUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.1921,
+    "price_change_pct_24h": 6.782,
+    "funding_rate": 0.0001,
+    "oi_change_pct_24h": 2.937845299854364,
+    "volume_usdt_24h": 325437283.8905,
+    "volume_avg_7d": 179160837.75707144,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-07-05",
+    "symbol": "SANDUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.05048,
+    "price_change_pct_24h": -1.406,
+    "funding_rate": 8.699e-05,
+    "oi_change_pct_24h": 3.2091790248307612,
+    "volume_usdt_24h": 13409150.75848,
+    "volume_avg_7d": 8061041.471011428,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
