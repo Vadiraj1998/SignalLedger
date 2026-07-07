@@ -1,0 +1,40 @@
+[
+  {
+    "date": "2026-07-07",
+    "symbol": "AAVEUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 94.2,
+    "price_change_pct_24h": 5.855,
+    "funding_rate": 0.0001,
+    "oi_change_pct_24h": 4.217956345240678,
+    "volume_usdt_24h": 154602011.842,
+    "volume_avg_7d": 95492845.47514285,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-07-07",
+    "symbol": "SEIUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.05057,
+    "price_change_pct_24h": 1.241,
+    "funding_rate": 2.262e-05,
+    "oi_change_pct_24h": -3.8537398053962653,
+    "volume_usdt_24h": 19770637.75822,
+    "volume_avg_7d": 12884640.222547144,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
