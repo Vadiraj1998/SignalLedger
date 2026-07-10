@@ -1,0 +1,23 @@
+[
+  {
+    "date": "2026-07-10",
+    "symbol": "ARBUSDT",
+    "market": "crypto",
+    "filters": [
+      "OI_SURGE",
+      "VOLUME_SPIKE",
+      "MOMENTUM_OI_CONFIRM"
+    ],
+    "bias": "long",
+    "price_at_scan": 0.08751,
+    "price_change_pct_24h": 13.916,
+    "funding_rate": 0.0001,
+    "oi_change_pct_24h": 22.1002416576903,
+    "volume_usdt_24h": 132689234.749191,
+    "volume_avg_7d": 36316980.91084157,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
