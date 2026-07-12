@@ -1,29 +1,29 @@
 {
-  "generated_at": "2026-07-05T02:30:01.967359",
-  "total_signals": 704,
-  "overall_win_rate_pct": 56.0,
-  "overall_avg_win_pct": 3.4,
-  "overall_avg_loss_pct": 0.49,
-  "overall_expectancy_pct": 1.688,
+  "generated_at": "2026-07-12T02:30:01.961090",
+  "total_signals": 823,
+  "overall_win_rate_pct": 48.7,
+  "overall_avg_win_pct": 3.39,
+  "overall_avg_loss_pct": 0.36,
+  "overall_expectancy_pct": 1.467,
   "filters": {
     "VOLUME_SPIKE": {
-      "signals": 138,
-      "evaluated": 136,
-      "wins": 116,
-      "losses": 20,
-      "pending": 2,
-      "win_rate_pct": 85.3,
-      "avg_win_move_pct": 6.99,
-      "avg_loss_move_pct": 0.93
+      "signals": 147,
+      "evaluated": 147,
+      "wins": 124,
+      "losses": 23,
+      "pending": 0,
+      "win_rate_pct": 84.4,
+      "avg_win_move_pct": 6.73,
+      "avg_loss_move_pct": 0.89
     },
     "MOMENTUM_OI_CONFIRM": {
-      "signals": 14,
-      "evaluated": 14,
-      "wins": 12,
+      "signals": 16,
+      "evaluated": 16,
+      "wins": 14,
       "losses": 2,
       "pending": 0,
-      "win_rate_pct": 85.7,
-      "avg_win_move_pct": 7.92,
+      "win_rate_pct": 87.5,
+      "avg_win_move_pct": 7.32,
       "avg_loss_move_pct": 4.32
     },
     "FUNDING_EXTREME_LONG": {
@@ -47,34 +47,34 @@
       "avg_loss_move_pct": 1.36
     },
     "OI_SURGE": {
-      "signals": 8,
-      "evaluated": 8,
-      "wins": 7,
+      "signals": 9,
+      "evaluated": 9,
+      "wins": 8,
       "losses": 1,
       "pending": 0,
-      "win_rate_pct": 87.5,
-      "avg_win_move_pct": 10.37,
+      "win_rate_pct": 88.9,
+      "avg_win_move_pct": 9.53,
       "avg_loss_move_pct": 8.59
     },
     "NEAR_52W_HIGH": {
-      "signals": 365,
-      "evaluated": 365,
+      "signals": 459,
+      "evaluated": 459,
       "wins": 174,
-      "losses": 191,
+      "losses": 285,
       "pending": 0,
-      "win_rate_pct": 47.7,
+      "win_rate_pct": 37.9,
       "avg_win_move_pct": 1.79,
-      "avg_loss_move_pct": 0.35
+      "avg_loss_move_pct": 0.24
     },
     "NEAR_52W_LOW": {
-      "signals": 170,
-      "evaluated": 170,
+      "signals": 186,
+      "evaluated": 186,
       "wins": 88,
-      "losses": 82,
+      "losses": 98,
       "pending": 0,
-      "win_rate_pct": 51.8,
+      "win_rate_pct": 47.3,
       "avg_win_move_pct": 1.57,
-      "avg_loss_move_pct": 0.23
+      "avg_loss_move_pct": 0.19
     },
     "OI_BUILDUP_BEARISH": {
       "signals": 2,
@@ -89,18 +89,18 @@
   },
   "markets": {
     "crypto": {
-      "signals": 167,
-      "wins": 157,
-      "losses": 38,
-      "pending": 2,
-      "win_rate_pct": 80.5
+      "signals": 176,
+      "wins": 168,
+      "losses": 41,
+      "pending": 0,
+      "win_rate_pct": 80.4
     },
     "stock": {
-      "signals": 537,
+      "signals": 647,
       "wins": 262,
-      "losses": 275,
+      "losses": 385,
       "pending": 0,
-      "win_rate_pct": 48.8
+      "win_rate_pct": 40.5
     }
   },
   "top_symbols": [
@@ -111,16 +111,22 @@
       "win_rate_pct": 160.0
     },
     {
-      "symbol": "AAVEUSDT",
-      "signals": 7,
-      "wins": 9,
-      "win_rate_pct": 128.6
-    },
-    {
       "symbol": "MANAUSDT",
       "signals": 8,
       "wins": 10,
       "win_rate_pct": 125.0
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "signals": 8,
+      "wins": 10,
+      "win_rate_pct": 125.0
+    },
+    {
+      "symbol": "ARBUSDT",
+      "signals": 6,
+      "wins": 7,
+      "win_rate_pct": 116.7
     },
     {
       "symbol": "WIFUSDT",
@@ -141,6 +147,12 @@
       "win_rate_pct": 100.0
     },
     {
+      "symbol": "UNIUSDT",
+      "signals": 8,
+      "wins": 8,
+      "win_rate_pct": 100.0
+    },
+    {
       "symbol": "SOLUSDT",
       "signals": 5,
       "wins": 5,
@@ -150,18 +162,6 @@
       "symbol": "ADAUSDT",
       "signals": 10,
       "wins": 10,
-      "win_rate_pct": 100.0
-    },
-    {
-      "symbol": "SANDUSDT",
-      "signals": 5,
-      "wins": 5,
-      "win_rate_pct": 100.0
-    },
-    {
-      "symbol": "RVNL",
-      "signals": 8,
-      "wins": 8,
       "win_rate_pct": 100.0
     }
   ]
