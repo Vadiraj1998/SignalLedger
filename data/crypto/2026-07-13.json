@@ -1,0 +1,21 @@
+[
+  {
+    "date": "2026-07-13",
+    "symbol": "AVAXUSDT",
+    "market": "crypto",
+    "filters": [
+      "DUMP_OI_CONFIRM"
+    ],
+    "bias": "short",
+    "price_at_scan": 6.403,
+    "price_change_pct_24h": -2.334,
+    "funding_rate": -6.817e-05,
+    "oi_change_pct_24h": 10.247751605692581,
+    "volume_usdt_24h": 77788406.407,
+    "volume_avg_7d": 72841520.18814285,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
