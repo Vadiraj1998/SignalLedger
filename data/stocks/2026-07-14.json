@@ -1,0 +1,442 @@
+[
+  {
+    "date": "2026-07-14",
+    "symbol": "ABCAPITAL",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 407.45,
+    "price_change_pct": 0.0,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 0.0,
+    "high_52w": 410.7,
+    "low_52w": 243.0,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-07-14",
+    "symbol": "APOLLOHOSP",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 8782.5,
+    "price_change_pct": 0.0,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 0.0,
+    "high_52w": 8950.0,
+    "low_52w": 6696.5,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-07-14",
+    "symbol": "DIVISLAB",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 6938.5,
+    "price_change_pct": 0.0,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 0.0,
+    "high_52w": 6968.0,
+    "low_52w": 5636.5,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-07-14",
+    "symbol": "EXIDEIND",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 423.4,
+    "price_change_pct": 0.0,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 0.0,
+    "high_52w": 431.0,
+    "low_52w": 287.0,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-07-14",
+    "symbol": "FEDERALBNK",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 332.5,
+    "price_change_pct": 0.0,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 0.0,
+    "high_52w": 336.5,
+    "low_52w": 185.11,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-07-14",
+    "symbol": "GMRAIRPORT",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 114.68,
+    "price_change_pct": 0.0,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 0.0,
+    "high_52w": 115.64,
+    "low_52w": 84.11,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-07-14",
+    "symbol": "ITC",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_LOW"
+    ],
+    "bias": "short",
+    "price_at_scan": 279.65,
+    "price_change_pct": 0.0,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 0.0,
+    "high_52w": 407.15,
+    "low_52w": 275.05,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-07-14",
+    "symbol": "LAURUSLABS",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 1558.6,
+    "price_change_pct": 0.0,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 0.0,
+    "high_52w": 1565.4,
+    "low_52w": 788.2,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-07-14",
+    "symbol": "LUPIN",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 2492.6,
+    "price_change_pct": 0.0,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 0.0,
+    "high_52w": 2526.9,
+    "low_52w": 1836.8,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-07-14",
+    "symbol": "NAM-INDIA",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 1215.3,
+    "price_change_pct": 0.0,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 0.0,
+    "high_52w": 1233.5,
+    "low_52w": 780.25,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-07-14",
+    "symbol": "NYKAA",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 328.4,
+    "price_change_pct": 0.0,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 0.0,
+    "high_52w": 332.15,
+    "low_52w": 200.14,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-07-14",
+    "symbol": "OFSS",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 11746.0,
+    "price_change_pct": 0.0,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 0.0,
+    "high_52w": 11958.0,
+    "low_52w": 6061.0,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-07-14",
+    "symbol": "PATANJALI",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_LOW"
+    ],
+    "bias": "short",
+    "price_at_scan": 408.85,
+    "price_change_pct": 0.0,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 0.0,
+    "high_52w": 653.9,
+    "low_52w": 406.35,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-07-14",
+    "symbol": "PAYTM",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 1386.5,
+    "price_change_pct": 0.0,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 0.0,
+    "high_52w": 1397.4,
+    "low_52w": 930.6,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-07-14",
+    "symbol": "PHOENIXLTD",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 2154.0,
+    "price_change_pct": 0.0,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 0.0,
+    "high_52w": 2163.4,
+    "low_52w": 1402.5,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-07-14",
+    "symbol": "PIIND",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_LOW"
+    ],
+    "bias": "short",
+    "price_at_scan": 2569.0,
+    "price_change_pct": 0.0,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 0.0,
+    "high_52w": 4330.0,
+    "low_52w": 2541.0,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-07-14",
+    "symbol": "PNBHOUSING",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 1122.3,
+    "price_change_pct": 0.0,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 0.0,
+    "high_52w": 1132.7,
+    "low_52w": 729.6,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-07-14",
+    "symbol": "RBLBANK",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 380.6,
+    "price_change_pct": 0.0,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 0.0,
+    "high_52w": 382.1,
+    "low_52w": 243.25,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-07-14",
+    "symbol": "SONACOMS",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 670.85,
+    "price_change_pct": 0.0,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 0.0,
+    "high_52w": 682.2,
+    "low_52w": 402.3,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-07-14",
+    "symbol": "SUNPHARMA",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 1921.4,
+    "price_change_pct": 0.0,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 0.0,
+    "high_52w": 1953.9,
+    "low_52w": 1548.0,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-07-14",
+    "symbol": "TITAN",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 4601.5,
+    "price_change_pct": 0.0,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 0.0,
+    "high_52w": 4679.8,
+    "low_52w": 3303.1,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-07-14",
+    "symbol": "TORNTPHARM",
+    "market": "stock",
+    "filters": [
+      "NEAR_52W_HIGH"
+    ],
+    "bias": "long",
+    "price_at_scan": 4951.1,
+    "price_change_pct": 0.0,
+    "oi_change_pct": null,
+    "pcr": null,
+    "volume": 0.0,
+    "high_52w": 4973.0,
+    "low_52w": 3314.2,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
