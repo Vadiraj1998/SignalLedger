@@ -1,0 +1,40 @@
+[
+  {
+    "date": "2026-07-15",
+    "symbol": "ETHUSDT",
+    "market": "crypto",
+    "filters": [
+      "MOMENTUM_OI_CONFIRM"
+    ],
+    "bias": "long",
+    "price_at_scan": 1890.64,
+    "price_change_pct_24h": 6.492,
+    "funding_rate": 3.834e-05,
+    "oi_change_pct_24h": 10.93115286530737,
+    "volume_usdt_24h": 9769714505.99,
+    "volume_avg_7d": 6589376765.400458,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-07-15",
+    "symbol": "INJUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 5.052,
+    "price_change_pct_24h": 8.203,
+    "funding_rate": -5.665e-05,
+    "oi_change_pct_24h": 5.5023329280704285,
+    "volume_usdt_24h": 47563221.8034,
+    "volume_avg_7d": 29595319.99162857,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
