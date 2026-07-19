@@ -1,0 +1,21 @@
+[
+  {
+    "date": "2026-07-19",
+    "symbol": "LTCUSDT",
+    "market": "crypto",
+    "filters": [
+      "MOMENTUM_OI_CONFIRM"
+    ],
+    "bias": "long",
+    "price_at_scan": 46.97,
+    "price_change_pct_24h": 4.077,
+    "funding_rate": 7.052e-05,
+    "oi_change_pct_24h": 14.216762297802937,
+    "volume_usdt_24h": 73524023.75,
+    "volume_avg_7d": 53769664.32564857,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
