@@ -1,29 +1,29 @@
 {
-  "generated_at": "2026-07-12T02:30:01.961090",
-  "total_signals": 823,
-  "overall_win_rate_pct": 48.7,
-  "overall_avg_win_pct": 3.39,
-  "overall_avg_loss_pct": 0.36,
-  "overall_expectancy_pct": 1.467,
+  "generated_at": "2026-07-19T02:30:01.898166",
+  "total_signals": 921,
+  "overall_win_rate_pct": 43.8,
+  "overall_avg_win_pct": 3.38,
+  "overall_avg_loss_pct": 0.3,
+  "overall_expectancy_pct": 1.312,
   "filters": {
     "VOLUME_SPIKE": {
-      "signals": 147,
-      "evaluated": 147,
-      "wins": 124,
-      "losses": 23,
+      "signals": 149,
+      "evaluated": 149,
+      "wins": 125,
+      "losses": 24,
       "pending": 0,
-      "win_rate_pct": 84.4,
-      "avg_win_move_pct": 6.73,
-      "avg_loss_move_pct": 0.89
+      "win_rate_pct": 83.9,
+      "avg_win_move_pct": 6.69,
+      "avg_loss_move_pct": 0.87
     },
     "MOMENTUM_OI_CONFIRM": {
-      "signals": 16,
-      "evaluated": 16,
-      "wins": 14,
+      "signals": 18,
+      "evaluated": 17,
+      "wins": 15,
       "losses": 2,
-      "pending": 0,
-      "win_rate_pct": 87.5,
-      "avg_win_move_pct": 7.32,
+      "pending": 1,
+      "win_rate_pct": 88.2,
+      "avg_win_move_pct": 6.96,
       "avg_loss_move_pct": 4.32
     },
     "FUNDING_EXTREME_LONG": {
@@ -37,14 +37,14 @@
       "avg_loss_move_pct": 2.57
     },
     "DUMP_OI_CONFIRM": {
-      "signals": 13,
-      "evaluated": 13,
+      "signals": 14,
+      "evaluated": 14,
       "wins": 12,
-      "losses": 1,
+      "losses": 2,
       "pending": 0,
-      "win_rate_pct": 92.3,
+      "win_rate_pct": 85.7,
       "avg_win_move_pct": 7.8,
-      "avg_loss_move_pct": 1.36
+      "avg_loss_move_pct": 0.92
     },
     "OI_SURGE": {
       "signals": 9,
@@ -57,24 +57,24 @@
       "avg_loss_move_pct": 8.59
     },
     "NEAR_52W_HIGH": {
-      "signals": 459,
-      "evaluated": 459,
+      "signals": 538,
+      "evaluated": 538,
       "wins": 174,
-      "losses": 285,
+      "losses": 364,
       "pending": 0,
-      "win_rate_pct": 37.9,
+      "win_rate_pct": 32.3,
       "avg_win_move_pct": 1.79,
-      "avg_loss_move_pct": 0.24
+      "avg_loss_move_pct": 0.19
     },
     "NEAR_52W_LOW": {
-      "signals": 186,
-      "evaluated": 186,
+      "signals": 200,
+      "evaluated": 200,
       "wins": 88,
-      "losses": 98,
+      "losses": 112,
       "pending": 0,
-      "win_rate_pct": 47.3,
+      "win_rate_pct": 44.0,
       "avg_win_move_pct": 1.57,
-      "avg_loss_move_pct": 0.19
+      "avg_loss_move_pct": 0.17
     },
     "OI_BUILDUP_BEARISH": {
       "signals": 2,
@@ -89,26 +89,26 @@
   },
   "markets": {
     "crypto": {
-      "signals": 176,
-      "wins": 168,
-      "losses": 41,
-      "pending": 0,
-      "win_rate_pct": 80.4
+      "signals": 181,
+      "wins": 170,
+      "losses": 43,
+      "pending": 1,
+      "win_rate_pct": 79.8
     },
     "stock": {
-      "signals": 647,
+      "signals": 740,
       "wins": 262,
-      "losses": 385,
+      "losses": 478,
       "pending": 0,
-      "win_rate_pct": 40.5
+      "win_rate_pct": 35.4
     }
   },
   "top_symbols": [
     {
       "symbol": "AVAXUSDT",
-      "signals": 5,
+      "signals": 6,
       "wins": 8,
-      "win_rate_pct": 160.0
+      "win_rate_pct": 133.3
     },
     {
       "symbol": "MANAUSDT",
