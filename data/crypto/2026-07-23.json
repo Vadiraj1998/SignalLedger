@@ -1,0 +1,40 @@
+[
+  {
+    "date": "2026-07-23",
+    "symbol": "NEARUSDT",
+    "market": "crypto",
+    "filters": [
+      "DUMP_OI_CONFIRM"
+    ],
+    "bias": "short",
+    "price_at_scan": 1.867,
+    "price_change_pct_24h": -3.514,
+    "funding_rate": 4.52e-06,
+    "oi_change_pct_24h": 9.039439924914133,
+    "volume_usdt_24h": 128331341.94,
+    "volume_avg_7d": 111669550.51114285,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-07-23",
+    "symbol": "AAVEUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 97.37,
+    "price_change_pct_24h": 1.766,
+    "funding_rate": 4.653e-05,
+    "oi_change_pct_24h": 0.6146653454643641,
+    "volume_usdt_24h": 111764802.037,
+    "volume_avg_7d": 70100906.919,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
