@@ -1,0 +1,40 @@
+[
+  {
+    "date": "2026-07-25",
+    "symbol": "SANDUSDT",
+    "market": "crypto",
+    "filters": [
+      "DUMP_OI_CONFIRM"
+    ],
+    "bias": "short",
+    "price_at_scan": 0.04489,
+    "price_change_pct_24h": -2.158,
+    "funding_rate": -0.00024141,
+    "oi_change_pct_24h": 8.039831145713622,
+    "volume_usdt_24h": 5908493.18332,
+    "volume_avg_7d": 4788989.579137143,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-07-25",
+    "symbol": "INJUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 5.167,
+    "price_change_pct_24h": -0.116,
+    "funding_rate": -0.00010135,
+    "oi_change_pct_24h": 4.550592514293526,
+    "volume_usdt_24h": 43380889.3748,
+    "volume_avg_7d": 28066892.370457143,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
