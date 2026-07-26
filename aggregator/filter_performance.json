@@ -1,29 +1,29 @@
 {
-  "generated_at": "2026-07-19T02:30:01.898166",
-  "total_signals": 921,
-  "overall_win_rate_pct": 43.8,
-  "overall_avg_win_pct": 3.38,
-  "overall_avg_loss_pct": 0.3,
-  "overall_expectancy_pct": 1.312,
+  "generated_at": "2026-07-26T02:30:01.862060",
+  "total_signals": 1021,
+  "overall_win_rate_pct": 40.0,
+  "overall_avg_win_pct": 3.36,
+  "overall_avg_loss_pct": 0.25,
+  "overall_expectancy_pct": 1.195,
   "filters": {
     "VOLUME_SPIKE": {
-      "signals": 149,
-      "evaluated": 149,
-      "wins": 125,
-      "losses": 24,
-      "pending": 0,
-      "win_rate_pct": 83.9,
-      "avg_win_move_pct": 6.69,
-      "avg_loss_move_pct": 0.87
+      "signals": 155,
+      "evaluated": 153,
+      "wins": 128,
+      "losses": 25,
+      "pending": 2,
+      "win_rate_pct": 83.7,
+      "avg_win_move_pct": 6.58,
+      "avg_loss_move_pct": 0.83
     },
     "MOMENTUM_OI_CONFIRM": {
       "signals": 18,
-      "evaluated": 17,
-      "wins": 15,
+      "evaluated": 18,
+      "wins": 16,
       "losses": 2,
-      "pending": 1,
-      "win_rate_pct": 88.2,
-      "avg_win_move_pct": 6.96,
+      "pending": 0,
+      "win_rate_pct": 88.9,
+      "avg_win_move_pct": 6.59,
       "avg_loss_move_pct": 4.32
     },
     "FUNDING_EXTREME_LONG": {
@@ -37,14 +37,14 @@
       "avg_loss_move_pct": 2.57
     },
     "DUMP_OI_CONFIRM": {
-      "signals": 14,
-      "evaluated": 14,
-      "wins": 12,
-      "losses": 2,
+      "signals": 17,
+      "evaluated": 17,
+      "wins": 13,
+      "losses": 4,
       "pending": 0,
-      "win_rate_pct": 85.7,
-      "avg_win_move_pct": 7.8,
-      "avg_loss_move_pct": 0.92
+      "win_rate_pct": 76.5,
+      "avg_win_move_pct": 7.3,
+      "avg_loss_move_pct": 0.77
     },
     "OI_SURGE": {
       "signals": 9,
@@ -57,24 +57,24 @@
       "avg_loss_move_pct": 8.59
     },
     "NEAR_52W_HIGH": {
-      "signals": 538,
-      "evaluated": 538,
+      "signals": 610,
+      "evaluated": 610,
       "wins": 174,
-      "losses": 364,
+      "losses": 436,
       "pending": 0,
-      "win_rate_pct": 32.3,
+      "win_rate_pct": 28.5,
       "avg_win_move_pct": 1.79,
-      "avg_loss_move_pct": 0.19
+      "avg_loss_move_pct": 0.16
     },
     "NEAR_52W_LOW": {
-      "signals": 200,
-      "evaluated": 200,
+      "signals": 219,
+      "evaluated": 219,
       "wins": 88,
-      "losses": 112,
+      "losses": 131,
       "pending": 0,
-      "win_rate_pct": 44.0,
+      "win_rate_pct": 40.2,
       "avg_win_move_pct": 1.57,
-      "avg_loss_move_pct": 0.17
+      "avg_loss_move_pct": 0.14
     },
     "OI_BUILDUP_BEARISH": {
       "signals": 2,
@@ -89,27 +89,21 @@
   },
   "markets": {
     "crypto": {
-      "signals": 181,
-      "wins": 170,
-      "losses": 43,
-      "pending": 1,
-      "win_rate_pct": 79.8
+      "signals": 190,
+      "wins": 175,
+      "losses": 46,
+      "pending": 2,
+      "win_rate_pct": 79.2
     },
     "stock": {
-      "signals": 740,
+      "signals": 831,
       "wins": 262,
-      "losses": 478,
+      "losses": 569,
       "pending": 0,
-      "win_rate_pct": 35.4
+      "win_rate_pct": 31.5
     }
   },
   "top_symbols": [
-    {
-      "symbol": "AVAXUSDT",
-      "signals": 6,
-      "wins": 8,
-      "win_rate_pct": 133.3
-    },
     {
       "symbol": "MANAUSDT",
       "signals": 8,
@@ -118,9 +112,9 @@
     },
     {
       "symbol": "AAVEUSDT",
-      "signals": 8,
-      "wins": 10,
-      "win_rate_pct": 125.0
+      "signals": 9,
+      "wins": 11,
+      "win_rate_pct": 122.2
     },
     {
       "symbol": "ARBUSDT",
@@ -129,10 +123,10 @@
       "win_rate_pct": 116.7
     },
     {
-      "symbol": "WIFUSDT",
-      "signals": 8,
-      "wins": 9,
-      "win_rate_pct": 112.5
+      "symbol": "AVAXUSDT",
+      "signals": 7,
+      "wins": 8,
+      "win_rate_pct": 114.3
     },
     {
       "symbol": "JUPUSDT",
@@ -141,15 +135,15 @@
       "win_rate_pct": 109.1
     },
     {
-      "symbol": "NEARUSDT",
-      "signals": 5,
-      "wins": 5,
-      "win_rate_pct": 100.0
-    },
-    {
       "symbol": "UNIUSDT",
       "signals": 8,
       "wins": 8,
+      "win_rate_pct": 100.0
+    },
+    {
+      "symbol": "WIFUSDT",
+      "signals": 9,
+      "wins": 9,
       "win_rate_pct": 100.0
     },
     {
@@ -162,6 +156,12 @@
       "symbol": "ADAUSDT",
       "signals": 10,
       "wins": 10,
+      "win_rate_pct": 100.0
+    },
+    {
+      "symbol": "SBICARD",
+      "signals": 8,
+      "wins": 8,
       "win_rate_pct": 100.0
     }
   ]
