@@ -1,0 +1,40 @@
+[
+  {
+    "date": "2026-07-26",
+    "symbol": "AVAXUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 6.776,
+    "price_change_pct_24h": 7.573,
+    "funding_rate": 0.0001,
+    "oi_change_pct_24h": 7.720191623383983,
+    "volume_usdt_24h": 109187366.276,
+    "volume_avg_7d": 67716755.24442856,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-07-26",
+    "symbol": "WIFUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.1548,
+    "price_change_pct_24h": 7.5,
+    "funding_rate": 5e-05,
+    "oi_change_pct_24h": -2.1270458693015577,
+    "volume_usdt_24h": 21600809.51976,
+    "volume_avg_7d": 13397744.094887141,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
