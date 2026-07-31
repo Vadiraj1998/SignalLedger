@@ -1,0 +1,40 @@
+[
+  {
+    "date": "2026-07-31",
+    "symbol": "BNBUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 592.41,
+    "price_change_pct_24h": 3.501,
+    "funding_rate": 5.15e-05,
+    "oi_change_pct_24h": 4.375017306813328,
+    "volume_usdt_24h": 325531463.822,
+    "volume_avg_7d": 187960640.72432855,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-07-31",
+    "symbol": "UNIUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 4.429,
+    "price_change_pct_24h": 11.003,
+    "funding_rate": 0.0001,
+    "oi_change_pct_24h": 6.115856894463914,
+    "volume_usdt_24h": 133951957.233,
+    "volume_avg_7d": 79705369.90771428,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
