@@ -1,0 +1,40 @@
+[
+  {
+    "date": "2026-08-01",
+    "symbol": "UNIUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 4.346,
+    "price_change_pct_24h": -2.095,
+    "funding_rate": 2.029e-05,
+    "oi_change_pct_24h": -2.1570477001545743,
+    "volume_usdt_24h": 167019510.991,
+    "volume_avg_7d": 95612633.96442857,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-08-01",
+    "symbol": "SANDUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.04273,
+    "price_change_pct_24h": 3.966,
+    "funding_rate": 0.0001,
+    "oi_change_pct_24h": 0.527551909822483,
+    "volume_usdt_24h": 12995800.84177,
+    "volume_avg_7d": 5975421.101261429,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
