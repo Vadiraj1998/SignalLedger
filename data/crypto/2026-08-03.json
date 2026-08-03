@@ -1,0 +1,22 @@
+[
+  {
+    "date": "2026-08-03",
+    "symbol": "ADAUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE",
+      "MOMENTUM_OI_CONFIRM"
+    ],
+    "bias": "long",
+    "price_at_scan": 0.1896,
+    "price_change_pct_24h": 8.778,
+    "funding_rate": 0.0001,
+    "oi_change_pct_24h": 14.179385884418458,
+    "volume_usdt_24h": 246995477.7744,
+    "volume_avg_7d": 156657961.8734857,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
