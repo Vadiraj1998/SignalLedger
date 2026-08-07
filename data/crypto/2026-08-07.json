@@ -1,0 +1,60 @@
+[
+  {
+    "date": "2026-08-07",
+    "symbol": "XRPUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE",
+      "DUMP_OI_CONFIRM"
+    ],
+    "bias": "short",
+    "price_at_scan": 1.0346,
+    "price_change_pct_24h": -2.525,
+    "funding_rate": -9.458e-05,
+    "oi_change_pct_24h": 10.929245394744296,
+    "volume_usdt_24h": 587177992.1447,
+    "volume_avg_7d": 362158095.11104715,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-08-07",
+    "symbol": "ADAUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.201,
+    "price_change_pct_24h": 5.126,
+    "funding_rate": 7.84e-06,
+    "oi_change_pct_24h": 3.907617746679938,
+    "volume_usdt_24h": 319326155.6315,
+    "volume_avg_7d": 206891119.6706,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-08-07",
+    "symbol": "INJUSDT",
+    "market": "crypto",
+    "filters": [
+      "DUMP_OI_CONFIRM"
+    ],
+    "bias": "short",
+    "price_at_scan": 4.576,
+    "price_change_pct_24h": -5.785,
+    "funding_rate": -0.00043106,
+    "oi_change_pct_24h": 8.025681359716165,
+    "volume_usdt_24h": 26706862.9964,
+    "volume_avg_7d": 22681375.178014286,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
