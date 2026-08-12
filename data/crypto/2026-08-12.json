@@ -1,0 +1,61 @@
+[
+  {
+    "date": "2026-08-12",
+    "symbol": "DOGEUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.07187,
+    "price_change_pct_24h": 3.143,
+    "funding_rate": 0.0001,
+    "oi_change_pct_24h": 5.0444887127821625,
+    "volume_usdt_24h": 329794779.80387,
+    "volume_avg_7d": 216200894.24876428,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-08-12",
+    "symbol": "LINKUSDT",
+    "market": "crypto",
+    "filters": [
+      "OI_SURGE",
+      "VOLUME_SPIKE",
+      "MOMENTUM_OI_CONFIRM"
+    ],
+    "bias": "long",
+    "price_at_scan": 8.777,
+    "price_change_pct_24h": 5.849,
+    "funding_rate": 0.0001,
+    "oi_change_pct_24h": 18.714073179113413,
+    "volume_usdt_24h": 177215254.167,
+    "volume_avg_7d": 85961993.38644858,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-08-12",
+    "symbol": "SANDUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.04019,
+    "price_change_pct_24h": -2.499,
+    "funding_rate": -0.00025824,
+    "oi_change_pct_24h": 6.761493278339313,
+    "volume_usdt_24h": 8053398.46512,
+    "volume_avg_7d": 4252170.906778571,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
