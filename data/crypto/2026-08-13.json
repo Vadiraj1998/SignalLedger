@@ -1,0 +1,40 @@
+[
+  {
+    "date": "2026-08-13",
+    "symbol": "DOGEUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.06965,
+    "price_change_pct_24h": -3.129,
+    "funding_rate": -3.543e-05,
+    "oi_change_pct_24h": -0.15103061522379846,
+    "volume_usdt_24h": 357746160.94916,
+    "volume_avg_7d": 238149959.28373855,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-08-13",
+    "symbol": "UNIUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 3.571,
+    "price_change_pct_24h": -4.723,
+    "funding_rate": 0.0001,
+    "oi_change_pct_24h": 3.2958121353204186,
+    "volume_usdt_24h": 125343969.888,
+    "volume_avg_7d": 69576277.58857143,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
