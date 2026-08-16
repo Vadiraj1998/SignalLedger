@@ -1,0 +1,40 @@
+[
+  {
+    "date": "2026-08-16",
+    "symbol": "AVAXUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 6.328,
+    "price_change_pct_24h": -2.195,
+    "funding_rate": -5.18e-05,
+    "oi_change_pct_24h": 2.4866003602431874,
+    "volume_usdt_24h": 101449515.204,
+    "volume_avg_7d": 64015153.74142857,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-08-16",
+    "symbol": "LINKUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 9.466,
+    "price_change_pct_24h": 5.565,
+    "funding_rate": 7.228e-05,
+    "oi_change_pct_24h": 6.053570934787382,
+    "volume_usdt_24h": 278319027.013,
+    "volume_avg_7d": 137320130.9838143,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
