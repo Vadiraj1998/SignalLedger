@@ -1,0 +1,40 @@
+[
+  {
+    "date": "2026-08-19",
+    "symbol": "DOTUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.751,
+    "price_change_pct_24h": -1.314,
+    "funding_rate": 5.855e-05,
+    "oi_change_pct_24h": -3.284474920421523,
+    "volume_usdt_24h": 39661507.574672,
+    "volume_avg_7d": 24004864.625075914,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-08-19",
+    "symbol": "SUIUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.6512,
+    "price_change_pct_24h": -3.526,
+    "funding_rate": -7.354e-05,
+    "oi_change_pct_24h": 5.395642895476619,
+    "volume_usdt_24h": 159685403.88233,
+    "volume_avg_7d": 79270404.29687285,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
