@@ -1,0 +1,41 @@
+[
+  {
+    "date": "2026-08-24",
+    "symbol": "UNIUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 4.524,
+    "price_change_pct_24h": 5.038,
+    "funding_rate": 0.0001,
+    "oi_change_pct_24h": 6.187381986752864,
+    "volume_usdt_24h": 209715217.234,
+    "volume_avg_7d": 132205400.61457144,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-08-24",
+    "symbol": "AAVEUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE",
+      "MOMENTUM_OI_CONFIRM"
+    ],
+    "bias": "long",
+    "price_at_scan": 141.61,
+    "price_change_pct_24h": 11.821,
+    "funding_rate": 0.0001,
+    "oi_change_pct_24h": 10.484273886121047,
+    "volume_usdt_24h": 337575085.987,
+    "volume_avg_7d": 161527943.08328572,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
