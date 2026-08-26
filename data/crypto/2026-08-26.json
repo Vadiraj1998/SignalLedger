@@ -1,0 +1,41 @@
+[
+  {
+    "date": "2026-08-26",
+    "symbol": "WIFUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE",
+      "DUMP_OI_CONFIRM"
+    ],
+    "bias": "short",
+    "price_at_scan": 0.1953,
+    "price_change_pct_24h": -3.029,
+    "funding_rate": 5e-05,
+    "oi_change_pct_24h": 13.402124641505594,
+    "volume_usdt_24h": 85923472.00685,
+    "volume_avg_7d": 48629481.79856714,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-08-26",
+    "symbol": "SANDUSDT",
+    "market": "crypto",
+    "filters": [
+      "DUMP_OI_CONFIRM"
+    ],
+    "bias": "short",
+    "price_at_scan": 0.04065,
+    "price_change_pct_24h": -3.878,
+    "funding_rate": -0.00180407,
+    "oi_change_pct_24h": 11.195007642794321,
+    "volume_usdt_24h": 17792590.79029,
+    "volume_avg_7d": 23856424.30023,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
