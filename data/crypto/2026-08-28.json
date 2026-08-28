@@ -1,0 +1,78 @@
+[
+  {
+    "date": "2026-08-28",
+    "symbol": "SOLUSDT",
+    "market": "crypto",
+    "filters": [
+      "MOMENTUM_OI_CONFIRM"
+    ],
+    "bias": "long",
+    "price_at_scan": 109.07,
+    "price_change_pct_24h": 7.005,
+    "funding_rate": -9.83e-06,
+    "oi_change_pct_24h": 12.404557476225794,
+    "volume_usdt_24h": 4217071779.8202,
+    "volume_avg_7d": 3143796232.7780013,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-08-28",
+    "symbol": "WIFUSDT",
+    "market": "crypto",
+    "filters": [
+      "MOMENTUM_OI_CONFIRM"
+    ],
+    "bias": "long",
+    "price_at_scan": 0.2172,
+    "price_change_pct_24h": 2.356,
+    "funding_rate": 5e-05,
+    "oi_change_pct_24h": 9.304778954266313,
+    "volume_usdt_24h": 49837675.70618,
+    "volume_avg_7d": 52214606.03526857,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-08-28",
+    "symbol": "JUPUSDT",
+    "market": "crypto",
+    "filters": [
+      "MOMENTUM_OI_CONFIRM"
+    ],
+    "bias": "long",
+    "price_at_scan": 0.2389,
+    "price_change_pct_24h": 8.838,
+    "funding_rate": 5e-05,
+    "oi_change_pct_24h": 8.916661912437393,
+    "volume_usdt_24h": 27251996.2491,
+    "volume_avg_7d": 19794669.772657145,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-08-28",
+    "symbol": "SANDUSDT",
+    "market": "crypto",
+    "filters": [
+      "DUMP_OI_CONFIRM"
+    ],
+    "bias": "short",
+    "price_at_scan": 0.04116,
+    "price_change_pct_24h": -2.279,
+    "funding_rate": -0.00173588,
+    "oi_change_pct_24h": 12.017345833848665,
+    "volume_usdt_24h": 10342045.21258,
+    "volume_avg_7d": 24309666.51614857,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
