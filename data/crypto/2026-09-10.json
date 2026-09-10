@@ -1,0 +1,59 @@
+[
+  {
+    "date": "2026-09-10",
+    "symbol": "NEARUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 2.483,
+    "price_change_pct_24h": 7.164,
+    "funding_rate": 0.0001,
+    "oi_change_pct_24h": 4.563787928988335,
+    "volume_usdt_24h": 477492074.099,
+    "volume_avg_7d": 305745409.6668571,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-09-10",
+    "symbol": "ATOMUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 1.855,
+    "price_change_pct_24h": 0.0,
+    "funding_rate": 0.0001,
+    "oi_change_pct_24h": 6.848060050056826,
+    "volume_usdt_24h": 93858920.662,
+    "volume_avg_7d": 34981351.38523429,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-09-10",
+    "symbol": "SANDUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.03713,
+    "price_change_pct_24h": -8.049,
+    "funding_rate": 4.063e-05,
+    "oi_change_pct_24h": -6.051589642684314,
+    "volume_usdt_24h": 19115974.99711,
+    "volume_avg_7d": 10371627.524777142,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
