@@ -1,0 +1,40 @@
+[
+  {
+    "date": "2026-09-12",
+    "symbol": "BTCUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 77191.0,
+    "price_change_pct_24h": 0.842,
+    "funding_rate": 6.093e-05,
+    "oi_change_pct_24h": -3.2711500019336635,
+    "volume_usdt_24h": 16104782849.59,
+    "volume_avg_7d": 9369882125.183743,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-09-12",
+    "symbol": "ETHUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 2515.47,
+    "price_change_pct_24h": 3.233,
+    "funding_rate": 5.5e-07,
+    "oi_change_pct_24h": 0.9625111613286265,
+    "volume_usdt_24h": 16146133534.86,
+    "volume_avg_7d": 7400242245.377841,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
