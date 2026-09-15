@@ -1,0 +1,21 @@
+[
+  {
+    "date": "2026-09-15",
+    "symbol": "XRPUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 1.4229,
+    "price_change_pct_24h": 6.115,
+    "funding_rate": 0.0001,
+    "oi_change_pct_24h": 3.0414803943331146,
+    "volume_usdt_24h": 1541757436.5391,
+    "volume_avg_7d": 946784203.8464315,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
