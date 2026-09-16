@@ -1,0 +1,98 @@
+[
+  {
+    "date": "2026-09-16",
+    "symbol": "BTCUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 75600.0,
+    "price_change_pct_24h": -3.258,
+    "funding_rate": 3.951e-05,
+    "oi_change_pct_24h": 3.3800263535447406,
+    "volume_usdt_24h": 18228495920.78,
+    "volume_avg_7d": 10098164854.130259,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-09-16",
+    "symbol": "XRPUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 1.2826,
+    "price_change_pct_24h": -9.809,
+    "funding_rate": -6.337e-05,
+    "oi_change_pct_24h": -0.35897776273812343,
+    "volume_usdt_24h": 2362964622.5631,
+    "volume_avg_7d": 1135987579.7677243,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-09-16",
+    "symbol": "UNIUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 6.36,
+    "price_change_pct_24h": -2.559,
+    "funding_rate": 6.458e-05,
+    "oi_change_pct_24h": 5.227231052930818,
+    "volume_usdt_24h": 332479850.168,
+    "volume_avg_7d": 218525313.74328572,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-09-16",
+    "symbol": "ARBUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE",
+      "MOMENTUM_OI_CONFIRM"
+    ],
+    "bias": "long",
+    "price_at_scan": 0.15165,
+    "price_change_pct_24h": 13.553,
+    "funding_rate": -1.97e-06,
+    "oi_change_pct_24h": 9.972243593637582,
+    "volume_usdt_24h": 243499571.180129,
+    "volume_avg_7d": 132744589.37010828,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-09-16",
+    "symbol": "OPUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.09361,
+    "price_change_pct_24h": -8.459,
+    "funding_rate": 0.0001,
+    "oi_change_pct_24h": 1.37969903462933,
+    "volume_usdt_24h": 54343878.984861,
+    "volume_avg_7d": 33525003.584279142,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
