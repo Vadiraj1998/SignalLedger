@@ -1,0 +1,42 @@
+[
+  {
+    "date": "2026-09-18",
+    "symbol": "NEARUSDT",
+    "market": "crypto",
+    "filters": [
+      "OI_SURGE",
+      "VOLUME_SPIKE",
+      "MOMENTUM_OI_CONFIRM"
+    ],
+    "bias": "long",
+    "price_at_scan": 3.147,
+    "price_change_pct_24h": 20.436,
+    "funding_rate": 0.0001,
+    "oi_change_pct_24h": 16.62179522174711,
+    "volume_usdt_24h": 632275948.565,
+    "volume_avg_7d": 313241480.3552857,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-09-18",
+    "symbol": "UNIUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 7.793,
+    "price_change_pct_24h": 16.175,
+    "funding_rate": 0.0001,
+    "oi_change_pct_24h": 0.5997076008847041,
+    "volume_usdt_24h": 587095615.451,
+    "volume_avg_7d": 291208182.07671434,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
