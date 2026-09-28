@@ -1,0 +1,21 @@
+[
+  {
+    "date": "2026-09-28",
+    "symbol": "SEIUSDT",
+    "market": "crypto",
+    "filters": [
+      "MOMENTUM_OI_CONFIRM"
+    ],
+    "bias": "long",
+    "price_at_scan": 0.07899,
+    "price_change_pct_24h": 9.968,
+    "funding_rate": 0.0001,
+    "oi_change_pct_24h": 8.118980822538376,
+    "volume_usdt_24h": 53656861.99977,
+    "volume_avg_7d": 67902248.89712143,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
