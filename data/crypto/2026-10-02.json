@@ -1,0 +1,21 @@
+[
+  {
+    "date": "2026-10-02",
+    "symbol": "AAVEUSDT",
+    "market": "crypto",
+    "filters": [
+      "MOMENTUM_OI_CONFIRM"
+    ],
+    "bias": "long",
+    "price_at_scan": 171.3,
+    "price_change_pct_24h": 7.479,
+    "funding_rate": 1.435e-05,
+    "oi_change_pct_24h": 8.0528144211464,
+    "volume_usdt_24h": 246706915.713,
+    "volume_avg_7d": 207999121.34699997,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
