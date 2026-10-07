@@ -1,0 +1,21 @@
+[
+  {
+    "date": "2026-10-07",
+    "symbol": "OPUSDT",
+    "market": "crypto",
+    "filters": [
+      "DUMP_OI_CONFIRM"
+    ],
+    "bias": "short",
+    "price_at_scan": 0.13028,
+    "price_change_pct_24h": -5.915,
+    "funding_rate": -5.548e-05,
+    "oi_change_pct_24h": 10.856201434130064,
+    "volume_usdt_24h": 30285893.519655,
+    "volume_avg_7d": 32634352.72607743,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
