@@ -1,0 +1,98 @@
+[
+  {
+    "date": "2026-10-08",
+    "symbol": "AVAXUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 11.123,
+    "price_change_pct_24h": -4.261,
+    "funding_rate": -3.574e-05,
+    "oi_change_pct_24h": -2.0849819560839737,
+    "volume_usdt_24h": 291331973.309,
+    "volume_avg_7d": 171241732.00785714,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-10-08",
+    "symbol": "JUPUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.3585,
+    "price_change_pct_24h": 2.166,
+    "funding_rate": 5e-05,
+    "oi_change_pct_24h": 0.14257936293916032,
+    "volume_usdt_24h": 37690284.9628,
+    "volume_avg_7d": 23138348.669757146,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-10-08",
+    "symbol": "SANDUSDT",
+    "market": "crypto",
+    "filters": [
+      "OI_SURGE",
+      "MOMENTUM_OI_CONFIRM"
+    ],
+    "bias": "long",
+    "price_at_scan": 0.07776,
+    "price_change_pct_24h": 16.739,
+    "funding_rate": -0.00031045,
+    "oi_change_pct_24h": 26.678397449852216,
+    "volume_usdt_24h": 552764086.14747,
+    "volume_avg_7d": 455270942.3762757,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-10-08",
+    "symbol": "INJUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 7.459,
+    "price_change_pct_24h": -8.027,
+    "funding_rate": 9.561e-05,
+    "oi_change_pct_24h": -0.3151791103674892,
+    "volume_usdt_24h": 98330821.1533,
+    "volume_avg_7d": 58246974.87957143,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-10-08",
+    "symbol": "APTUSDT",
+    "market": "crypto",
+    "filters": [
+      "DUMP_OI_CONFIRM"
+    ],
+    "bias": "short",
+    "price_at_scan": 0.7631,
+    "price_change_pct_24h": -7.559,
+    "funding_rate": 1.24e-05,
+    "oi_change_pct_24h": 8.38402815769994,
+    "volume_usdt_24h": 72676336.5854,
+    "volume_avg_7d": 54471244.74084572,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
