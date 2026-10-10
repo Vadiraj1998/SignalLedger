@@ -1,0 +1,42 @@
+[
+  {
+    "date": "2026-10-10",
+    "symbol": "ATOMUSDT",
+    "market": "crypto",
+    "filters": [
+      "OI_SURGE",
+      "VOLUME_SPIKE",
+      "MOMENTUM_OI_CONFIRM"
+    ],
+    "bias": "long",
+    "price_at_scan": 2.064,
+    "price_change_pct_24h": 17.14,
+    "funding_rate": 0.0001,
+    "oi_change_pct_24h": 39.45186282283799,
+    "volume_usdt_24h": 127300580.989,
+    "volume_avg_7d": 40122752.039998576,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-10-10",
+    "symbol": "APTUSDT",
+    "market": "crypto",
+    "filters": [
+      "MOMENTUM_OI_CONFIRM"
+    ],
+    "bias": "long",
+    "price_at_scan": 0.814,
+    "price_change_pct_24h": 10.523,
+    "funding_rate": 7.336e-05,
+    "oi_change_pct_24h": 9.43762718659016,
+    "volume_usdt_24h": 93409801.69778,
+    "volume_avg_7d": 64715754.797058575,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
