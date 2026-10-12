@@ -1,0 +1,21 @@
+[
+  {
+    "date": "2026-10-12",
+    "symbol": "APTUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.9006,
+    "price_change_pct_24h": 3.696,
+    "funding_rate": -9.28e-05,
+    "oi_change_pct_24h": 1.2209954732368498,
+    "volume_usdt_24h": 137613558.09418,
+    "volume_avg_7d": 84010602.77483714,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
