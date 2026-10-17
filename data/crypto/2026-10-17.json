@@ -1,0 +1,41 @@
+[
+  {
+    "date": "2026-10-17",
+    "symbol": "INJUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE",
+      "MOMENTUM_OI_CONFIRM"
+    ],
+    "bias": "long",
+    "price_at_scan": 8.73,
+    "price_change_pct_24h": 2.297,
+    "funding_rate": 4.91e-06,
+    "oi_change_pct_24h": 12.914907575695095,
+    "volume_usdt_24h": 346310233.3752,
+    "volume_avg_7d": 134667059.21161428,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-10-17",
+    "symbol": "SEIUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.06525,
+    "price_change_pct_24h": 4.2,
+    "funding_rate": 7.401e-05,
+    "oi_change_pct_24h": -0.31445829965876265,
+    "volume_usdt_24h": 35078391.39489,
+    "volume_avg_7d": 22561176.75883857,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
