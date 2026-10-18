@@ -1,0 +1,42 @@
+[
+  {
+    "date": "2026-10-18",
+    "symbol": "SANDUSDT",
+    "market": "crypto",
+    "filters": [
+      "OI_SURGE",
+      "VOLUME_SPIKE",
+      "MOMENTUM_OI_CONFIRM"
+    ],
+    "bias": "long",
+    "price_at_scan": 0.0597,
+    "price_change_pct_24h": 10.107,
+    "funding_rate": -0.00193035,
+    "oi_change_pct_24h": 41.753491523957706,
+    "volume_usdt_24h": 184704290.69483,
+    "volume_avg_7d": 58675319.40526571,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-10-18",
+    "symbol": "MANAUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.08739,
+    "price_change_pct_24h": -1.198,
+    "funding_rate": -0.00014703,
+    "oi_change_pct_24h": 13.617818458040668,
+    "volume_usdt_24h": 13815336.98188,
+    "volume_avg_7d": 6675365.635727143,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
