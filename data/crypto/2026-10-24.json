@@ -1,0 +1,59 @@
+[
+  {
+    "date": "2026-10-24",
+    "symbol": "DOTUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 1.0851,
+    "price_change_pct_24h": -2.384,
+    "funding_rate": 6.359e-05,
+    "oi_change_pct_24h": -3.724549013027842,
+    "volume_usdt_24h": 95516883.46041,
+    "volume_avg_7d": 57259108.96577286,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-10-24",
+    "symbol": "WIFUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.1884,
+    "price_change_pct_24h": -4.268,
+    "funding_rate": 1.52e-05,
+    "oi_change_pct_24h": 3.3719814171814972,
+    "volume_usdt_24h": 24460001.06893,
+    "volume_avg_7d": 15311806.346237142,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-10-24",
+    "symbol": "ATOMUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 1.706,
+    "price_change_pct_24h": -0.525,
+    "funding_rate": -3.912e-05,
+    "oi_change_pct_24h": 0.48779169801958294,
+    "volume_usdt_24h": 37082277.568,
+    "volume_avg_7d": 20018376.947227143,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
