@@ -1,0 +1,116 @@
+[
+  {
+    "date": "2026-10-31",
+    "symbol": "BTCUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 77312.6,
+    "price_change_pct_24h": -0.754,
+    "funding_rate": 0.0001,
+    "oi_change_pct_24h": 3.537463271730956,
+    "volume_usdt_24h": 18723515400.07,
+    "volume_avg_7d": 10283558193.476772,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-10-31",
+    "symbol": "BNBUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 704.37,
+    "price_change_pct_24h": 0.934,
+    "funding_rate": 0.0,
+    "oi_change_pct_24h": -3.9886996513287456,
+    "volume_usdt_24h": 874737052.509,
+    "volume_avg_7d": 513483131.37481433,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-10-31",
+    "symbol": "AVAXUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 8.541,
+    "price_change_pct_24h": 3.152,
+    "funding_rate": -6.126e-05,
+    "oi_change_pct_24h": -1.037436961139797,
+    "volume_usdt_24h": 162730290.02,
+    "volume_avg_7d": 107753370.71728572,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-10-31",
+    "symbol": "LINKUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 11.448,
+    "price_change_pct_24h": 7.908,
+    "funding_rate": 2.46e-05,
+    "oi_change_pct_24h": -4.558923139881994,
+    "volume_usdt_24h": 215603678.084,
+    "volume_avg_7d": 134424066.91753143,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-10-31",
+    "symbol": "UNIUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 7.149,
+    "price_change_pct_24h": 10.495,
+    "funding_rate": 1.054e-05,
+    "oi_change_pct_24h": -11.496210192021852,
+    "volume_usdt_24h": 319327538.155,
+    "volume_avg_7d": 201637340.239,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-10-31",
+    "symbol": "OPUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.11991,
+    "price_change_pct_24h": 18.523,
+    "funding_rate": -0.00056957,
+    "oi_change_pct_24h": -4.667517045437573,
+    "volume_usdt_24h": 66216682.159816,
+    "volume_avg_7d": 33696894.51081,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
