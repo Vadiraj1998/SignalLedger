@@ -1,0 +1,40 @@
+[
+  {
+    "date": "2026-11-03",
+    "symbol": "XRPUSDT",
+    "market": "crypto",
+    "filters": [
+      "OI_SURGE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 1.25,
+    "price_change_pct_24h": -0.072,
+    "funding_rate": 0.0001,
+    "oi_change_pct_24h": 15.114090754579804,
+    "volume_usdt_24h": 583708648.6618,
+    "volume_avg_7d": 586036457.2759086,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-11-03",
+    "symbol": "NEARUSDT",
+    "market": "crypto",
+    "filters": [
+      "DUMP_OI_CONFIRM"
+    ],
+    "bias": "short",
+    "price_at_scan": 3.866,
+    "price_change_pct_24h": -9.883,
+    "funding_rate": 0.0001,
+    "oi_change_pct_24h": 14.0141396801963,
+    "volume_usdt_24h": 530987395.927,
+    "volume_avg_7d": 520392477.8741428,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
