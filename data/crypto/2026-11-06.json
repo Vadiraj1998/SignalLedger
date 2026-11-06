@@ -1,0 +1,194 @@
+[
+  {
+    "date": "2026-11-06",
+    "symbol": "BTCUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 76050.0,
+    "price_change_pct_24h": -5.46,
+    "funding_rate": 0.0001,
+    "oi_change_pct_24h": -1.1116829511976998,
+    "volume_usdt_24h": 20754881292.8,
+    "volume_avg_7d": 12053865712.793814,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-11-06",
+    "symbol": "ETHUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 2236.93,
+    "price_change_pct_24h": -7.679,
+    "funding_rate": 0.0001,
+    "oi_change_pct_24h": -1.1350954167939047,
+    "volume_usdt_24h": 13733955050.55,
+    "volume_avg_7d": 8140292467.392784,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-11-06",
+    "symbol": "XRPUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 1.2067,
+    "price_change_pct_24h": -7.533,
+    "funding_rate": 0.0001,
+    "oi_change_pct_24h": 1.2645656717749536,
+    "volume_usdt_24h": 976377797.9145,
+    "volume_avg_7d": 635127237.2842643,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-11-06",
+    "symbol": "DOGEUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.07112,
+    "price_change_pct_24h": -7.672,
+    "funding_rate": -6.3e-06,
+    "oi_change_pct_24h": 0.604899936481329,
+    "volume_usdt_24h": 469087446.1559,
+    "volume_avg_7d": 303823541.42765003,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-11-06",
+    "symbol": "ADAUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.1807,
+    "price_change_pct_24h": -8.414,
+    "funding_rate": 2.01e-06,
+    "oi_change_pct_24h": -1.0509712202739832,
+    "volume_usdt_24h": 222031910.6835,
+    "volume_avg_7d": 125902680.85127142,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-11-06",
+    "symbol": "LTCUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 51.59,
+    "price_change_pct_24h": -8.301,
+    "funding_rate": 0.0001,
+    "oi_change_pct_24h": -1.5166405115667407,
+    "volume_usdt_24h": 98255368.06,
+    "volume_avg_7d": 59543896.72195572,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-11-06",
+    "symbol": "ATOMUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 1.354,
+    "price_change_pct_24h": -8.39,
+    "funding_rate": -0.0001476,
+    "oi_change_pct_24h": -9.024362302305876,
+    "volume_usdt_24h": 29075020.763,
+    "volume_avg_7d": 16885799.446154285,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-11-06",
+    "symbol": "JUPUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.2396,
+    "price_change_pct_24h": -7.775,
+    "funding_rate": -1.199e-05,
+    "oi_change_pct_24h": 2.1185583131177474,
+    "volume_usdt_24h": 17796884.9307,
+    "volume_avg_7d": 11087423.308214286,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-11-06",
+    "symbol": "INJUSDT",
+    "market": "crypto",
+    "filters": [
+      "OI_SURGE",
+      "VOLUME_SPIKE",
+      "MOMENTUM_OI_CONFIRM"
+    ],
+    "bias": "long",
+    "price_at_scan": 8.15,
+    "price_change_pct_24h": 2.606,
+    "funding_rate": 0.0001,
+    "oi_change_pct_24h": 21.732379160504824,
+    "volume_usdt_24h": 175113802.6874,
+    "volume_avg_7d": 80488057.6218857,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-11-06",
+    "symbol": "SUIUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.8409,
+    "price_change_pct_24h": -9.454,
+    "funding_rate": -2.838e-05,
+    "oi_change_pct_24h": -4.004509065433906,
+    "volume_usdt_24h": 262042526.06853,
+    "volume_avg_7d": 174652885.6251343,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
