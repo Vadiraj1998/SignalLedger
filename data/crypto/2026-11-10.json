@@ -1,0 +1,42 @@
+[
+  {
+    "date": "2026-11-10",
+    "symbol": "AVAXUSDT",
+    "market": "crypto",
+    "filters": [
+      "OI_SURGE",
+      "VOLUME_SPIKE",
+      "MOMENTUM_OI_CONFIRM"
+    ],
+    "bias": "long",
+    "price_at_scan": 8.652,
+    "price_change_pct_24h": 9.187,
+    "funding_rate": -2.795e-05,
+    "oi_change_pct_24h": 15.678618987095644,
+    "volume_usdt_24h": 306918366.839,
+    "volume_avg_7d": 116577652.70471428,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-11-10",
+    "symbol": "ARBUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.17472,
+    "price_change_pct_24h": 5.253,
+    "funding_rate": -0.00011245,
+    "oi_change_pct_24h": -1.6379583932334154,
+    "volume_usdt_24h": 132040964.835977,
+    "volume_avg_7d": 71613167.86986628,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
