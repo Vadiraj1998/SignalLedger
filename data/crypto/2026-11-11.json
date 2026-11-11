@@ -1,0 +1,21 @@
+[
+  {
+    "date": "2026-11-11",
+    "symbol": "JUPUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.2544,
+    "price_change_pct_24h": 0.713,
+    "funding_rate": 5.15e-06,
+    "oi_change_pct_24h": 3.3099404246952875,
+    "volume_usdt_24h": 20688386.125,
+    "volume_avg_7d": 13253309.55347143,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
