@@ -1,0 +1,327 @@
+[
+  {
+    "date": "2026-11-15",
+    "symbol": "BTCUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 64124.1,
+    "price_change_pct_24h": -6.114,
+    "funding_rate": 4.667e-05,
+    "oi_change_pct_24h": 0.017244381486949838,
+    "volume_usdt_24h": 18778000248.74,
+    "volume_avg_7d": 10589950230.933058,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-11-15",
+    "symbol": "ETHUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 1768.36,
+    "price_change_pct_24h": -8.337,
+    "funding_rate": -5.374e-05,
+    "oi_change_pct_24h": 0.9358819483636215,
+    "volume_usdt_24h": 13626925156.31,
+    "volume_avg_7d": 7257909663.219168,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-11-15",
+    "symbol": "BNBUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 582.12,
+    "price_change_pct_24h": -7.717,
+    "funding_rate": 0.0,
+    "oi_change_pct_24h": 0.25838161364723056,
+    "volume_usdt_24h": 670239917.874,
+    "volume_avg_7d": 369137079.1987143,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-11-15",
+    "symbol": "SOLUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 70.23,
+    "price_change_pct_24h": -10.192,
+    "funding_rate": -0.00013955,
+    "oi_change_pct_24h": 0.06799060892728556,
+    "volume_usdt_24h": 2781794213.8766,
+    "volume_avg_7d": 1659641542.5761428,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-11-15",
+    "symbol": "XRPUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.9135,
+    "price_change_pct_24h": -9.608,
+    "funding_rate": -1.72e-06,
+    "oi_change_pct_24h": 5.924460195454535,
+    "volume_usdt_24h": 1241778733.1735,
+    "volume_avg_7d": 825715602.3845656,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-11-15",
+    "symbol": "DOGEUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.05735,
+    "price_change_pct_24h": -11.099,
+    "funding_rate": 4.255e-05,
+    "oi_change_pct_24h": 7.214523472990848,
+    "volume_usdt_24h": 571397235.79585,
+    "volume_avg_7d": 342440052.12581,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-11-15",
+    "symbol": "ADAUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.1475,
+    "price_change_pct_24h": -12.463,
+    "funding_rate": -0.00021195,
+    "oi_change_pct_24h": 0.9148398722165574,
+    "volume_usdt_24h": 229113473.5153,
+    "volume_avg_7d": 138275605.64022857,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-11-15",
+    "symbol": "LINKUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 8.877,
+    "price_change_pct_24h": -9.86,
+    "funding_rate": -4.158e-05,
+    "oi_change_pct_24h": -1.6210607485508486,
+    "volume_usdt_24h": 184998844.534,
+    "volume_avg_7d": 120248669.20818713,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-11-15",
+    "symbol": "DOTUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.7062,
+    "price_change_pct_24h": -13.689,
+    "funding_rate": -0.00010282,
+    "oi_change_pct_24h": 3.5027060169799578,
+    "volume_usdt_24h": 67721156.70564,
+    "volume_avg_7d": 38981597.44099571,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-11-15",
+    "symbol": "WIFUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.1291,
+    "price_change_pct_24h": -13.064,
+    "funding_rate": 4.78e-05,
+    "oi_change_pct_24h": 6.484390103533425,
+    "volume_usdt_24h": 22925005.68945,
+    "volume_avg_7d": 11717071.925352857,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-11-15",
+    "symbol": "LTCUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 44.46,
+    "price_change_pct_24h": -9.927,
+    "funding_rate": -4.603e-05,
+    "oi_change_pct_24h": -1.2915839488453373,
+    "volume_usdt_24h": 115103384.53,
+    "volume_avg_7d": 68448436.80092429,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-11-15",
+    "symbol": "JUPUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.248,
+    "price_change_pct_24h": -6.344,
+    "funding_rate": -8.005e-05,
+    "oi_change_pct_24h": 0.7588475967296983,
+    "volume_usdt_24h": 31465868.9874,
+    "volume_avg_7d": 19483669.41412857,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-11-15",
+    "symbol": "INJUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 6.809,
+    "price_change_pct_24h": -15.678,
+    "funding_rate": -8.714e-05,
+    "oi_change_pct_24h": -13.144827008012113,
+    "volume_usdt_24h": 176923459.9318,
+    "volume_avg_7d": 106857916.67598571,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-11-15",
+    "symbol": "SUIUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.7005,
+    "price_change_pct_24h": -11.997,
+    "funding_rate": -0.00017046,
+    "oi_change_pct_24h": -3.5564056451116466,
+    "volume_usdt_24h": 239936099.04201,
+    "volume_avg_7d": 159757099.11504,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-11-15",
+    "symbol": "OPUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE",
+      "DUMP_OI_CONFIRM"
+    ],
+    "bias": "short",
+    "price_at_scan": 0.07978,
+    "price_change_pct_24h": -13.826,
+    "funding_rate": -0.0001462,
+    "oi_change_pct_24h": 8.02798790824902,
+    "volume_usdt_24h": 36646425.777466,
+    "volume_avg_7d": 23919316.907928713,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-11-15",
+    "symbol": "APTUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE",
+      "DUMP_OI_CONFIRM"
+    ],
+    "bias": "short",
+    "price_at_scan": 0.449,
+    "price_change_pct_24h": -16.153,
+    "funding_rate": -0.00057293,
+    "oi_change_pct_24h": 8.372354087582181,
+    "volume_usdt_24h": 61539252.6316,
+    "volume_avg_7d": 32127841.12495143,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-11-15",
+    "symbol": "SEIUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.03761,
+    "price_change_pct_24h": -11.9,
+    "funding_rate": -0.0002844,
+    "oi_change_pct_24h": 2.558729953629001,
+    "volume_usdt_24h": 17755062.16989,
+    "volume_avg_7d": 10521018.747822857,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
