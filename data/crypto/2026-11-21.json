@@ -1,0 +1,59 @@
+[
+  {
+    "date": "2026-11-21",
+    "symbol": "BTCUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 58914.8,
+    "price_change_pct_24h": -4.899,
+    "funding_rate": -6.069e-05,
+    "oi_change_pct_24h": -0.5242064853207212,
+    "volume_usdt_24h": 24791656584.26,
+    "volume_avg_7d": 15536354571.190128,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-11-21",
+    "symbol": "JUPUSDT",
+    "market": "crypto",
+    "filters": [
+      "DUMP_OI_CONFIRM"
+    ],
+    "bias": "short",
+    "price_at_scan": 0.2274,
+    "price_change_pct_24h": -8.931,
+    "funding_rate": -0.0001214,
+    "oi_change_pct_24h": 8.639713176888856,
+    "volume_usdt_24h": 36873785.1432,
+    "volume_avg_7d": 30128076.495085716,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-11-21",
+    "symbol": "SEIUSDT",
+    "market": "crypto",
+    "filters": [
+      "DUMP_OI_CONFIRM"
+    ],
+    "bias": "short",
+    "price_at_scan": 0.03519,
+    "price_change_pct_24h": -7.395,
+    "funding_rate": -0.00015864,
+    "oi_change_pct_24h": 9.09024482805042,
+    "volume_usdt_24h": 13206364.1169,
+    "volume_avg_7d": 11123495.362597143,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
