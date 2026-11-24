@@ -1,0 +1,59 @@
+[
+  {
+    "date": "2026-11-24",
+    "symbol": "ATOMUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 1.282,
+    "price_change_pct_24h": 9.199,
+    "funding_rate": 4.441e-05,
+    "oi_change_pct_24h": 1.3848951739953417,
+    "volume_usdt_24h": 23806847.773,
+    "volume_avg_7d": 14483283.012422858,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-11-24",
+    "symbol": "JUPUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.2371,
+    "price_change_pct_24h": 5.565,
+    "funding_rate": 5.05e-06,
+    "oi_change_pct_24h": 2.5645340727662123,
+    "volume_usdt_24h": 48388918.2835,
+    "volume_avg_7d": 29143658.349471428,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  },
+  {
+    "date": "2026-11-24",
+    "symbol": "ARBUSDT",
+    "market": "crypto",
+    "filters": [
+      "VOLUME_SPIKE"
+    ],
+    "bias": "neutral",
+    "price_at_scan": 0.11292,
+    "price_change_pct_24h": -1.104,
+    "funding_rate": -5.073e-05,
+    "oi_change_pct_24h": -0.6831721802678601,
+    "volume_usdt_24h": 77477809.360371,
+    "volume_avg_7d": 51410221.488083854,
+    "eod_price": null,
+    "move_pct": null,
+    "success": null,
+    "updated_at": null
+  }
+]
