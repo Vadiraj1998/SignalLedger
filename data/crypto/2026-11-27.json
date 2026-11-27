@@ -13,10 +13,10 @@
     "oi_change_pct_24h": 4.227137733762975,
     "volume_usdt_24h": 25476919.89796,
     "volume_avg_7d": 14216677.226802858,
-    "eod_price": null,
-    "move_pct": null,
-    "success": null,
-    "updated_at": null
+    "eod_price": 0.14,
+    "move_pct": 3.017,
+    "success": true,
+    "updated_at": "2026-11-27T18:00:02.882267+00:00"
   },
   {
     "date": "2026-11-27",
@@ -34,9 +34,9 @@
     "oi_change_pct_24h": 23.598240893881268,
     "volume_usdt_24h": 90449850.38346,
     "volume_avg_7d": 22974190.180365715,
-    "eod_price": null,
-    "move_pct": null,
-    "success": null,
-    "updated_at": null
+    "eod_price": 0.03894,
+    "move_pct": 0.646,
+    "success": true,
+    "updated_at": "2026-11-27T18:00:03.185861+00:00"
   }
 ]
